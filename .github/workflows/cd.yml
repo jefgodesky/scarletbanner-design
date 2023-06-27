@@ -1,0 +1,26 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  REPO: scarletbanner-design
+  GH_USERNAME: jefgodesky
+
+jobs:
+  deploy:
+    name: Deploy to design.scarletbanner.com
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to design.scarletbanner.com
+        uses: appleboy/ssh-action@master
+        with:
+          host: scarletbanner.com
+          USERNAME: ${{ secrets.DEPLOYER_USERNAME }}
+          PORT: 22
+          KEY: ${{ secrets.DEPLOYER_KEY }}
+          script: |
+            cd /var/www/html/${{ env.REPO }}
+            git pull
