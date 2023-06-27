@@ -1,2 +1,5 @@
+# Ignore anything that you can build
+node_modules
+
 # Ignore IDE files
 .idea

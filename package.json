@@ -20,5 +20,8 @@
   "license": "GPL-3.0-only",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
   }
 }
