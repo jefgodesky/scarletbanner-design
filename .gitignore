@@ -1,5 +1,6 @@
 # Ignore anything that you can build
 node_modules
+css
 
 # Ignore IDE files
 .idea
