@@ -24,4 +24,5 @@ jobs:
           script: |
             cd /var/www/html/${{ env.REPO }}
             git pull
+            npm install
             npm run sass:prod
