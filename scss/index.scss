@@ -1,22 +1,21 @@
 @use "modules/cdn";
 
 body {
-  background: url('#{cdn.$images}/wall.jpg');
+  background: url('#{cdn.$images}/wall.gif');
   font-family: 'Alegreya', serif;
   margin: 0;
   padding: 0;
 }
 
 nav {
-  background: url('#{cdn.$images}/wood.jpg') repeat-x;
-  background-size: 10em;
+  background: url('#{cdn.$images}/wood.gif') repeat;
   box-shadow: 0 0 1em 1em #000;
-  height: 3.4em;
+  height: 4em;
   margin: 0 0 2em 0;
   position: relative;
 
   h1 {
-    background: url('#{cdn.$logos}/full-color.png') no-repeat top center;
+    background: url('#{cdn.$logos}/full-color-trimmed.png') no-repeat top center;
     background-size: contain;
     height: 9em;
     margin: 0 auto 0 auto;
@@ -38,14 +37,10 @@ nav {
 }
 
 main {
-  background-color: #ccc;
-  background-image: url('#{cdn.$images}/vellum-top.png'), url('#{cdn.$images}/vellum-bottom.png'), url('#{cdn.$images}/vellum.jpg');
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-position: top center, bottom center, center;
-  background-size: 100%, 100%;
+  background-color: #fff;
   box-shadow: 0 0 1em 1em #000;
-  margin: 6em auto 0 auto;
+  margin: 6em auto 2em auto;
   max-width: 50em;
   min-height: 75vh;
-  padding: 2em 2em 2em 2em;
+  padding: 2em;
 }
