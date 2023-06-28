@@ -2,6 +2,19 @@
 
 body {
   background: url('#{cdn.$images}/wall.jpg');
-  color: #fff;
   font-family: 'Alegreya', serif;
+  padding: 2em;
+}
+
+main {
+  background-color: #ccc;
+  background-image: url('#{cdn.$images}/vellum-top.png'), url('#{cdn.$images}/vellum-bottom.png'), url('#{cdn.$images}/vellum.jpg');
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: top center, bottom center, center;
+  background-size: 100%, 100%;
+  box-shadow: 0 0 1em 1em #000;
+  margin: 0 auto;
+  max-width: 2048px;
+  min-height: 75vh;
+  padding: 2em;
 }

@@ -2,5 +2,6 @@
 node_modules
 css
 
-# Ignore IDE files
+# Ignore local files
+.DS_Store
 .idea
