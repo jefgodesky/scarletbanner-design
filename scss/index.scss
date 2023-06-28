@@ -1,3 +1,7 @@
+@use "modules/cdn";
+
 body {
+  background: url('#{cdn.$images}/wall.jpg');
+  color: #fff;
   font-family: 'Alegreya', serif;
 }
