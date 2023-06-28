@@ -23,6 +23,7 @@
     "sass:prod": "sass --no-source-map --style=compressed scss:css"
   },
   "devDependencies": {
+    "browser-sync": "^2.29.3",
     "sass": "^1.63.6"
   }
 }
