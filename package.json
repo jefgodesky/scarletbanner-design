@@ -19,6 +19,8 @@
   },
   "license": "GPL-3.0-only",
   "scripts": {
+    "dev": "npm-run-all -p sass:dev html:dev",
+    "html:dev": "browser-sync start --server --files \"*.html,css/*.css\"",
     "sass:dev": "sass --watch --update --style=expanded scss:css",
     "sass:prod": "sass --no-source-map --style=compressed scss:css"
   },
