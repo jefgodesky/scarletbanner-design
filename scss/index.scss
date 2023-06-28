@@ -3,7 +3,38 @@
 body {
   background: url('#{cdn.$images}/wall.jpg');
   font-family: 'Alegreya', serif;
-  padding: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: url('#{cdn.$images}/wood.jpg') repeat-x;
+  background-size: 10em;
+  box-shadow: 0 0 1em 1em #000;
+  height: 3.4em;
+  margin: 0 0 2em 0;
+  position: relative;
+
+  h1 {
+    background: url('#{cdn.$logos}/full-color.png') no-repeat top center;
+    background-size: contain;
+    height: 9em;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    position: relative;
+    width: 15em;
+
+    a {
+      bottom: 0;
+      display: block;
+      font-size: 0;
+      left: 0;
+      text-decoration: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
 }
 
 main {
@@ -13,8 +44,8 @@ main {
   background-position: top center, bottom center, center;
   background-size: 100%, 100%;
   box-shadow: 0 0 1em 1em #000;
-  margin: 0 auto;
-  max-width: 2048px;
+  margin: 6em auto 0 auto;
+  max-width: 50em;
   min-height: 75vh;
-  padding: 2em;
+  padding: 2em 2em 2em 2em;
 }
