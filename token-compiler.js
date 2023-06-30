@@ -9,13 +9,18 @@ const processColor = (key, val) => {
   return `$${key}: ${val.hex};`
 }
 
+const processSpacing = (key, val) => {
+  return `$${key}: ${val};`
+}
+
 const processDefault = (key, val) => {
   const formatting = typeof val === 'string' ? `"${val}"` : val
   return `$${key}: ${formatting};`
 }
 
 const processors = {
-  'color': processColor
+  'color': processColor,
+  'spacing': processSpacing
 }
 
 const files = fs.readdirSync(tokensDir)
