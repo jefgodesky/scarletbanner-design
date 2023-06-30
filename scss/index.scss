@@ -1,8 +1,7 @@
 @use "modules/cdn";
 
 body {
-  background: #000 url('#{cdn.$images}/wall.png') repeat-x;
-  background-attachment: fixed;
+  background: #000 url('#{cdn.$images}/wall.png') center 41em repeat-x local;
   font-family: 'Alegreya', serif;
   margin: 0;
   padding: 0;
