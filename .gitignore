@@ -1,6 +1,8 @@
 # Ignore anything that you can build
 node_modules
 css
+scss/modules
+!scss/modules/_cdn.scss
 
 # Ignore local files
 .DS_Store
