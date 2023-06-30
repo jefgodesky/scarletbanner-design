@@ -1,4 +1,7 @@
 @use "modules/cdn";
+@use "partials/typography";
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
   background: #000 url('#{cdn.$images}/wall.png') center 4em repeat-x local;
@@ -22,11 +25,13 @@ nav {
   h1 {
     background: url('#{cdn.$logos}/full-color-trimmed.png') no-repeat top center;
     background-size: contain;
-    height: 9em;
+    border-bottom: 0;
+    font-size: 1em;
+    height: 15em;
     margin: 0 auto 0 auto;
     padding: 0;
     position: relative;
-    width: 15em;
+    width: 20em;
 
     a {
       bottom: 0;
@@ -60,6 +65,13 @@ nav {
     color: #fff;
     margin: 20em auto 10em;
     max-width: 50em;
+    text-shadow: 0 0 0.25em #000;
+
+    h1 {
+      color: #fff;
+      border-bottom: 0;
+      margin: 0;
+    }
   }
 
   &::after {
@@ -88,7 +100,9 @@ main {
   background-position: top center, bottom center, center, center;
   background-size: 100%, 100%, 100%, cover;
   box-shadow: 0 0 1em 1em #000;
-  margin: 6em auto 2em auto;
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin: 4em auto 2em auto;
   max-width: 50em;
   min-height: 75vh;
   padding: 2em 4em;

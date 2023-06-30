@@ -1,0 +1,9 @@
+@use "../modules/cdn";
+
+@font-face {
+  font-family: 'Black Castle';
+  src: url('#{cdn.$fonts}/blackcastlemf-webfont.woff2') format('woff2'),
+  url('#{cdn.$fonts}/blackcastlemf-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
