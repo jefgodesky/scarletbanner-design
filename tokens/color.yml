@@ -1,10 +1,15 @@
 scarlet:
+  name: Scarlet
   hex: "#dc143c"
 page base:
+  name: Page Base
   hex: "#fdfdfd"
 page shade:
+  name: Page Shade
   hex: "#e1ceb9"
 page text:
+  name: Page Text
   hex: "#000"
 outer text:
+  name: Outer Text
   hex: "#999"
