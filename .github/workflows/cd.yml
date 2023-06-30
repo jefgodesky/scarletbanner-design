@@ -25,4 +25,5 @@ jobs:
             cd /var/www/html/${{ env.REPO }}
             git pull
             npm install
+            node token-compiler.js
             npm run sass:prod
