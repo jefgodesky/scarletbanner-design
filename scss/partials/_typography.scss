@@ -1,9 +1,10 @@
-@use "fonts";
+@use "../partials/fonts" as f;
+@use "../modules/fonts";
 
 h1 {
   border-bottom: 0.1em solid #e1ceb9;
   color: #dc143c;
-  font-family: 'Black Castle', serif;
+  font-family: fonts.$heading, serif;
   font-weight: normal;
   font-size: 3em;
   line-height: 1;

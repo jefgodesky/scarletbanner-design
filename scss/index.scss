@@ -1,24 +1,27 @@
 @use "modules/cdn";
 @use "partials/typography";
+@use "modules/fonts";
+@use "modules/color";
+@use "modules/spacing";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-  background: #000 url('#{cdn.$images}/wall.png') center 4em repeat-x local;
-  font-family: 'Alegreya', serif;
+  background: color.$page-text url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
+  font-family: fonts.$base, serif;
   margin: 0;
   padding: 0;
 
   &:has(.hero) {
-    background-position: center 40em;
+    background-position: center spacing.$vertical * 20;
   }
 }
 
 nav {
   background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: 0.25em solid #000;
-  box-shadow: 0 0 1em 1em #000;
-  height: 4em;
+  border-bottom: calc(spacing.$vertical / 8) solid color.$page-text;
+  box-shadow: 0 0 1em 1em color.$page-text;
+  height: spacing.$vertical * 2;
   margin: 0;
   position: relative;
 
@@ -27,11 +30,11 @@ nav {
     background-size: contain;
     border-bottom: 0;
     font-size: 1em;
-    height: 15em;
+    height: spacing.$vertical * 7;
     margin: 0 auto 0 auto;
     padding: 0;
     position: relative;
-    width: 20em;
+    width: spacing.$vertical * 10;
 
     a {
       bottom: 0;
@@ -63,9 +66,9 @@ nav {
 
   .content {
     color: #fff;
-    margin: 20em auto 10em;
-    max-width: 50em;
-    text-shadow: 0 0 0.25em #000;
+    margin: spacing.$vertical * 10 auto 10em;
+    max-width: spacing.$horizontal * 10;
+    text-shadow: 0 0 calc(spacing.$vertical / 8) #000;
 
     h1 {
       color: #fff;
@@ -76,9 +79,9 @@ nav {
 
   &::after {
     background: url('#{cdn.$images}/wood.gif') repeat;
-    border-top: 0.25em solid #000;
-    border-bottom: 0.25em solid #000;
-    box-shadow: 0 0 1em #000;
+    border-top: calc(spacing.$vertical / 8) solid #000;
+    border-bottom: calc(spacing.$vertical / 8) solid #000;
+    box-shadow: 0 0 1em color.$page-text;
     content: '';
     display: block;
     height: 1em;
@@ -91,26 +94,25 @@ nav {
 }
 
 main {
-  background-color: #fdfdfd;
+  background-color: color.$page-base;
   background-image: url('#{cdn.$images}/page-top.svg'),
     url('#{cdn.$images}/page-bottom.svg'),
     url('#{cdn.$images}/page-body.svg'),
-    radial-gradient(circle, #fdfdfd 0%, #fdfdfd 50%, #e1ceb9 100%);
+    radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
   background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
   background-position: top center, bottom center, center, center;
   background-size: 100%, 100%, 100%, cover;
   box-shadow: 0 0 1em 1em #000;
   font-size: 1.25em;
   line-height: 1.5;
-  margin: 4em auto 2em auto;
-  max-width: 50em;
-  min-height: 75vh;
-  padding: 2em 4em;
+  margin: spacing.$vertical * 2 auto spacing.$vertical auto;
+  max-width: spacing.$horizontal * 10;
+  padding: spacing.$vertical spacing.$horizontal;
 }
 
 footer {
   color: #999;
   margin: 0 auto;
-  max-width: 50em;
-  padding: 0 4em 8em 4em;
+  max-width: spacing.$horizontal * 10;
+  padding: 0 spacing.$horizontal * 2 spacing.$vertical * 2 spacing.$horizontal * 2;
 }
