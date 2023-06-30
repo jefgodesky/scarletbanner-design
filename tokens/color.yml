@@ -1,0 +1,10 @@
+scarlet:
+  hex: "#dc143c"
+page base:
+  hex: "#fdfdfd"
+page shade:
+  hex: "#e1ceb9"
+page text:
+  hex: "#000"
+outer text:
+  hex: "#999"
