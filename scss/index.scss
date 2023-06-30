@@ -1,7 +1,8 @@
 @use "modules/cdn";
 
 body {
-  background: url('#{cdn.$images}/wall.gif');
+  background: #000 url('#{cdn.$images}/wall.png') repeat-x;
+  background-attachment: fixed;
   font-family: 'Alegreya', serif;
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
 
 nav {
   background: url('#{cdn.$images}/wood.gif') repeat;
+  border-bottom: 0.25em solid #000;
   box-shadow: 0 0 1em 1em #000;
   height: 4em;
   margin: 0 0 2em 0;
@@ -37,10 +39,17 @@ nav {
 }
 
 main {
-  background-color: #fff;
+  background-color: #fdfdfd;
+  background-image: url('#{cdn.$images}/page-top.svg'),
+    url('#{cdn.$images}/page-bottom.svg'),
+    url('#{cdn.$images}/page-body.svg'),
+    radial-gradient(circle, #fdfdfd 0%, #fdfdfd 50%, #e1ceb9 100%);
+  background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
+  background-position: top center, bottom center, center, center;
+  background-size: 100%, 100%, 100%, cover;
   box-shadow: 0 0 1em 1em #000;
   margin: 6em auto 2em auto;
   max-width: 50em;
   min-height: 75vh;
-  padding: 2em;
+  padding: 2em 4em;
 }
