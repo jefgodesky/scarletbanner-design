@@ -96,12 +96,43 @@ const replaceValues = (str, data, prefix = '') => {
   return working
 }
 
-// Special processors for specific token files.
-const processors = {
-  'color': processColor,
-  'spacing': processSpacing,
-  'breakpoints': processSpacing,
-  'fonts': processFont
+/**
+ * Transform an object into an array of lines expressing Sass variables.
+ * @param {string} name - The name of the property in `data` that should be
+ *   transformed into Sass variables.
+ * @param {Object} data - An object containing the data to be transformed.
+ * @returns {string[]} - An array of strings expressing Sass variables.
+ */
+
+const getSassLines = (name, data) => {
+  const lines = []
+  const processors = {
+    'color': processColor,
+    'spacing': processSpacing,
+    'breakpoints': processSpacing,
+    'fonts': processFont
+  }
+
+  const processor = processors[name] ?? processDefault
+  for (const key in data[name]) {
+    lines.push(processor(slugify(key), data[name][key]))
+  }
+  return lines
+}
+
+/**
+ * Transform the CDN object.
+ * @param {Object} data - An object containing the data to be transformed.
+ * @returns {string[]} - An array of strings expressing Sass variables.
+ */
+
+const getCDN = data => {
+  data.cdn.root = `${data.cdn.root}/v${data.version.split('.').join('/')}`
+  for (const key in data.cdn) {
+    if (key === 'root') continue
+    data.cdn[key] = `#{$root}${data.cdn[key]}`
+  }
+  return getSassLines('cdn', data)
 }
 
 const data = { version: pkg.version }
@@ -116,11 +147,7 @@ for (const file of tokenFiles) {
   data[pieces[0]] = parse(raw)
 
   // Processing Sass variables.
-  const lines = []
-  const processor = processors[pieces[0]] ?? processDefault
-  for (const key in data[pieces[0]]) {
-    lines.push(processor(slugify(key), data[pieces[0]][key]))
-  }
+  const lines = pieces[0] === 'cdn' ? getCDN(data) : getSassLines(pieces[0], data)
 
   // Print Sass variable file corresponding to this token file.
   fs.writeFileSync(`${modsDir}/_${pieces[0]}.scss`, lines.join('\n'), { encoding: 'utf8' })

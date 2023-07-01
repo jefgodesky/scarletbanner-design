@@ -2,7 +2,6 @@
 node_modules
 css
 scss/modules/*.scss
-!scss/modules/_cdn.scss
 !scss/modules/_layout.scss
 *.html
 !html/*.html
