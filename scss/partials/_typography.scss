@@ -1,6 +1,10 @@
 @use "../partials/fonts" as f;
 @use "../modules/fonts";
 
+body {
+  font-family: fonts.$base, serif;
+}
+
 h1 {
   border-bottom: 0.1em solid #e1ceb9;
   color: #dc143c;
