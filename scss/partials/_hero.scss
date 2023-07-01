@@ -1,0 +1,52 @@
+@use "../modules/cdn";
+@use "../modules/color";
+@use "../modules/spacing";
+@use "../modules/layout";
+
+body:has(.hero) {
+  background-position: center spacing.$vertical * 20;
+}
+
+.hero {
+  overflow: auto;
+  position: relative;
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .content {
+    @extend %layout-block;
+    color: #fff;
+    margin: spacing.$vertical * 10 auto 10em;
+    text-shadow: 0 0 calc(#{spacing.$vertical} / 8) #000;
+
+    h1 {
+      color: #fff;
+      border-bottom: 0;
+      margin: 0;
+    }
+  }
+
+  &::after {
+    background: url('#{cdn.$images}/wood.gif') repeat;
+    border-top: calc(#{spacing.$vertical} / 8) solid #000;
+    border-bottom: calc(#{spacing.$vertical} / 8) solid #000;
+    box-shadow: 0 0 1em color.$page-text;
+    content: '';
+    display: block;
+    height: 1em;
+  }
+
+  & + main {
+    margin-top: -8em;
+    position: relative;
+  }
+}

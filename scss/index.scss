@@ -5,6 +5,7 @@
 @use "modules/spacing";
 
 @use "partials/nav";
+@use "partials/hero";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -12,54 +13,6 @@ body {
   background: color.$page-text url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
   margin: 0;
   padding: 0;
-
-  &:has(.hero) {
-    background-position: center spacing.$vertical * 20;
-  }
-}
-
-.hero {
-  overflow: auto;
-  position: relative;
-
-  img {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .content {
-    color: #fff;
-    margin: spacing.$vertical * 10 auto 10em;
-    max-width: spacing.$horizontal * 10;
-    text-shadow: 0 0 calc(#{spacing.$vertical} / 8) #000;
-
-    h1 {
-      color: #fff;
-      border-bottom: 0;
-      margin: 0;
-    }
-  }
-
-  &::after {
-    background: url('#{cdn.$images}/wood.gif') repeat;
-    border-top: calc(#{spacing.$vertical} / 8) solid #000;
-    border-bottom: calc(#{spacing.$vertical} / 8) solid #000;
-    box-shadow: 0 0 1em color.$page-text;
-    content: '';
-    display: block;
-    height: 1em;
-  }
-
-  & + main {
-    margin-top: -8em;
-    position: relative;
-  }
 }
 
 main {
