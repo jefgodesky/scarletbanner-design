@@ -1,0 +1,9 @@
+@use "../modules/spacing";
+@use "../modules/layout";
+
+footer {
+  @extend %layout-block;
+  color: #999;
+  margin: 0 auto;
+  padding: 0 spacing.$horizontal * 2 spacing.$vertical * 2 spacing.$horizontal * 2;
+}

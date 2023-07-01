@@ -7,6 +7,7 @@
 @use "partials/nav";
 @use "partials/hero";
 @use "partials/main";
+@use "partials/footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -14,11 +15,4 @@ body {
   background: color.$page-text url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
   margin: 0;
   padding: 0;
-}
-
-footer {
-  color: #999;
-  margin: 0 auto;
-  max-width: spacing.$horizontal * 10;
-  padding: 0 spacing.$horizontal * 2 spacing.$vertical * 2 spacing.$horizontal * 2;
 }
