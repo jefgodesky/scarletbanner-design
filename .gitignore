@@ -3,6 +3,8 @@ node_modules
 css
 scss/modules
 !scss/modules/_cdn.scss
+*.html
+!html/*.html
 
 # Ignore local files
 .DS_Store
