@@ -1,4 +1,5 @@
 @use "../partials/fonts" as f;
+@use "../modules/breakpoints";
 @use "../modules/fonts";
 
 body {
@@ -6,11 +7,36 @@ body {
 }
 
 h1 {
-  border-bottom: 0.1em solid #e1ceb9;
+  border-bottom: 0.15em solid #e1ceb9;
   color: #dc143c;
   font-family: fonts.$heading, serif;
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1;
   margin: 1em 0 0 0;
+
+  @media (min-width: breakpoints.$blocks) {
+    font-size: 3em;
+    border-bottom-width: 0.1em;
+  }
+}
+
+h2 {
+  font-family: fonts.$heading, serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 1.5em 0 0.5em 0;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 1.5em 0 0.5em 0;
+}
+
+h4 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 2em 0 0 0;
 }
