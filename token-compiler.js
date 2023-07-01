@@ -100,6 +100,7 @@ const replaceValues = (str, data, prefix = '') => {
 const processors = {
   'color': processColor,
   'spacing': processSpacing,
+  'breakpoints': processSpacing,
   'fonts': processFont
 }
 
