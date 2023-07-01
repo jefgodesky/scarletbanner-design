@@ -1,0 +1,44 @@
+@use "../modules/color";
+@use "../modules/spacing";
+
+body {
+  counter-reset: scarletbanner-tables;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: 'Alegreya Sans', sans-serif;
+  margin: 1em -1em;
+  width: calc(100% + 2em);
+
+  caption {
+    counter-increment: scarletbanner-tables;
+    font-weight: bold;
+    text-align: left;
+
+    &:before {
+      content: "Table " counter(scarletbanner-tables) ". ";
+    }
+  }
+
+  td, th {
+    padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
+    text-align: left;
+  }
+
+  th {
+    border-bottom: 0.1em solid color.$scarlet;
+  }
+
+  tr:nth-child(even) td {
+    background: adjust-color(color.$page-shade, $alpha: -0.66);
+  }
+
+  .num {
+    text-align: center;
+  }
+
+  tfoot {
+    border-top: 1px solid adjust-color(color.$page-text, $alpha: -0.66);
+  }
+}
