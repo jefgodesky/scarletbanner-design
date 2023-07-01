@@ -6,6 +6,7 @@
 
 @use "partials/nav";
 @use "partials/hero";
+@use "partials/main";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -13,23 +14,6 @@ body {
   background: color.$page-text url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
   margin: 0;
   padding: 0;
-}
-
-main {
-  background-color: color.$page-base;
-  background-image: url('#{cdn.$images}/page-top.svg'),
-    url('#{cdn.$images}/page-bottom.svg'),
-    url('#{cdn.$images}/page-body.svg'),
-    radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
-  background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
-  background-position: top center, bottom center, center, center;
-  background-size: 100%, 100%, 100%, cover;
-  box-shadow: 0 0 1em 1em #000;
-  font-size: 1.25em;
-  line-height: 1.5;
-  margin: spacing.$vertical * 2 auto spacing.$vertical auto;
-  max-width: spacing.$horizontal * 10;
-  padding: spacing.$vertical spacing.$horizontal;
 }
 
 footer {
