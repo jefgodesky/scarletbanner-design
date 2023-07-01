@@ -1,0 +1,6 @@
+@use "../modules/spacing";
+
+%layout-block {
+  max-width: spacing.$horizontal * 10;
+  padding: spacing.$vertical spacing.$horizontal;
+}

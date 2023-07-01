@@ -4,48 +4,17 @@
 @use "modules/color";
 @use "modules/spacing";
 
+@use "partials/nav";
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
   background: color.$page-text url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
-  font-family: fonts.$base, serif;
   margin: 0;
   padding: 0;
 
   &:has(.hero) {
     background-position: center spacing.$vertical * 20;
-  }
-}
-
-nav {
-  background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: calc(#{spacing.$vertical} / 8) solid color.$page-text;
-  box-shadow: 0 0 1em 1em color.$page-text;
-  height: spacing.$vertical * 2;
-  margin: 0;
-  position: relative;
-
-  h1 {
-    background: url('#{cdn.$logos}/full-color-trimmed.png') no-repeat top center;
-    background-size: contain;
-    border-bottom: 0;
-    font-size: 1em;
-    height: spacing.$vertical * 7;
-    margin: 0 auto 0 auto;
-    padding: 0;
-    position: relative;
-    width: spacing.$vertical * 10;
-
-    a {
-      bottom: 0;
-      display: block;
-      font-size: 0;
-      left: 0;
-      text-decoration: none;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
   }
 }
 

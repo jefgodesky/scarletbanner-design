@@ -1,0 +1,36 @@
+@use "../modules/cdn";
+@use "../modules/color";
+@use "../modules/spacing";
+@use "../modules/layout";
+
+nav {
+  background: url('#{cdn.$images}/wood.gif') repeat;
+  border-bottom: calc(#{spacing.$vertical} / 8) solid color.$page-text;
+  box-shadow: 0 0 1em 1em color.$page-text;
+  height: spacing.$vertical * 2;
+  margin: 0;
+  position: relative;
+
+  h1 {
+    @extend %layout-block;
+    background: url('#{cdn.$logos}/full-color-trimmed.png') no-repeat top center;
+    background-size: contain;
+    border-bottom: 0;
+    font-size: 1em;
+    height: spacing.$vertical * 7;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    position: relative;
+
+    a {
+      bottom: 0;
+      display: block;
+      font-size: 0;
+      left: 0;
+      text-decoration: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
