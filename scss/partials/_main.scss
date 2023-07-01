@@ -1,3 +1,4 @@
+@use "../modules/breakpoints";
 @use "../modules/cdn";
 @use "../modules/color";
 @use "../modules/spacing";
@@ -7,14 +8,23 @@ main {
   @extend %layout-block;
   background-color: color.$page-base;
   background-image: url('#{cdn.$images}/page-top.svg'),
-  url('#{cdn.$images}/page-bottom.svg'),
-  url('#{cdn.$images}/page-body.svg'),
-  radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
-  background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
-  background-position: top center, bottom center, center, center;
-  background-size: 100%, 100%, 100%, cover;
+    url('#{cdn.$images}/page-bottom.svg'),
+    radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
+  background-repeat: no-repeat;
+  background-position: top center, bottom center, center;
+  background-size: 102%, 102%, cover;
   box-shadow: 0 0 1em 1em #000;
   font-size: 1.25em;
   line-height: 1.5;
-  margin: spacing.$vertical * 2 auto spacing.$vertical auto;
+  margin-top: spacing.$vertical * 2;
+  
+  @media (min-width: breakpoints.$blocks) {
+    background-image: url('#{cdn.$images}/page-top.svg'),
+      url('#{cdn.$images}/page-bottom.svg'),
+      url('#{cdn.$images}/page-body.svg'),
+      radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
+    background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
+    background-position: top center, bottom center, center, center;
+    background-size: 100%, 100%, 100%, cover;
+  }
 }
