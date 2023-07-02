@@ -1,15 +1,12 @@
 heading:
-  name:
-    human: Black Castle
-    system: Black Castle
+  name: Black Castle
+  stack: 'Black Castle', serif
   src: https://moorstation.org/typoasis/designers/mueller/
 base:
-  name:
-    human: Alegreya
-    system: Alegreya
+  name: Alegreya
+  stack: 'Alegreya', serif
   src: https://github.com/huertatipografica/Alegreya
 technical:
-  name:
-    human: Alegreya Sans
-    system: Alegreya Sans
+  name: Alegreya Sans
+  stack: 'Alegreya Sans', sans-serif
   src: https://github.com/huertatipografica/Alegreya

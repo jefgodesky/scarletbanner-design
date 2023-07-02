@@ -45,16 +45,14 @@ const processSpacing = (key, val) => {
  * font as a Sass variable.
  * @param {string} key - The name of the Sass variable.
  * @param {Object} val - An object with a `name` object property.
- * @param {Object} val.name - An object with a `system` string property.
- * @param {string} val.name.system - The name of the font to be set in the
- *   variable. This is the name of the font as it would be used in a CSS
- *   font-family rule.
+ * @param {string} val.stack - The value of the font to be set in the
+ *   variable.
  * @returns {string} - A line of Sass that defines a new Sass variable `key` to
  *   the font name provided by `val.name.system`.
  */
 
 const processFont = (key, val) => {
-  return `$${key}: "${val.name.system}";`
+  return `$${key}: "${val.stack}";`
 }
 
 /**
