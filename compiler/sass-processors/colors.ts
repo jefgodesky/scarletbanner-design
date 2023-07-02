@@ -1,6 +1,6 @@
 interface ColorData {
   hex: string
-  [key: string]: string | number | object
+  [key: string]: any
 }
 
 const colorProcessor = (key: string, data: ColorData): string => {
