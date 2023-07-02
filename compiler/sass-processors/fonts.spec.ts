@@ -3,7 +3,7 @@ import fontProcessor, { isFontData } from './fonts.js'
 
 describe('fontProcessor', () => {
   it('returns a string defining a Sass variable', () => {
-    const actual = fontProcessor('test', { stack: '\'Helvetica\', sans-serif' })
+    const actual = fontProcessor('test', { stack: ['Helvetica', 'sans-serif'] })
     expect(actual).to.equal('$test: \'Helvetica\', sans-serif;')
   })
 })
@@ -89,12 +89,12 @@ describe('isFontData', () => {
     expect(isFontData({ stack: 1 })).to.equal(false)
   })
 
-  it('returns true if given an object with a string stack property', () => {
-    expect(isFontData({ stack: 'hello' })).to.equal(true)
+  it('returns false if given an object with a string stack property', () => {
+    expect(isFontData({ stack: 'hello' })).to.equal(false)
   })
 
-  it('returns false if given an object with an empty array stack property', () => {
-    expect(isFontData({ stack: [] })).to.equal(false)
+  it('returns true if given an object with an empty array stack property', () => {
+    expect(isFontData({ stack: [] })).to.equal(true)
   })
 
   it('returns false if given an object with a stack property that is an array of nulls', () => {
@@ -113,8 +113,8 @@ describe('isFontData', () => {
     expect(isFontData({ stack: [1, 2, 3] })).to.equal(false)
   })
 
-  it('returns false if given an object with a stack property that is an array of strings', () => {
-    expect(isFontData({ stack: ['a', 'b', 'c'] })).to.equal(false)
+  it('returns true if given an object with a stack property that is an array of strings', () => {
+    expect(isFontData({ stack: ['a', 'b', 'c'] })).to.equal(true)
   })
 
   it('returns false if given an object with a stack property that is an array of arrays', () => {
@@ -126,6 +126,6 @@ describe('isFontData', () => {
   })
 
   it('returns true if the object has other properties', () => {
-    expect(isFontData({ name: 'Test', src: 'test', stack: 'hello', other: { val: 42 } })).to.equal(true)
+    expect(isFontData({ name: 'Test', src: 'test', stack: ['hello'], other: { val: 42 } })).to.equal(true)
   })
 })

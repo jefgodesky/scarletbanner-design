@@ -23,12 +23,15 @@ describe('generateSass', () => {
   })
 
   it('generates Sass font variables', () => {
-    const actual = generateSass('fonts', { base: { stack: '\'Helvetica\', sans-serif' }, mono: { stack: '\'Courier New\', monospace' } })
+    const base = { stack: ['Helvetica', 'sans-serif'] }
+    const mono = { stack: ['Courier New', 'monospace'] }
+    const actual = generateSass('fonts', { base, mono })
     expect(actual).to.eql(['$base: \'Helvetica\', sans-serif;', '$mono: \'Courier New\', monospace;'])
   })
 
   it('skips bad input', () => {
-    const actual = generateSass('fonts', { base: { stack: '\'Helvetica\', sans-serif' }, mono: '\'Courier New\', monospace' })
+    const base = { stack: ['Helvetica', 'sans-serif'] }
+    const actual = generateSass('fonts', { base, mono: '\'Courier New\', monospace' })
     expect(actual).to.eql(['$base: \'Helvetica\', sans-serif;'])
   })
 })
