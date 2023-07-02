@@ -1,7 +1,10 @@
 import fs from 'fs'
 import slugify from 'slugify'
 import { parse } from 'yaml'
-import pkg from './package.json' assert { type: 'json' }
+// import pkg from './package.json' assert { type: 'json' }
+
+const raw = fs.readFileSync('./package.json', 'utf8')
+const pkg = JSON.parse(raw)
 
 const tokensDir = './tokens'
 const modsDir = './scss/modules'
@@ -107,10 +110,10 @@ const replaceValues = (str, data, prefix = '') => {
 const getSassLines = (name, data) => {
   const lines = []
   const processors = {
-    'color': processColor,
-    'spacing': processSpacing,
-    'breakpoints': processSpacing,
-    'fonts': processFont
+    color: processColor,
+    spacing: processSpacing,
+    breakpoints: processSpacing,
+    fonts: processFont
   }
 
   const processor = processors[name] ?? processDefault

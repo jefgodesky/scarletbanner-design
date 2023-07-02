@@ -19,8 +19,11 @@
   },
   "license": "GPL-3.0-only",
   "scripts": {
+    "test": "npm-run-all lint unit-test",
     "dev": "npm-run-all tokens watch:dev",
     "prod": "npm-run-all tokens sass:prod",
+    "lint": "ts-standard",
+    "unit-test": "mocha",
     "tokens": "node token-compiler.js",
     "watch:dev": "npm-run-all -p sass:dev html:dev",
     "html:dev": "browser-sync start --server --files \"*.html,css/*.css\"",
