@@ -6,6 +6,11 @@ describe('fontProcessor', () => {
     const actual = fontProcessor('test', { stack: ['Helvetica', 'sans-serif'] })
     expect(actual).to.equal('$test: \'Helvetica\', sans-serif;')
   })
+
+  it('handles variable names with spaces', () => {
+    const actual = fontProcessor('sans serif', { stack: ['Helvetica', 'sans-serif'] })
+    expect(actual).to.equal('$sans-serif: \'Helvetica\', sans-serif;')
+  })
 })
 
 describe('isFontData', () => {

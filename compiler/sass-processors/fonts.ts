@@ -1,3 +1,5 @@
+import slugify from 'slugify'
+
 interface FontData {
   stack: string[]
   [key: string]: any
@@ -7,7 +9,7 @@ const fontProcessor = (key: string, data: FontData): string => {
   const special = ['serif', 'sans-serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'ui-serif', 'ui-sans-serif',
     'ui-monospace', 'ui-rounded', 'math', 'emoji', 'fangsong']
   const stackMap = data.stack.map(orig => special.includes(orig) ? orig : `'${orig}'`)
-  return `$${key}: ${stackMap.join(', ')};`
+  return `$${slugify(key)}: ${stackMap.join(', ')};`
 }
 
 const isFontData = (obj: any): obj is FontData => {
