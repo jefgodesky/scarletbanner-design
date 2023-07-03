@@ -24,7 +24,7 @@
     "prod": "npm-run-all tokens sass:prod",
     "lint": "ts-standard",
     "unit-test": "mocha",
-    "tokens": "node token-compiler.js",
+    "tokens": "node --experimental-specifier-resolution=node --loader ts-node/esm ./compiler/index.ts",
     "watch:dev": "npm-run-all -p sass:dev html:dev",
     "html:dev": "browser-sync start --server --files \"*.html,css/*.css\"",
     "sass:dev": "sass --watch --update --style=expanded scss:css",
