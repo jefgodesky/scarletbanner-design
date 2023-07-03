@@ -32,6 +32,7 @@
     "js:dev": "webpack --watch --mode development",
     "js:prod": "webpack --mode production"
   },
+  "pre-commit": [ "test", "prod" ],
   "dependencies": {
     "prismjs": "^1.29.0"
   },
