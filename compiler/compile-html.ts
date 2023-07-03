@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import parseTags from './tags/parser.js'
 import renderTags from './tags/render.js'
 
-const input = './html'
+const input = './docs'
 const output = '.'
 
 const compileHTML = (data: { [key: string]: { [key: string]: any } }): void => {
