@@ -30,10 +30,14 @@
     "sass:dev": "sass --watch --update --style=expanded stylesheets/src:stylesheets/dist",
     "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist"
   },
+  "dependencies": {
+    "prismjs": "^1.29.0"
+  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "@types/mock-fs": "^4.13.1",
+    "@types/prismjs": "^1.26.0",
     "browser-sync": "^2.29.3",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
