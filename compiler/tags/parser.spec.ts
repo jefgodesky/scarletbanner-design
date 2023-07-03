@@ -8,7 +8,7 @@ describe('parseTags', () => {
   })
 
   it('handles nested data', () => {
-    const actual = parseTags({ foo: { bar: 2 } })
-    expect(actual).to.eql({ '{{ foo.bar }}': 2 })
+    const actual = parseTags({ foo: { bar: 2 }, baz: 1 })
+    expect(actual).to.eql({ '{{ foo.bar }}': 2, '{{ baz }}': 1 })
   })
 })
