@@ -2,7 +2,7 @@
 node_modules
 stylesheets/dist
 stylesheets/src/modules/*.scss
-!scss/modules/_layout.scss
+!stylesheets/src/modules/_layout.scss
 *.html
 !docs/*.html
 

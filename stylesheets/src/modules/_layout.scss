@@ -1,0 +1,16 @@
+@use "../modules/breakpoints";
+@use "../modules/spacing";
+
+%layout-block {
+  max-width: breakpoints.$blocks;
+  padding: spacing.$vertical calc(#{spacing.$horizontal} / 2);
+
+  @media (min-width: breakpoints.$blocks) {
+    margin: 0 spacing.$horizontal;
+    padding: spacing.$vertical spacing.$horizontal;
+  }
+
+  @media (min-width: calc(#{breakpoints.$blocks} + (8 * #{spacing.$horizontal}))) {
+    margin: 0 auto;
+  }
+}
