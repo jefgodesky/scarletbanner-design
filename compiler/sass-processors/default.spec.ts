@@ -11,4 +11,9 @@ describe('defaultProcessor', () => {
     const actual = defaultProcessor('foo', 42)
     expect(actual).to.equal('$foo: 42;')
   })
+
+  it('handles variables with spaces', () => {
+    const actual = defaultProcessor('foo fighters', 'This is a Call')
+    expect(actual).to.equal('$foo-fighters: \'This is a Call\';')
+  })
 })
