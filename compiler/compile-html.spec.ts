@@ -7,7 +7,7 @@ describe('compileHTML', () => {
   let files = {}
 
   beforeEach(() => {
-    files = { './html/test.html': '<p>{{ a.b.c }}</p>' }
+    files = { './docs/test.html': '<p>{{ a.b.c }}</p>' }
     mock(files)
   })
 
