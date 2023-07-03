@@ -1,10 +1,13 @@
-import { join, resolve } from 'path'
+import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 export default {
-  entry: './scripts/src/index.ts',
+  entry: {
+    loader: './scripts/src/loader.ts',
+    code: './scripts/src/modules/code.ts'
+  },
   module: {
     rules: [
       {
@@ -21,12 +24,7 @@ export default {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: './bundle.js',
+    filename: './[name].js',
     path: resolve(__dirname, 'scripts/dist')
-  },
-  devServer: {
-    static: join(__dirname, 'scripts/dist'),
-    compress: true,
-    port: 4000
   }
 }
