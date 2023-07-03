@@ -1,10 +1,12 @@
+import slugify from 'slugify'
+
 interface ColorData {
   hex: string
   [key: string]: any
 }
 
 const colorProcessor = (key: string, data: ColorData): string => {
-  return `$${key}: ${data.hex};`
+  return `$${slugify(key)}: ${data.hex};`
 }
 
 const isColorData = (obj: any): obj is ColorData => {

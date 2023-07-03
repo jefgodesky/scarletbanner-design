@@ -6,6 +6,11 @@ describe('colorProcessor', () => {
     const actual = colorProcessor('black', { hex: '#000' })
     expect(actual).to.equal('$black: #000;')
   })
+
+  it('handles variables with spaces', () => {
+    const actual = colorProcessor('off black', { hex: '#111' })
+    expect(actual).to.equal('$off-black: #111;')
+  })
 })
 
 describe('isColorData', () => {
