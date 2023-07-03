@@ -21,14 +21,16 @@
   "scripts": {
     "test": "npm-run-all lint unit-test",
     "dev": "npm-run-all tokens watch:dev",
-    "prod": "npm-run-all tokens sass:prod",
+    "prod": "npm-run-all tokens sass:prod js:prod",
     "lint": "ts-standard",
     "unit-test": "mocha",
     "tokens": "node --experimental-specifier-resolution=node --loader ts-node/esm ./compiler/index.ts",
-    "watch:dev": "npm-run-all -p sass:dev html:dev",
-    "html:dev": "browser-sync start --server --files \"*.html,stylesheets/dist/*.css\"",
+    "watch:dev": "npm-run-all -p sass:dev html:dev js:dev",
+    "html:dev": "browser-sync start --server --files \"*.html,stylesheets/dist/*.css,scripts/dist/*.js\"",
     "sass:dev": "sass --watch --update --style=expanded stylesheets/src:stylesheets/dist",
-    "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist"
+    "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist",
+    "js:dev": "webpack --watch --mode development",
+    "js:prod": "webpack --mode production"
   },
   "dependencies": {
     "prismjs": "^1.29.0"
