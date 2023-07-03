@@ -1,0 +1,17 @@
+@use "../modules/color";
+@use "../modules/spacing";
+
+:not(pre) > code[class*=language-].block {
+  background: none;
+}
+
+:not(pre) > code[class*=language-].block {
+  background: color.$page-base;
+  border: 1px solid color.$page-shade;
+  display: block;
+  max-height: 10em;
+  overflow: scroll;
+  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
+  white-space: pre;
+  width: calc(100% - #{spacing.$horizontal});
+}
