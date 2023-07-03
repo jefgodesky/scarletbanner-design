@@ -5,16 +5,21 @@ import compileTokens from './compile-tokens.js'
 describe('compileTokens', () => {
   beforeEach(() => {
     mock({
-      '../package.json': '{ version: "1.0.0" }',
-      '../tokens/breakpoints.yml': 'big: 100em\nlil: 10em',
-      '../tokens/cdn.yml': 'root: /path/to/root\nimages: /images',
-      '../tokens/color.yml': 'black:\n  name: Black\n  hex: "#000"\nwhite:\n  name: White\n  hex: "#fff"',
-      '../tokens/fonts.yml': 'base:\n  name: Helvetica\n  stack:\n    - Helvetica\n    - sans-serif',
-      '../tokens/spacing.yml': 'horizontal: 4em\nvertical: 2em'
+      './package.json': '{ version: "1.0.0" }',
+      './tokens/breakpoints.yml': 'big: 100em\nlil: 10em',
+      './tokens/cdn.yml': 'root: /path/to/root\nimages: /images',
+      './tokens/color.yml': 'black:\n  name: Black\n  hex: "#000"\nwhite:\n  name: White\n  hex: "#fff"',
+      './tokens/fonts.yml': 'base:\n  name: Helvetica\n  stack:\n    - Helvetica\n    - sans-serif',
+      './tokens/spacing.yml': 'horizontal: 4em\nvertical: 2em'
     })
   })
 
   afterEach(mock.restore)
+
+  it('includes the version', () => {
+    const data = compileTokens()
+    expect(data.version).to.equal('1.0.0')
+  })
 
   it('compiles breakpoint tokens', () => {
     const data = compileTokens()
