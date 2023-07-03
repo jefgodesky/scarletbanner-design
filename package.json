@@ -26,9 +26,9 @@
     "unit-test": "mocha",
     "tokens": "node --experimental-specifier-resolution=node --loader ts-node/esm ./compiler/index.ts",
     "watch:dev": "npm-run-all -p sass:dev html:dev",
-    "html:dev": "browser-sync start --server --files \"*.html,css/*.css\"",
-    "sass:dev": "sass --watch --update --style=expanded scss:css",
-    "sass:prod": "sass --no-source-map --style=compressed scss:css"
+    "html:dev": "browser-sync start --server --files \"*.html,stylesheets/dist/*.css\"",
+    "sass:dev": "sass --watch --update --style=expanded stylesheets/src:stylesheets/dist",
+    "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
