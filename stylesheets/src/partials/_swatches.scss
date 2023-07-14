@@ -1,0 +1,63 @@
+@use "../modules/breakpoints";
+@use "../modules/color";
+@use "../modules/fonts";
+@use "../modules/spacing";
+
+.swatches {
+  list-style-type: none;
+
+  &, table {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border: 1px solid color.$page-shade;
+    border-radius: spacing.$rounding;
+    display: block;
+    margin: 0 0 0.5em 0;
+    overflow: auto;
+    padding: 4em 0 0 0;
+  }
+
+  h4 {
+    background: color.$page-base;
+    border-top: 1px solid color.$page-shade;
+    font-size: 1em;
+    font-style: normal;
+    margin: 0;
+    padding: 0.5em;
+  }
+
+  table {
+    background: color.$page-base;
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1em;
+    }
+  }
+
+  th, td {
+    padding: 0em 0.5em;
+  }
+
+  th {
+    border: 0;
+    width: 3em;
+  }
+
+  table tr:nth-child(even) td {
+    background: transparent;
+  }
+
+  @media (min-width: 55em) {
+    li {
+      display: inline-block;
+      margin: 0 1em 0.5em 0;
+      width: 12em;
+    }
+  }
+}
