@@ -1,6 +1,7 @@
 @use "../partials/fonts" as f;
 @use "../modules/breakpoints";
 @use "../modules/fonts";
+@use "../modules/color";
 
 body {
   font-family: fonts.$base;
@@ -15,8 +16,8 @@ h1, h2 {
 }
 
 h1 {
-  border-bottom: 0.15em solid #e1ceb9;
-  color: #dc143c;
+  border-bottom: 0.15em solid color.$accent-border;
+  color: color.$scarlet;
   font-weight: normal;
   font-size: 2em;
   line-height: 1;

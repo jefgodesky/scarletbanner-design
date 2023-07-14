@@ -24,12 +24,12 @@ body:has(.hero) {
 
   .content {
     @extend %layout-block;
-    color: #fff;
+    color: color.$white;
     margin: spacing.$vertical * 10 auto 10em;
-    text-shadow: 0 0 calc(#{spacing.$vertical} / 8) #000;
+    text-shadow: 0 0 calc(#{spacing.$vertical} / 8) color.$black;
 
     h1 {
-      color: #fff;
+      color: color.$white;
       border-bottom: 0;
       margin: 0;
     }
@@ -37,8 +37,8 @@ body:has(.hero) {
 
   &::after {
     background: url('#{cdn.$images}/wood.gif') repeat;
-    border-top: calc(#{spacing.$vertical} / 8) solid #000;
-    border-bottom: calc(#{spacing.$vertical} / 8) solid #000;
+    border-top: calc(#{spacing.$vertical} / 8) solid color.$black;
+    border-bottom: calc(#{spacing.$vertical} / 8) solid color.$black;
     box-shadow: 0 0 1em color.$page-text;
     content: '';
     display: block;
