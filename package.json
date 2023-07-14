@@ -50,6 +50,7 @@
     "@types/prismjs": "^1.26.0",
     "browser-sync": "^2.29.3",
     "chai": "^4.3.7",
+    "colord": "^2.9.3",
     "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0",
     "mock-fs": "^5.2.0",
