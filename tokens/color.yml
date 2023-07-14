@@ -13,9 +13,6 @@ page text:
 outer text:
   name: Outer Text
   hex: "#999"
-accent border:
-  name: Accent Border
-  hex: "#e1ceb9"
 black:
   name: Black
   hex: "#000"
