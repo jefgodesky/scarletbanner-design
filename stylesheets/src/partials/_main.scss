@@ -9,7 +9,8 @@ main {
   background-color: color.$page-base;
   background-image: url('#{cdn.$images}/page-top.svg'),
     url('#{cdn.$images}/page-bottom.svg'),
-    radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
+    linear-gradient(color.$page-shade 0, transparent 10em, transparent calc(100% - 10em), color.$page-shade 100%),
+    linear-gradient(90deg, color.$page-shade 0, transparent 10em, transparent calc(100% - 10em), color.$page-shade 100%);
   background-repeat: no-repeat;
   background-position: top center, bottom center, center;
   background-size: 102%, 102%, cover;
@@ -22,7 +23,8 @@ main {
     background-image: url('#{cdn.$images}/page-top.svg'),
       url('#{cdn.$images}/page-bottom.svg'),
       url('#{cdn.$images}/page-body.svg'),
-      radial-gradient(circle, color.$page-base 0%, color.$page-base 50%, color.$page-shade 100%);
+      linear-gradient(color.$page-shade 0, transparent 10em, transparent calc(100% - 10em), color.$page-shade 100%),
+      linear-gradient(90deg, color.$page-shade 0, transparent 10em, transparent calc(100% - 10em), color.$page-shade 100%);
     background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
     background-position: top center, bottom center, center, center;
     background-size: 100%, 100%, 100%, cover;
