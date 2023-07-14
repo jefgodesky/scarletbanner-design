@@ -10,7 +10,7 @@ const compileHTML = (data: { [key: string]: { [key: string]: any } }): void => {
   const templates = readdirSync(input)
   for (const file of templates) {
     const orig = readFileSync(`${input}/${file}`, 'utf8')
-    const filled = renderTags(orig, tags)
+    const filled = renderTags(orig, tags, data)
     writeFileSync(`${output}/${file}`, filled, { encoding: 'utf8' })
   }
 }
