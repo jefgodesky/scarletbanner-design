@@ -1,0 +1,21 @@
+@use "../modules/color";
+@use "../modules/spacing";
+
+.panel {
+  border: 1px solid transparent;
+  border-radius: spacing.$rounding;
+  color: color.$page-text;
+  display: block;
+  margin: 0 -1em;
+  padding: 0.333em 1em;
+  text-decoration: none;
+
+  &:hover {
+    background: color.$page-base;
+    border-color: color.$page-shade;
+  }
+
+  h2, h3, h4 {
+    margin-top: 0.333em;
+  }
+}

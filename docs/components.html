@@ -14,6 +14,32 @@
     </nav>
     <main>
       <h1>Components</h1>
+      <section id="component-panel" class="component">
+        <h2>Panel Link</h2>
+        <div class="example">
+          <a href="#component-panel" class="panel">
+            <p>You can use any block-level elements you like inside the panel,
+              including paragraphs, lists, and headings.</p>
+          </a>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;a href="#" class="panel"&gt;
+  <p>...</p>
+&lt;/a&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>This component is best used for a menu that takes up most or all of
+            a page (like <a href="index.html">the homepage for this design system</a>).</li>
+          <li>The panel is designed to work with secondary, tertiary, and quarternary
+            headings (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> and
+            <code>&lt;h4&gt;</code>), but not primary headings (<code>&lt;h1&gt;</code>).
+            Each page should have only one primary heading, so if you&rsquo;re considering
+            using it in a panel, you might be using the wrong component.</li>
+          <li>Since the entire panel is a link, don&rsquo;t use any other links or buttons
+            inside the panel.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>
