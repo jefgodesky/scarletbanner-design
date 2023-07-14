@@ -4,6 +4,10 @@
   margin: 0;
   padding: 1em 0;
 
+  .example {
+    margin: 1em 0;
+  }
+
   details > code[class*=language-].block {
     border-top: 0;
   }
