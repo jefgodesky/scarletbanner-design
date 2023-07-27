@@ -4,4 +4,6 @@ loader: 'ts-node/esm'
 recursive: true
 require:
   - 'ts-node/register'
-spec: './**/*.spec.ts'
+spec:
+  - './scripts/src/*.spec.ts'
+  - './scripts/src/**/*.spec.ts'

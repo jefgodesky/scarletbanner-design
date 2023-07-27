@@ -39,6 +39,7 @@
     "prod"
   ],
   "dependencies": {
+    "design-tokenizer": "^0.1.0",
     "es6-promise": "^4.2.8",
     "prismjs": "^1.29.0"
   },
