@@ -14,5 +14,5 @@
   overflow: scroll;
   padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
   white-space: pre;
-  width: calc(100% - #{spacing.$horizontal});
+  width: calc(100% - (#{spacing.$horizontal} / 2));
 }
