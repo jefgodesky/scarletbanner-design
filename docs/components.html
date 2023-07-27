@@ -14,7 +14,36 @@
     </nav>
     <main>
       <h1>Components</h1>
-      <section id="component-panel" class="component">
+      <section id="component-link" class="component" data-component-category="navigation">
+        <h2>Link</h2>
+        <div class="example" style="padding: 1em; text-align: center;">
+          <a href="#component-link">Link</a>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;a href="#"&gt;Link&lt;/a&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>In general, links <em>go places</em>, while <a href="#component-button">buttons</a>
+            <em>do things</em>. The difference is that buttons change the state
+            of the website. That can be on the server side or the client side,
+            but a button implies that some action is being taken, and something,
+            somewhere is different now. Links take you somewhere else, but
+            neither the place you were nor the place you&rsquo;re going have
+            changed when you do so.</li>
+          <li>Yes, buttons are routinely abused to work as just bigger, more
+            prominent links &mdash; usually along with other bad design
+            decisions that visually mark almost all of the items on a page as
+            the most important thing, creating frustration and increasing the
+            user&rsquo;s cognitive load. It&rsquo;s a terrible practice, and
+            just because it&rsquo;s common is no reason to do it.</li>
+          <li>In places where you might be tempted to use a button to go
+            somewhere because the link should be visually prominent, consider
+            using the <a href="#component-prominent-link">prominent link</a>
+            component instead.</li>
+        </ul>
+      </section>
+      <section id="component-panel" class="component" data-component-category="Navigation">
         <h2>Panel Link</h2>
         <div class="example">
           <a href="#component-panel" class="panel">

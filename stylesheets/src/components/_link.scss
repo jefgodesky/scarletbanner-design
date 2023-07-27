@@ -1,0 +1,10 @@
+@use "../modules/colors";
+
+a {
+  color: colors.$link;
+  font-weight: bold;
+
+  &:visited {
+    color: colors.$visited;
+  }
+}

@@ -7,6 +7,7 @@
   border-radius: spacing.$rounding;
   color: colors.$page-text;
   display: block;
+  font-weight: normal;
   margin: 0 -1em;
   padding: 0.333em 1em;
   text-decoration: none;
@@ -15,6 +16,10 @@
     background: colors.$page-base;
     border-color: colors.$page-shade;
     box-shadow: shadows.$block;
+  }
+
+  &:visited {
+    color: colors.$page-text;
   }
 
   h2, h3, h4 {
