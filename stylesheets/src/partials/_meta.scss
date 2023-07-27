@@ -1,0 +1,32 @@
+@use "../modules/borders";
+@use "../modules/shadows";
+@use "../modules/spacing";
+
+.shadow-page-example,
+.shadow-block-example,
+.border-h1-example,
+.border-block-example{
+  border-radius: spacing.$rounding;
+  margin: 2em 0;
+  padding: 1em;
+
+  th {
+    width: 6em;
+  }
+}
+
+.shadow-page-example {
+  box-shadow: shadows.$page;
+}
+
+.shadow-block-example {
+  box-shadow: shadows.$block;
+}
+
+.border-h1-example {
+  border: borders.$h1;
+}
+
+.border-block-example {
+  border: borders.$block;
+}

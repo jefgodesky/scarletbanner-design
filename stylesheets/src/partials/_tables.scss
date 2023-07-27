@@ -1,6 +1,21 @@
 @use "../modules/colors";
 @use "../modules/spacing";
 
+%varlist {
+  th {
+    border: 0;
+  }
+
+  th,
+  td {
+    padding: 0 1em;
+  }
+
+  tr:nth-child(even) td {
+    background: none;
+  }
+}
+
 body {
   counter-reset: scarletbanner-tables;
 }
@@ -40,5 +55,9 @@ table {
 
   tfoot {
     border-top: 1px solid adjust-color(colors.$page-text, $alpha: -0.66);
+  }
+
+  &.varlist {
+    @extend %varlist;
   }
 }

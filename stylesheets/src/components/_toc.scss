@@ -1,0 +1,30 @@
+@use "../modules/breakpoints";
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/shadows";
+@use "../modules/spacing";
+
+nav.toc {
+  background: rgba(colors.$page-shade, 0.5);
+  border-top: borders.$block;
+  border-bottom: borders.$block;
+  padding: 1em 2em;
+
+  h4 {
+    border-bottom: borders.$block;
+    border-bottom-width: 0.2em;
+    font-style: normal;
+    margin: 0 0 0.5em 0;
+    white-space: nowrap;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: breakpoints.$full-page) {
+    margin: 1em -2em;
+  }
+}

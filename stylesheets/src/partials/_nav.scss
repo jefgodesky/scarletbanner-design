@@ -4,9 +4,9 @@
 @use "../modules/shadows";
 @use "../modules/layout";
 
-nav {
+body > nav {
   background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$page-text;
+  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$shadow-deep;
   box-shadow: shadows.$page;
   height: spacing.$vertical * 2;
   margin: 0;

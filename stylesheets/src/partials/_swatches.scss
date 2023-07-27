@@ -2,6 +2,7 @@
 @use "../modules/breakpoints";
 @use "../modules/colors";
 @use "../modules/spacing";
+@use "../partials/tables";
 
 .swatch {
   border: borders.$block;
@@ -14,6 +15,7 @@
   }
 
   table {
+    @extend %varlist;
     background: colors.$page-base;
     border-radius: 0 0 spacing.$rounding spacing.$rounding;
     color: colors.$page-text;
@@ -33,20 +35,8 @@
     }
   }
 
-  th,
-  td {
-    border: 0;
-    margin: 0;
-    padding: 0 1em;
-  }
-
   th {
     width: 3em;
-  }
-
-  td,
-  tr:nth-child(even) td {
-    background: transparent;
   }
 }
 
