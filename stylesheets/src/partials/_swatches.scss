@@ -1,8 +1,8 @@
 @use "../modules/breakpoints";
-@use "../modules/color";
-@use "../modules/fonts";
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/typography";
 @use "../modules/spacing";
-@use "../modules/variables";
 
 .swatches {
   list-style-type: none;
@@ -13,7 +13,7 @@
   }
 
   .swatch {
-    border: 1px solid color.$page-shade;
+    border: 1px solid colors.$page-shade;
     border-radius: spacing.$rounding;
     display: block;
     margin: 0 0 0.5em 0;
@@ -29,8 +29,8 @@
   }
 
   table {
-    background: color.$page-base;
-    color: color.$page-text;
+    background: colors.$page-base;
+    color: colors.$page-text;
     width: 100%;
 
     &:before,
@@ -84,7 +84,7 @@
   }
 
   .example {
-    border: variables.$border-block;
+    border: borders.$block;
     float: left;
     margin: 0.25em 0.25em 0.25em 0;
     overflow: hidden;

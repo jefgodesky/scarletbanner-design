@@ -1,12 +1,13 @@
 @use "../modules/cdn";
-@use "../modules/color";
+@use "../modules/colors";
 @use "../modules/spacing";
+@use "../modules/shadows";
 @use "../modules/layout";
 
 nav {
   background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: calc(#{spacing.$vertical} / 8) solid color.$page-text;
-  box-shadow: 0 0 1em 1em color.$page-text;
+  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$page-text;
+  box-shadow: shadows.$page;
   height: spacing.$vertical * 2;
   margin: 0;
   position: relative;

@@ -1,4 +1,5 @@
-@use "../modules/color";
+@use "../modules/borders";
+@use "../modules/colors";
 
 .component {
   margin: 0;
@@ -13,14 +14,14 @@
   }
 
   summary {
-    background: lighten(color.$page-shade, 15%);
-    border: 1px solid color.$page-shade;
+    background: lighten(colors.$page-shade, 15%);
+    border: borders.$block;
     cursor: pointer;
     padding: 0.5em 1em;
     width: calc(100% - 4em);
   }
 
   & + .component {
-    border-top: 0.25em solid color.$page-shade;
+    border-top: 0.25em solid colors.$page-shade;
   }
 }

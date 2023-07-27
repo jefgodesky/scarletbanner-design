@@ -1,19 +1,20 @@
-@use "../modules/color";
+@use "../modules/colors";
+@use "../modules/shadows";
 @use "../modules/spacing";
 
 .panel {
   border: 1px solid transparent;
   border-radius: spacing.$rounding;
-  color: color.$page-text;
+  color: colors.$page-text;
   display: block;
   margin: 0 -1em;
   padding: 0.333em 1em;
   text-decoration: none;
 
   &:hover {
-    background: color.$page-base;
-    border-color: color.$page-shade;
-    box-shadow: 0 0 0.25em rgba(color.$black, 0.25);
+    background: colors.$page-base;
+    border-color: colors.$page-shade;
+    box-shadow: shadows.$block;
   }
 
   h2, h3, h4 {

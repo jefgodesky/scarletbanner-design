@@ -1,47 +1,33 @@
 @use "../partials/fonts" as f;
+@use "../modules/borders";
 @use "../modules/breakpoints";
-@use "../modules/fonts";
-@use "../modules/color";
+@use "../modules/typography";
+@use "../modules/colors";
 
 body {
-  font-family: fonts.$base;
+  font: typography.$body;
 }
 
 h1, h2, h3, h4 {
   margin: 1em 0 0;
 }
 
-h1, h2 {
-  font-family: fonts.$heading;
-}
-
 h1 {
-  border-bottom: 0.15em solid color.$page-shade;
-  color: color.$scarlet;
-  font-weight: normal;
-  font-size: 2em;
-  line-height: 1;
-
-  @media (min-width: breakpoints.$full-page) {
-    font-size: 3em;
-    border-bottom-width: 0.1em;
-  }
+  font: typography.$h1;
+  border-bottom: borders.$h1;
+  color: colors.$scarlet;
 }
 
 h2 {
-  font-size: 1.75em;
-  font-weight: normal;
+  font: typography.$h2;
 }
 
 h3 {
-  font-size: 1.5em;
-  font-weight: bold;
+  font: typography.$h3;
 }
 
 h4 {
-  font-size: 1.25em;
-  font-style: italic;
-  font-weight: bold;
+  font: typography.$h4;
   margin: 1em 0 0 0;
 }
 
@@ -83,5 +69,11 @@ li {
 }
 
 .technical {
-  font-family: 'Alegreya Sans', sans-serif;
+  font: typography.$technical;
+}
+
+@media (min-width: breakpoints.$full-page) {
+  html {
+    font-size: 125%;
+  }
 }

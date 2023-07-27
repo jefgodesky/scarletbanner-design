@@ -1,4 +1,4 @@
-@use "../modules/color";
+@use "../modules/colors";
 @use "../modules/spacing";
 
 body {
@@ -27,11 +27,11 @@ table {
   }
 
   th {
-    border-bottom: 0.1em solid color.$scarlet;
+    border-bottom: 0.1em solid colors.$scarlet;
   }
 
   tr:nth-child(even) td {
-    background: adjust-color(color.$page-shade, $alpha: -0.66);
+    background: adjust-color(colors.$page-shade, $alpha: -0.66);
   }
 
   .num {
@@ -39,6 +39,6 @@ table {
   }
 
   tfoot {
-    border-top: 1px solid adjust-color(color.$page-text, $alpha: -0.66);
+    border-top: 1px solid adjust-color(colors.$page-text, $alpha: -0.66);
   }
 }
