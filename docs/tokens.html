@@ -32,6 +32,7 @@
           <li><a href="#spacing">Spacing</a></li>
           <li><a href="#shadows">Shadows</a></li>
           <li><a href="#borders">Borders</a></li>
+          <li><a href="#transitions">Transitions</a></li>
         </ul>
       </nav>
       <h2 id="colors">Colors</h2>
@@ -64,7 +65,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>breakpoints.$full-page</td>
+            <td>{{ breakpoints.full-page.scss }}</td>
             <td>{{ breakpoint.full-page }}</td>
           </tr>
         </tbody>
@@ -87,63 +88,63 @@
         </thead>
         <tbody>
           <tr>
-            <td>typography.$family-display</td>
+            <td>{{ typography.family.display.scss }}</td>
             <td>{{ typography.family.display }}</td>
           </tr>
           <tr>
-            <td>typography.$family-body</td>
+            <td>{{ typography.family.body.scss }}</td>
             <td>{{ typography.family.body }}</td>
           </tr>
           <tr>
-            <td>typography.$family-technical</td>
+            <td>{{ typography.family.technical.scss }}</td>
             <td>{{ typography.family.technical }}</td>
           </tr>
           <tr>
-            <td>typography.$size-xs</td>
+            <td>{{ typography.size.xs.scss }}</td>
             <td>{{ typography.size.xs }}</td>
           </tr>
           <tr>
-            <td>typography.$size-s</td>
+            <td>{{ typography.size.s.scss }}</td>
             <td>{{ typography.size.s }}</td>
           </tr>
           <tr>
-            <td>typography.$size-m</td>
+            <td>{{ typography.size.m.scss }}</td>
             <td>{{ typography.size.m }}</td>
           </tr>
           <tr>
-            <td>typography.$size-l</td>
+            <td>{{ typography.size.l.scss }}</td>
             <td>{{ typography.size.l }}</td>
           </tr>
           <tr>
-            <td>typography.$size-xl</td>
+            <td>{{ typography.size.xl.scss }}</td>
             <td>{{ typography.size.xl }}</td>
           </tr>
           <tr>
-            <td>typography.$size-xxl</td>
+            <td>{{ typography.size.xxl.scss }}</td>
             <td>{{ typography.size.xxl }}</td>
           </tr>
           <tr>
-            <td>typography.$h1</td>
+            <td>{{ typography.styles.h1.scss }}</td>
             <td>{{ typography.styles.h1.css }}</td>
           </tr>
           <tr>
-            <td>typography.$h2</td>
+            <td>{{ typography.styles.h2.scss }}</td>
             <td>{{ typography.styles.h2.css }}</td>
           </tr>
           <tr>
-            <td>typography.$h3</td>
+            <td>{{ typography.styles.h3.scss }}</td>
             <td>{{ typography.styles.h3.css }}</td>
           </tr>
           <tr>
-            <td>typography.$h4</td>
+            <td>{{ typography.styles.h4.scss }}</td>
             <td>{{ typography.styles.h4.css }}</td>
           </tr>
           <tr>
-            <td>typography.$body</td>
+            <td>{{ typography.styles.body.scss }}</td>
             <td>{{ typography.styles.body.css }}</td>
           </tr>
           <tr>
-            <td>typography.$technical</td>
+            <td>{{ typography.styles.technical.scss }}</td>
             <td>{{ typography.styles.technical.css }}</td>
           </tr>
         </tbody>
@@ -164,15 +165,15 @@
         </thead>
         <tbody>
           <tr>
-            <td>spacing.$horizontal</td>
+            <td>{{ spacing.horizontal.scss }}</td>
             <td>{{ spacing.horizontal }}</td>
           </tr>
           <tr>
-            <td>spacing.$vertical</td>
+            <td>{{ spacing.vertical.scss }}</td>
             <td>{{ spacing.vertical }}</td>
           </tr>
           <tr>
-            <td>spacing.$rounding</td>
+            <td>{{ spacing.rounding.scss }}</td>
             <td>{{ spacing.rounding }}</td>
           </tr>
         </tbody>
@@ -259,6 +260,27 @@
         <p>This is the standard border that we use when a UI element needs
           a border.</p>
       </div>
+      <h2 id="transitions">Transitions</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_transitions.scss</code>
+        module (found at <code>stylesheets/src/modules/_transitions.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_transitions.scss";</code>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ transition.quick.scss }}</td>
+            <td>{{ transition.quick.css }}</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>
