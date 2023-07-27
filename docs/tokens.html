@@ -23,14 +23,149 @@
         <a href="https://design-tokens.github.io/community-group/format/">W3C Design Tokens Format Module</a>.
         If you are using a tool that recognizes that format, you can use the
         link above to import our tokens directly.</p>
-      <h2>Colors</h2>
+      <h2 id="colors">Colors</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_colors.scss</code>
+        module (found at <code>stylesheets/src/modules/_colors.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_colors.scss";</code>
       {{ swatches }}
-      <h3>Contrast</H3>
+      <h3 id="colors-contrast">Contrast</H3>
       <p><a href="https://contrastrebellion.com/">Contrast is critically important</a>
         for making text readable and accessible. As a result, not every
         possible combination of our colors is appropriate. Below are the
         combinations which meet the WCAG AAA criteria for body text.</p>
       {{ color-contrast.normal.aaa }}
+      <h2 id="breakpoints">Breakpoints</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_breakpoints.scss</code>
+        module (found at <code>stylesheets/src/modules/_breakpoints.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_breakpoints.scss";</code>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>breakpoints.$full-page</td>
+            <td>{{ breakpoint.full-page }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="typography">Typography</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_typography.scss</code>
+        module (found at <code>stylesheets/src/modules/_typography.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_typography.scss";</code>
+      <p>For examples of these typographic styles, see the
+        <a href="typography.html">typography page</a>.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>typography.$family-display</td>
+            <td>{{ typography.family.display }}</td>
+          </tr>
+          <tr>
+            <td>typography.$family-body</td>
+            <td>{{ typography.family.body }}</td>
+          </tr>
+          <tr>
+            <td>typography.$family-technical</td>
+            <td>{{ typography.family.technical }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-xs</td>
+            <td>{{ typography.size.xs }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-s</td>
+            <td>{{ typography.size.s }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-m</td>
+            <td>{{ typography.size.m }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-l</td>
+            <td>{{ typography.size.l }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-xl</td>
+            <td>{{ typography.size.xl }}</td>
+          </tr>
+          <tr>
+            <td>typography.$size-xxl</td>
+            <td>{{ typography.size.xxl }}</td>
+          </tr>
+          <tr>
+            <td>typography.$h1</td>
+            <td>{{ typography.styles.h1.css }}</td>
+          </tr>
+          <tr>
+            <td>typography.$h2</td>
+            <td>{{ typography.styles.h2.css }}</td>
+          </tr>
+          <tr>
+            <td>typography.$h3</td>
+            <td>{{ typography.styles.h3.css }}</td>
+          </tr>
+          <tr>
+            <td>typography.$h4</td>
+            <td>{{ typography.styles.h4.css }}</td>
+          </tr>
+          <tr>
+            <td>typography.$body</td>
+            <td>{{ typography.styles.body.css }}</td>
+          </tr>
+          <tr>
+            <td>typography.$technical</td>
+            <td>{{ typography.styles.technical.css }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="spacing">Spacing</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_spacing.scss</code>
+        module (found at <code>stylesheets/src/modules/_spacing.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_spacing.scss";</code>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>spacing.$horizontal</td>
+            <td>{{ spacing.horizontal }}</td>
+          </tr>
+          <tr>
+            <td>spacing.$vertical</td>
+            <td>{{ spacing.vertical }}</td>
+          </tr>
+          <tr>
+            <td>spacing.$rounding</td>
+            <td>{{ spacing.rounding }}</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>
