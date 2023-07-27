@@ -1,10 +1,17 @@
 @use "../modules/colors";
+@use "../modules/transitions";
 
 a {
   color: colors.$link;
   font-weight: bold;
+  transition: transitions.$quick;
 
   &:visited {
     color: colors.$visited;
+  }
+
+  &:active,
+  &:hover {
+    color: colors.$scarlet;
   }
 }

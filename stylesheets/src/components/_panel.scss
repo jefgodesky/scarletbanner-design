@@ -18,6 +18,8 @@
     box-shadow: shadows.$block;
   }
 
+  &:active,
+  &:hover,
   &:visited {
     color: colors.$page-text;
   }
