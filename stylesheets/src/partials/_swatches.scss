@@ -1,100 +1,94 @@
-@use "../modules/breakpoints";
 @use "../modules/borders";
+@use "../modules/breakpoints";
 @use "../modules/colors";
-@use "../modules/typography";
 @use "../modules/spacing";
 
-.swatches {
-  list-style-type: none;
-
-  &, table {
-    margin: 0;
-    padding: 0;
-  }
-
-  .swatch {
-    border: 1px solid colors.$page-shade;
-    border-radius: spacing.$rounding;
-    display: block;
-    margin: 0 0 0.5em 0;
-    overflow: auto;
-    padding: 4em 0 0 0;
-  }
+.swatch {
+  border: borders.$block;
+  border-radius: spacing.$rounding;
+  margin: 1em 0;
 
   h4 {
-    font-size: 1em;
     font-style: normal;
-    margin: 0;
-    padding: 0.5em;
+    padding: 2em 1em 1em 1em;
   }
 
   table {
     background: colors.$page-base;
+    border-radius: 0 0 spacing.$rounding spacing.$rounding;
     color: colors.$page-text;
+    margin: 0;
+    padding: 0;
     width: 100%;
 
     &:before,
     &:after {
       content: '';
       display: block;
-      height: 1em;
+      height: 0.5em;
     }
 
-    &:before {
-      height: 0.5em;
+    &:after {
+      height: 1em;
     }
   }
 
-  th, td {
-    padding: 0em 0.5em;
-    white-space: nowrap;
+  th,
+  td {
+    border: 0;
+    margin: 0;
+    padding: 0 1em;
   }
 
   th {
-    border: 0;
     width: 3em;
   }
 
-  table tr:nth-child(even) td {
+  td,
+  tr:nth-child(even) td {
     background: transparent;
   }
-
-  @media (min-width: 55em) {
-    .swatch {
-      display: inline-block;
-      margin: 0 1em 0.5em 0;
-      vertical-align: top;
-      width: 14em;
-    }
-  }
-}
-
-.contrast-reports {
-  overflow: auto;
-  margin-top: -2em;
 }
 
 .contrast-report {
-  h4:before {
-    clear: both;
-    content: '';
-    display: block;
-    height: 1em;
-    width: 100%;
-  }
-
-  .example {
-    border: borders.$block;
-    float: left;
-    margin: 0.25em 0.25em 0.25em 0;
-    overflow: hidden;
-    padding: 1em;
-    white-space: nowrap;
-    width: calc(50% - 4em - 2px);
-  }
-
   table {
     display: none;
     visibility: hidden;
+  }
+
+  h4 {
+    font-style: normal;
+    padding: 1em;
+  }
+
+  .example {
+    padding: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: breakpoints.$full-page) {
+  @supports (display: grid) {
+    .swatches {
+      display: grid;
+      grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+      grid-gap: 1em;
+      margin: 1em 0;
+
+      .swatch {
+        margin: 0;
+      }
+    }
+
+    .contrast-report {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 0;
+
+      h4 {
+        grid-column: 1 / span 2;
+      }
+    }
   }
 }
