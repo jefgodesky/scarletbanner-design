@@ -2,6 +2,7 @@
 @use "../modules/color";
 @use "../modules/fonts";
 @use "../modules/spacing";
+@use "../modules/variables";
 
 .swatches {
   list-style-type: none;
@@ -11,7 +12,7 @@
     padding: 0;
   }
 
-  li {
+  .swatch {
     border: 1px solid color.$page-shade;
     border-radius: spacing.$rounding;
     display: block;
@@ -21,8 +22,6 @@
   }
 
   h4 {
-    background: color.$page-base;
-    border-top: 1px solid color.$page-shade;
     font-size: 1em;
     font-style: normal;
     margin: 0;
@@ -31,17 +30,24 @@
 
   table {
     background: color.$page-base;
+    color: color.$page-text;
     width: 100%;
 
+    &:before,
     &:after {
       content: '';
       display: block;
       height: 1em;
     }
+
+    &:before {
+      height: 0.5em;
+    }
   }
 
   th, td {
     padding: 0em 0.5em;
+    white-space: nowrap;
   }
 
   th {
@@ -54,10 +60,41 @@
   }
 
   @media (min-width: 55em) {
-    li {
+    .swatch {
       display: inline-block;
       margin: 0 1em 0.5em 0;
-      width: 12em;
+      vertical-align: top;
+      width: 14em;
     }
+  }
+}
+
+.contrast-reports {
+  overflow: auto;
+  margin-top: -2em;
+}
+
+.contrast-report {
+  h4:before {
+    clear: both;
+    content: '';
+    display: block;
+    height: 1em;
+    width: 100%;
+  }
+
+  .example {
+    border: variables.$border-block;
+    float: left;
+    margin: 0.25em 0.25em 0.25em 0;
+    overflow: hidden;
+    padding: 1em;
+    white-space: nowrap;
+    width: calc(50% - 4em - 2px);
+  }
+
+  table {
+    display: none;
+    visibility: hidden;
   }
 }
