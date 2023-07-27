@@ -22,7 +22,7 @@ h1 {
   font-size: 2em;
   line-height: 1;
 
-  @media (min-width: breakpoints.$blocks) {
+  @media (min-width: breakpoints.$full-page) {
     font-size: 3em;
     border-bottom-width: 0.1em;
   }

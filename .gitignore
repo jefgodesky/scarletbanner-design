@@ -2,10 +2,12 @@
 node_modules
 stylesheets/dist
 stylesheets/src/modules/*.scss
+!stylesheets/src/modules/_cdn.scss
 !stylesheets/src/modules/_layout.scss
 scripts/dist
 *.html
 !docs/*.html
+add-doc.json
 
 # Ignore local files
 .DS_Store

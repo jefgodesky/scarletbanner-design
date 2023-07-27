@@ -19,7 +19,7 @@ main {
   line-height: 1.5;
   margin-top: spacing.$vertical * 2;
   
-  @media (min-width: breakpoints.$blocks) {
+  @media (min-width: breakpoints.$full-page) {
     background-image: url('#{cdn.$images}/page-top.svg'),
       url('#{cdn.$images}/page-bottom.svg'),
       url('#{cdn.$images}/page-body.svg'),
