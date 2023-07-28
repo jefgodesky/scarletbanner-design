@@ -14,7 +14,7 @@
     </nav>
     <main>
       <h1>Components</h1>
-      <section id="component-link" class="component" data-component-category="navigation">
+      <section id="component-link" class="component" data-component-category="Navigation">
         <h2>Link</h2>
         <div class="example" style="padding: 1em; text-align: center;">
           <a href="#component-link">Link</a>
@@ -47,7 +47,7 @@
             <a href="#component-panel">panel link</a> component.</li>
         </ul>
       </section>
-      <section id="component-prominent-link" class="component" data-component-category="navigation">
+      <section id="component-prominent-link" class="component" data-component-category="Navigation">
         <h2>Prominent Link</h2>
         <div class="example">
           <a href="#component-prominent-link" class="prominent">Left-Aligned Link</a>
@@ -113,7 +113,7 @@
             inside the panel.</li>
         </ul>
       </section>
-      <section id="component-button" class="component" data-component-category="navigation">
+      <section id="component-button" class="component" data-component-category="Navigation">
         <h2>Button</h2>
         <div class="example">
           <div>
@@ -171,7 +171,7 @@
             <a href="#component-panel">panel link</a> component.</li>
         </ul>
       </section>
-      <section id="component-toc" class="component" data-component-category="navigation">
+      <section id="component-toc" class="component" data-component-category="Navigation">
         <h2>Table of Contents</h2>
         <div class="example">
           <nav class="toc">
@@ -202,17 +202,75 @@
   &lt;/ul&gt;
 &lt;/nav&gt;</code>
         </details>
+        <ul class="notes">
+          <li>A table of contents helps users jump to different sections on a
+            single, long page. It should appear near the top of such a page to be
+            effective. It doesn&rsquo;t need to be the first thing on the page
+            &mdash; it can follow a short introduction, for example &mdash; but
+            if a user has to scroll a substantial way down the page to reach it,
+            then it&rsquo;s ineffective in its goal of helping users reach the
+            point of the page that they&rsquo;re interested in with a minimum of
+            scrolling.</li>
+        </ul>
       </section>
-      <ul class="notes">
-        <li>A table of contents helps users jump to different sections on a
-          single, long page. It should appear near the top of such a page to be
-          effective. It doesn&rsquo;t need to be the first thing on the page
-          &mdash; it can follow a short introduction, for example &mdash; but
-          if a user has to scroll a substantial way down the page to reach it,
-          then it&rsquo;s ineffective in its goal of helping users reach the
-          point of the page that they&rsquo;re interested in with a minimum of
-          scrolling.</li>
-      </ul>
+      <section id="component-input" class="component" data-component-category="Forms">
+        <h2>Text Input</h2>
+        <div class="example">
+          <input type="text" placeholder="Text input" />
+          <input type="email" placeholder="you@example.com" />
+          <input type="search" placeholder="Your search terms..." />
+          <input type="tel" placeholder="1 (212) 867-5309" />
+          <input type="url" placeholder="https://scarletbanner.com" />
+          <input type="number" value="0" min="0" max="10" />
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;input type="text" placeholder="Text input" /&gt;
+&lt;input type="email" placeholder="you@example.com" /&gt;
+&lt;input type="search" placeholder="Your search terms..." /&gt;
+&lt;input type="tel" placeholder="1 (212) 867-5309" /&gt;
+&lt;input type="url" placeholder="https://scarletbanner.com" /&gt;
+&lt;input type="number" value="0" min="0" max="10" /&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Do <strong>not</strong> use placeholders in place of
+            <a href="#component-label">labels</a>. When you begin typing in a
+            text box, the text disappears, so if you forget precisely what you
+            need to enter in this box, you&rsquo;ll need to remove what
+            you&rsquo;ve written. Placeholders aren&rsquo;t designed to take
+            the place of labels; that&rsquo;s what labels are for. Placeholders
+            should be used to provide an example of the sort of input a user
+            should provide in the box.</li>
+          <li>The text input is the most generic of the fields provided here.
+            This is appropriate for fields that need to collect a piece of
+            arbitrary short text. Wherever appropriate, use one of the more
+            specific fields detailed here. The text input is the default option
+            that you can use when none of the other options quite fit. When
+            asking the user for text that you expect to exceed more than a
+            dozen or so character, use the <a href="#component-textarea">text area</a>
+            component instead.</li>
+          <li>The email input is the field you should use when you ask the
+            user to enter an email address. Though this may look the same on a
+            desktop browser, the specialized field can prompt a variety of
+            affordances. For example, on iOS Safari, the email field brings up
+            a different keyboard, with special <em>@</em> and <em>.com</em>
+            buttons that make typing an email address more convenient.</li>
+          <li>The search input is the field you should use when you ask the
+            user to enter a search query.</li>
+          <li>The telephone input is the field you should use if you ever
+            need to ask the user to enter a telephone number.</li>
+          <li>The URL input is the field you should use when you ask the
+            user to enter a URL.</li>
+          <li>The number input is the field you should use when you ask the
+            user to enter a number.</li>
+          <li>Never ask for more data than you actually need. Every additional
+            field on a form increases the interaction cost, reducing the
+            likelihood that you&rsquo;ll get any response at all. Interrogate
+            every field to determine if it&rsquo;s something you really need,
+            and eliminate everything that is not absolutely necessary in order
+            to provide the service that you wish to provide.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>

@@ -1,0 +1,16 @@
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/shadows";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+input {
+  appearance: none;
+  background: #00000010;
+  border: borders.$block;
+  box-shadow: inset shadows.$block;
+  display: block;
+  font: typography.$technical;
+  padding: spacing.$vertical / 4 spacing.$horizontal / 4;
+  width: 100%;
+}
