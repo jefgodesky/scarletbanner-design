@@ -5,7 +5,9 @@
 .shadow-page-example,
 .shadow-block-example,
 .border-h1-example,
-.border-block-example{
+.border-block-example,
+.border-gold-groove-example,
+.border-gold-ridge-example {
   border-radius: spacing.$rounding;
   margin: 2em 0;
   padding: 1em;
@@ -29,4 +31,12 @@
 
 .border-block-example {
   border: borders.$block;
+}
+
+.border-gold-groove-example {
+  border: borders.$gold-groove;
+}
+
+.border-gold-ridge-example {
+  border: borders.$gold-ridge;
 }
