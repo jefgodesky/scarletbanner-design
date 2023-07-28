@@ -1,0 +1,13 @@
+@use "../modules/spacing";
+
+textarea {
+  height: spacing.$vertical * 4;
+
+  &.sm {
+    height: spacing.$vertical * 2;
+  }
+
+  &.lg {
+    height: spacing.$vertical * 8;
+  }
+}

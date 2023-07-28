@@ -4,13 +4,14 @@
 @use "../modules/spacing";
 @use "../modules/typography";
 
-input {
+input,
+textarea {
   appearance: none;
   background: #00000010;
   border: borders.$block;
   box-shadow: inset shadows.$block;
   display: block;
   font: typography.$technical;
-  padding: spacing.$vertical / 4 spacing.$horizontal / 4;
+  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
   width: 100%;
 }
