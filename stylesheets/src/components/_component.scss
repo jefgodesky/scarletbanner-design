@@ -19,7 +19,7 @@
     background: lighten(colors.$page-shade, 15%);
     border: borders.$block;
     cursor: pointer;
-    padding: spacing.$vertical / 4 spacing.$horizontal / 4;
+    padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
     width: calc(100% - (#{spacing.$horizontal} / 2));
   }
 

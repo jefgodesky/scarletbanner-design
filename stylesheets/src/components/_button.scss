@@ -24,7 +24,7 @@ input[type="submit"] {
   font-weight: normal;
   line-height: 1.2;
   margin: 0.25em;
-  padding: spacing.$vertical / 4 spacing.$horizontal / 2;
+  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 2);
   text-shadow: 0 0 0.5rem colors.$shadow-light;
   transition: transitions.$quick;
   width: auto;
