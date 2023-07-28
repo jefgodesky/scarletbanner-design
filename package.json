@@ -43,7 +43,8 @@
   "dependencies": {
     "design-tokenizer": "^0.1.1",
     "es6-promise": "^4.2.8",
-    "prismjs": "^1.29.0"
+    "prismjs": "^1.29.0",
+    "unobtrusive-dom": "^0.2.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
