@@ -10,7 +10,7 @@ input[type="button"],
 input[type="submit"] {
   appearance: none;
   background: radial-gradient(colors.$scarlet 0%, darken(colors.$scarlet, 15%) 100%);
-  border-radius: spacing.$rounding;
+  border-radius: spacing.$rounding * 3;
   border-top: borders.$gold-ridge;
   border-right: borders.$gold-ridge;
   border-bottom: borders.$gold-groove;
