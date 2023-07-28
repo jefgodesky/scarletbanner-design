@@ -24,7 +24,7 @@
           <code class="language-html block">&lt;a href="#"&gt;Link&lt;/a&gt;</code>
         </details>
         <ul class="notes">
-          <li>In general, links <em>go places</em>, while <a href="#component-button">buttons</a>
+          <li>Links <em>go places</em>, while <a href="#component-button">buttons</a>
             <em>do things</em>. The difference is that buttons change the state
             of the website. That can be on the server side or the client side,
             but a button implies that some action is being taken, and something,
@@ -111,6 +111,64 @@
             using it in a panel, you might be using the wrong component.</li>
           <li>Since the entire panel is a link, don&rsquo;t use any other links or buttons
             inside the panel.</li>
+        </ul>
+      </section>
+      <section id="component-button" class="component" data-component-category="navigation">
+        <h2>Button</h2>
+        <div class="example">
+          <div>
+            <button>Primary Button</button>
+            <input type="button" value="Primary Button" />
+          </div>
+          <div>
+            <button class="secondary">Secondary Button</button>
+            <input type="button" value="Secondary Button" class="secondary" />
+          </div>
+          <div>
+            <button disabled>Disabled Button</button>
+            <input type="button" value="Disabled Button" disabled />
+          </div>
+          <div>
+            <button disabled class="secondary">Disabled Secondary Button</button>
+            <input type="button" value="Disabled Secondary Button" disabled class="secondary" />
+          </div>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;button&gt;Primary Button&lt;/button&gt;
+&lt;input type="button" value="Primary Button" /&gt;
+
+&lt;button class="secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;input type="button" value="Secondary Button" class="secondary" /&gt;
+
+&lt;button disabled&gt;Disabled Button&lt;/button&gt;
+&lt;input type="button" value="Disabled Button" disabled /&gt;
+
+&lt;button disabled class="secondary"&gt;Disabled Secondary Button&lt;/button&gt;
+&lt;input type="button" value="Disabled Secondary Button" disabled class="secondary" /&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Buttons <em>do things</em>, while <a href="#component-link">links</a>
+            <em>go places</em>. The difference is that buttons change the state
+            of the website. That can be on the server side or the client side,
+            but a button implies that some action is being taken, and something,
+            somewhere is different now. Links take you somewhere else, but
+            neither the place you were nor the place you&rsquo;re going have
+            changed when you do so.</li>
+          <li>Yes, buttons are routinely abused to work as just bigger, more
+            prominent links &mdash; usually along with other bad design
+            decisions that visually mark almost all of the items on a page as
+            the most important thing, creating frustration and increasing the
+            user&rsquo;s cognitive load. It&rsquo;s a terrible practice, and
+            just because it&rsquo;s common is no reason to do it.</li>
+          <li>In places where you might be tempted to use a button to go
+            somewhere because the link should be visually prominent, consider
+            using the <a href="#component-prominent-link">prominent link</a>
+            component instead.</li>
+          <li>If you need to present the user with a prominent decision point
+            when hen could go to any of several different places, and each one
+            calls for some significant explanation, you might consider the
+            <a href="#component-panel">panel link</a> component.</li>
         </ul>
       </section>
     </main>
