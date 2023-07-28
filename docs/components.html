@@ -271,6 +271,42 @@
             to provide the service that you wish to provide.</li>
         </ul>
       </section>
+      <section id="component-label" class="component" data-component-category="Forms">
+        <h2>Label</h2>
+        <div class="example">
+          <label for="component-label-x1">Label</label>
+          <input type="text" id="component-label-x1" />
+          <label for="component-label-x2">
+            Label
+            <p>This label has a note.</p>
+          </label>
+          <input type="text" id="component-label-x2" />
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;label for="component-label-x1"&gt;Label&lt;/label&gt;
+&lt;input type="text" id="component-label-x1" /&gt;
+
+&lt;label for="component-label-x2"&gt;
+  Label
+  &lt;p&gt;This label has a note.&lt;/p&gt;
+&lt;/label&gt;
+&lt;input type="text" id="component-label-x2" /&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Though rare exceptions might exist, it&rsquo;s a good starting
+            point to assume that <em>all</em> form elements <em>must</em> have
+            labels. If you think you might have a legitimate exception, spend
+            some time really thinking about where a label could go.</li>
+          <li>Do <strong>not</strong> use placeholders in place of labels. When
+            you begin typing in a text box, the text disappears, so if you
+            forget precisely what you need to enter in this box, you&rsquo;ll
+            need to remove what you&rsquo;ve written. Placeholders aren&rsquo;t
+            designed to take the place of labels; that&rsquo;s what labels are
+            for. Placeholders should be used to provide an example of the sort
+            of input a user should provide in the box.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>
