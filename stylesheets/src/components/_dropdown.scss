@@ -1,0 +1,8 @@
+@use "../modules/colors";
+@use "../modules/shadows";
+
+select,
+select:active {
+  background: colors.$page-base;
+  box-shadow: shadows.$block;
+}

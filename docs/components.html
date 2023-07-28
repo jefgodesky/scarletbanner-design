@@ -329,6 +329,62 @@
             concise and informative <a href="#component-label">label</a>.</li>
         </ul>
       </section>
+      <section id="component-dropdown" class="component" data-component-category="Forms">
+        <h2>Dropdown</h2>
+        <div class="example">
+          <select>
+            <optgroup label="Chromatic Dragons">
+              <option value="red">Red Dragon</option>
+              <option value="blue">Blue Dragon</option>
+              <option value="green">Green Dragon</option>
+              <option value="black">Black Dragon</option>
+              <option value="white">White Dragon</option>
+            </optgroup>
+            <optgroup label="Metallic Dragons">
+              <option value="gold">Gold Dragon</option>
+              <option value="silver">Silver Dragon</option>
+              <option value="bronze">Bronze Dragon</option>
+              <option value="brass">Brass Dragon</option>
+              <option value="copper">Copper Dragon</option>
+            </optgroup>
+          </select>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;select&gt;
+  &lt;optgroup label="Chromatic Dragons"&gt;
+    &lt;option value="red"&gt;Red Dragon&lt;/option&gt;
+    &lt;option value="blue"&gt;Blue Dragon&lt;/option&gt;
+    &lt;option value="green"&gt;Green Dragon&lt;/option&gt;
+    &lt;option value="black"&gt;Black Dragon&lt;/option&gt;
+    &lt;option value="white"&gt;White Dragon&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Metallic Dragons"&gt;
+    &lt;option value="gold"&gt;Gold Dragon&lt;/option&gt;
+    &lt;option value="silver"&gt;Silver Dragon&lt;/option&gt;
+    &lt;option value="bronze"&gt;Bronze Dragon&lt;/option&gt;
+    &lt;option value="brass"&gt;Brass Dragon&lt;/option&gt;
+    &lt;option value="copper"&gt;Copper Dragon&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Use a dropdown when you would like a user to choose a single
+            option from a set list of options. When to use a dropdown and
+            when to use a set of <a href="#component-radio">radio buttons</a>
+            can be subtle, but some reasons to prefer a dropdown over
+            radio buttons include:
+            <ul>
+              <li>When there is a clear default, recommended, or most common
+                option (which you should have selected by default).</li>
+              <li>There are quite a few options to choose from, but it&rsquo;s
+                easy for users to notice the pattern and predict what the
+                available options will be (e.g., a list of countries).</li>
+              <li>When you have more than seven options to choose between.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/loader.js"></script>
   </body>

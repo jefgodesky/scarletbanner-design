@@ -5,7 +5,8 @@
 @use "../modules/typography";
 
 input,
-textarea {
+textarea,
+select {
   appearance: none;
   background: #00000010;
   border: borders.$block;
