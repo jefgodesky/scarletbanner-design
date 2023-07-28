@@ -14,4 +14,9 @@ textarea {
   font: typography.$technical;
   padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
   width: 100%;
+
+  &:focus {
+    background: rgba(colors.$link, 5%);
+    border-color: colors.$link;
+  }
 }
