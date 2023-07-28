@@ -10,7 +10,7 @@
     padding: spacing.$vertical spacing.$horizontal;
   }
 
-  @media (min-width: calc(#{breakpoints.$full-page} + (8 * #{spacing.$horizontal}))) {
+  @media (min-width: calc(#{breakpoints.$full-page} + (6 * #{spacing.$horizontal}))) {
     margin: 0 auto;
   }
 }

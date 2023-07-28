@@ -1,5 +1,6 @@
 @use "../modules/borders";
 @use "../modules/colors";
+@use "../modules/spacing";
 
 .component {
   margin: 0;
@@ -11,14 +12,15 @@
 
   details > code[class*=language-].block {
     border-top: 0;
+    width: calc(100% - (#{spacing.$horizontal} / 2));
   }
 
   summary {
     background: lighten(colors.$page-shade, 15%);
     border: borders.$block;
     cursor: pointer;
-    padding: 0.5em 1em;
-    width: calc(100% - 2em);
+    padding: spacing.$vertical / 4 spacing.$horizontal / 4;
+    width: calc(100% - (#{spacing.$horizontal} / 2));
   }
 
   & + .component {
