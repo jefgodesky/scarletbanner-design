@@ -1,21 +1,16 @@
-import { resolve } from 'path'
+import path from 'path'
 import { fileURLToPath } from 'url'
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default {
-  entry: {
-    loader: './scripts/src/loader.ts',
-    code: './scripts/src/modules/code.ts'
-  },
+  entry: './scripts/src/index.ts',
   module: {
     rules: [
       {
-        test: /\.ts?$/,
-        use: [{
-          loader: 'ts-loader',
-          options: { configFile: 'scripts/src/tsconfig.json' }
-        }],
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/
       }
     ]
@@ -24,7 +19,12 @@ export default {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: './[name].js',
-    path: resolve(__dirname, 'scripts/dist')
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'scripts/dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 }

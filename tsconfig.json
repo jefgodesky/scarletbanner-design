@@ -9,5 +9,9 @@
     "strict": true,
     "skipLibCheck": true,
     "resolveJsonModule": true
-  }
+  },
+  "exclude": [
+    "scripts/dist",
+    "node_modules"
+  ]
 }
