@@ -1,15 +1,10 @@
 @use "../modules/cdn";
 @use "../modules/colors";
-@use "../modules/spacing";
 @use "../modules/shadows";
-@use "../modules/layout";
-
-body:has(.hero) {
-  background-position: center spacing.$vertical * 20;
-}
+@use "../modules/typography";
 
 .hero {
-  overflow: auto;
+  height: 60vh;
   position: relative;
 
   img {
@@ -23,31 +18,21 @@ body:has(.hero) {
     z-index: -1;
   }
 
-  .content {
-    @extend %layout-block;
-    color: colors.$hero-text;
-    margin: spacing.$vertical * 10 auto 10em;
-    text-shadow: 0 0 calc(#{spacing.$vertical} / 8) colors.$hero-contrast;
-
-    h1 {
-      color: colors.$hero-text;
-      border-bottom: 0;
-      margin: 0;
-    }
-  }
-
-  &::after {
+  &:after {
     background: url('#{cdn.$images}/wood.gif') repeat;
-    border-top: calc(#{spacing.$vertical} / 8) solid colors.$hero-contrast;
-    border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$hero-contrast;
+    border-top: calc(#{typography.$size-xs} / 2) solid colors.$shadow-deep;
+    border-bottom: calc(#{typography.$size-xs} / 2) solid colors.$shadow-deep;
+    bottom: typography.$size-xs * -4;
     box-shadow: shadows.$page;
     content: '';
     display: block;
-    height: 1em;
+    height: typography.$size-xs * 4;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
   }
 
   & + main {
-    margin-top: -8em;
-    position: relative;
+    margin-top: -20vh;
   }
 }
