@@ -39,7 +39,11 @@ html {
 }
 
 body {
-  background: #000000 url('#{cdn.$images}/wall.png') center spacing.$vertical * 2 repeat-x local;
+  background-attachment: fixed, local;
+  background-color: colors.$shadow-deep;
+  background-image: linear-gradient(transparent 0%, colors.$shadow-deep 100%), url('#{cdn.$images}/wall.gif');
+  background-repeat: no-repeat, repeat;
+  background-position: bottom center, top center;
   margin: 0;
   padding: 0;
 }
