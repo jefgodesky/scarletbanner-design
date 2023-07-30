@@ -466,6 +466,73 @@
           </li>
         </ul>
       </section>
+      <section id="component-checkboxes" class="component" data-component-category="Forms">
+        <h2>Checkboxes</h2>
+        <div class="example">
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="fighter" id="checkbox-example-fighter" />
+            Fighting Person
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="wizard" id="checkbox-example-wizard" />
+            Magic User
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="thief" id="checkbox-example-thief" />
+            Thief
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox-example" value="cleric" id="checkbox-example-cleric" />
+            Cleric
+          </label>
+          <label class="checkbox extended">
+            <input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended" />
+            Actually, I used a combination of lifepath and point-buy systems to
+            build my character without any specific class, and without using
+            any multiclassing options.
+          </label>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="fighter" id="checkbox-example-fighter" /&gt;
+  Fighting Person
+&lt;/label&gt;
+
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="wizard" id="checkbox-example-wizard" /&gt;
+  Magic User
+&lt;/label&gt;
+
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="thief" id="checkbox-example-thief" /&gt;
+  Thief
+&lt;/label&gt;
+
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="cleric" id="checkbox-example-cleric" /&gt;
+  Cleric
+&lt;/label&gt;
+
+&lt;label class="checkbox extended"&gt;
+  &lt;input type="checkbox" name="checkbox-example" value="extended" id="checkbox-example-extended" /&gt;
+  Actually...
+&lt;/label&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Use a set of checkboxes when you would like a user to choose one
+            or more options from a set list of options.</li>
+          <li>You can also use a single checkbox on its own to capture a
+            boolean value from a user, like opting in to an agreement.</li>
+          <li>If you use a checkbox to gather consent or agreement from a user,
+            it <strong>cannot</strong> be checked by default. Consent is
+            <em>only</em> ethical or binding when it is freely and consciously
+            given. It is entirely too easy for a user to submit a form without
+            noticing a checkbox that is marked by default. Besides being a
+            deeply unethical dark pattern or &rdquo;antipattern,&ldquo; in many
+            legal jurisdictions this will not stand up as legal consent.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>

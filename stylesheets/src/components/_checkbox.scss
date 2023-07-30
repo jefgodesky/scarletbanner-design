@@ -1,0 +1,19 @@
+@use "../modules/colors";
+@use "../modules/typography";
+
+input[type="checkbox"] {
+  border-radius: 0;
+
+  &:checked:after {
+    background: transparent;
+    border-top: 0 solid transparent;
+    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$link;
+    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$link;
+    border-left: 0 solid transparent;
+    border-radius: 0;
+    height: typography.$size-l;
+    margin: -0.25rem 0 0 0.5rem;
+    transform: rotate(45deg);
+    width: calc(#{typography.$size-l} / 2);
+  }
+}

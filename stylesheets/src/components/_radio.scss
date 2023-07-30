@@ -1,7 +1,8 @@
 @use "../modules/colors";
 @use "../modules/typography";
 
-label.radio {
+label.radio,
+label.checkbox {
   margin: 1em 0;
   padding: 0 0 0 calc(#{typography.$size-l} * 1.5);
 
@@ -10,7 +11,8 @@ label.radio {
   }
 }
 
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
   border-radius: calc(#{typography.$size-l} / 2);
   display: inline-block;
   float: left;
