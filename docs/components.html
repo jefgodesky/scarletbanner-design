@@ -386,6 +386,72 @@
           </li>
         </ul>
       </section>
+      <section id="component-radio" class="component" data-component-category="Forms">
+        <h2>Radio Buttons</h2>
+        <div class="example">
+          <label class="radio">
+            <input type="radio" name="radio-example" value="yes" id="radio-example-yes" />
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="radio-example" value="no" id="radio-example-no" />
+            No
+          </label>
+          <label class="radio">
+            <input type="radio" name="radio-example" value="note" id="radio-example-note" />
+            Well&hellip;
+            <p>This radio button&rsquo;s label has a note.</p>
+          </label>
+          <label class="radio extended">
+            <input type="radio" name="radio-example" value="ext" id="radio-example-ext" />
+            You may find on some occasions that it is useful for a radio button
+            to support a label that is a bit more verbose than usual.
+            Don&rsquo;t worry; while you should strive for concise labels
+            whenever possible, when a longer label is necessary, it can be
+            supported.
+          </label>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;label class="radio"&gt;
+  &lt;input type="radio" name="radio-example" value="yes" id="radio-example-yes" /&gt;
+  Yes
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="radio-example" value="no" id="radio-example-no" /&gt;
+  No
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="radio-example" value="note" id="radio-example-note" /&gt;
+  Well&hellip;
+  &lt;p&gt;This radio button&rsquo;s label has a note.&lt;/p&gt;
+&lt;/label&gt;
+
+&lt;label class="radio extended"&gt;
+  &lt;input type="radio" name="radio-example" value="ext" id="radio-example-ext" /&gt;
+  You may find on some occasions that it is useful...
+&lt;/label&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Use radio buttons when you would like a user to choose a single
+            option from a set list of options. When to use radio buttons and
+            when to use a <a href="#component-dropdown">dropdown</a> can be
+            subtle, but some reasons to prefer radio buttons over a dropdown
+            include:
+            <ul>
+              <li>When there is no clear default, recommended, or most common
+                option. When this is the case, do not select any option by
+                default (though you may want to require that the user select an
+                option on the back-end).</li>
+              <li>When it&rsquo;s important that users be able to compare the
+                options side-by-side.</li>
+              <li>When there are five or fewer options to choose from.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>

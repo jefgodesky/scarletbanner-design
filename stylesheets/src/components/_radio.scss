@@ -1,0 +1,35 @@
+@use "../modules/colors";
+@use "../modules/typography";
+
+label.radio {
+  margin: 1em 0;
+  padding: 0 0 0 calc(#{typography.$size-l} * 1.5);
+
+  &.extended {
+    font-weight: normal;
+  }
+}
+
+input[type="radio"] {
+  border-radius: calc(#{typography.$size-l} / 2);
+  display: inline-block;
+  float: left;
+  height: typography.$size-l;
+  margin: calc(#{typography.$size-l} * -0.1) 0 0 calc(#{typography.$size-l} * -1.5);
+  padding: 0;
+  width: typography.$size-l;
+
+  &:checked {
+    background: rgba(colors.$link, 0.25);
+
+    &:after {
+      background: colors.$link;
+      border-radius: calc(#{typography.$size-l} * 0.3);
+      content: '';
+      display: block;
+      height: calc(#{typography.$size-l} * 0.6);
+      margin: calc((#{typography.$size-l} * 0.2) - 1px) 0 0 calc((#{typography.$size-l} * 0.2) - 1px);
+      width: calc(#{typography.$size-l} * 0.6);
+    }
+  }
+}
