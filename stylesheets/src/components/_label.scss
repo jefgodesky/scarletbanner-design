@@ -1,3 +1,4 @@
+@use "../modules/colors";
 @use "../modules/typography";
 
 label {
@@ -11,4 +12,14 @@ label {
     font-weight: normal;
     margin: 0;
   }
+
+  &.error {
+    color: colors.$scarlet;
+  }
+}
+
+p.error.msg {
+  color: colors.$scarlet;
+  font: typography.$technical;
+  margin: typography.$size-xs 0 typography.$size-m 0;
 }

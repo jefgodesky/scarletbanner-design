@@ -20,4 +20,10 @@ select {
     background: rgba(colors.$link, 5%);
     border-color: colors.$link;
   }
+
+  &.error {
+    background: rgba(colors.$scarlet, 0.1);
+    border-color: colors.$scarlet;
+    color: colors.$scarlet;
+  }
 }

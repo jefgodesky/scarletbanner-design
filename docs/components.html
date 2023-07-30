@@ -223,6 +223,7 @@
           <input type="tel" placeholder="1 (212) 867-5309" />
           <input type="url" placeholder="https://scarletbanner.com" />
           <input type="number" value="0" min="0" max="10" />
+          <input type="text" placeholder="Text input" value="Error!" class="error" />
         </div>
         <details>
           <summary>Markup</summary>
@@ -231,7 +232,8 @@
 &lt;input type="search" placeholder="Your search terms..." /&gt;
 &lt;input type="tel" placeholder="1 (212) 867-5309" /&gt;
 &lt;input type="url" placeholder="https://scarletbanner.com" /&gt;
-&lt;input type="number" value="0" min="0" max="10" /&gt;</code>
+&lt;input type="number" value="0" min="0" max="10" /&gt;
+&lt;input type="text" placeholder="Text input" value="Error!" class="error" /&gt;</code>
         </details>
         <ul class="notes">
           <li>Do <strong>not</strong> use placeholders in place of
@@ -282,6 +284,10 @@
             <p>This label has a note.</p>
           </label>
           <input type="text" id="component-label-x2" />
+          <label for="component-label-x3" class="error">Label in Error State</label>
+          <input type="text" class="error" id="component-label-x3" />
+          <p class="error msg">This is an example of a text input in an error
+            state, with a label and an error message.</p>
         </div>
         <details>
           <summary>Markup</summary>
@@ -292,7 +298,10 @@
   Label
   &lt;p&gt;This label has a note.&lt;/p&gt;
 &lt;/label&gt;
-&lt;input type="text" id="component-label-x2" /&gt;</code>
+&lt;input type="text" id="component-label-x2" /&gt;
+
+&lt;label for="component-label-x3" class="error"&gt;Label in Error State&lt;/label&gt;
+&lt;input type="text" class="error" id="component-label-x3" /&gt;</code>
         </details>
         <ul class="notes">
           <li>Though rare exceptions might exist, it&rsquo;s a good starting
@@ -306,6 +315,10 @@
             designed to take the place of labels; that&rsquo;s what labels are
             for. Placeholders should be used to provide an example of the sort
             of input a user should provide in the box.</li>
+          <li>It is critically important that error messages be written in as
+            clear and concise a manner as possible. They should make it clear
+            to the user, in approachable, everyday language, why the error
+            occurred and what options the user has to rectify it.</li>
         </ul>
       </section>
       <section id="component-textarea" class="component" data-component-category="Forms">
@@ -314,6 +327,7 @@
           <textarea class="sm">This is a small text area.</textarea>
           <textarea>This is the standard text area.</textarea>
           <textarea class="lg">This is a large text area.</textarea>
+          <textarea class="error">This is the standard text area in an error state.</textarea>
         </div>
         <details>
           <summary>Markup</summary>
