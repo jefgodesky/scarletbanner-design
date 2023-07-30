@@ -3,6 +3,7 @@
 @use "../modules/spacing";
 
 .component {
+  border-top: borders.$h1;
   margin: 0;
   padding: 1em 0;
 
@@ -21,9 +22,5 @@
     cursor: pointer;
     padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
     width: calc(100% - (#{spacing.$horizontal} / 2));
-  }
-
-  & + .component {
-    border-top: 0.25em solid colors.$page-shade;
   }
 }

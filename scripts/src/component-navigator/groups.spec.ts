@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import jsdomGlobal from 'jsdom-global'
 import { create } from 'unobtrusive-dom'
-import getGroups from './groups.js'
+import getGroups from './groups'
 
 describe('getGroups', () => {
   let jsdomCleanUp: () => void

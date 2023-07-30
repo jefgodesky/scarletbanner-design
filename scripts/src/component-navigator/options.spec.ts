@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import jsdomGlobal from 'jsdom-global'
 import { create } from 'unobtrusive-dom'
-import getOptions from './options.js'
+import getOptions from './options'
 
 describe('getOptions', () => {
   let jsdomCleanUp: () => void

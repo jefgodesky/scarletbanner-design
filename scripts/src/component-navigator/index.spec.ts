@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import jsdomGlobal from 'jsdom-global'
-import initComponentNavigator from './index.js'
+import initComponentNavigator from './index'
 
 describe('initComponentNavigator', () => {
   let jsdomCleanUp: () => void

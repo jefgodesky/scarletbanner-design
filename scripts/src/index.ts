@@ -6,7 +6,8 @@ interface ModuleConfig {
 }
 
 const modules: ModuleConfig[] = [
-  { elems: selector('code.block'), name: 'code' }
+  { elems: selector('code.block'), name: 'code' },
+  { elems: selector('section.component[data-component-category]'), name: 'component-navigator' }
 ]
 
 const loadModules = async (configs: ModuleConfig[]): Promise<void> => {

@@ -1,5 +1,5 @@
 import { create } from 'unobtrusive-dom'
-import getOptions from './options.js'
+import getOptions from './options'
 
 const getGroups = (components: Element[]): HTMLOptGroupElement[] => {
   const categoryField = 'data-component-category'

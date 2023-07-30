@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import jsdomGlobal from 'jsdom-global'
 import { create } from 'unobtrusive-dom'
-import handleChange from './handle-change.js'
+import handleChange from './handle-change'
 
 describe('Component Navigator: handleChange', () => {
   let jsdomCleanUp: () => void

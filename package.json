@@ -23,7 +23,7 @@
     "dev": "npm-run-all tokens watch:dev",
     "prod": "npm-run-all tokens sass:prod js:prod",
     "lint": "ts-standard",
-    "unit-test": "mocha",
+    "unit-test": "mocha --experimental-specifier-resolution=node",
     "tokens": "npm-run-all tokens:adddoc tokens:compile",
     "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary add-doc.json --html-src docs --html-dist .",
     "tokens:adddoc": "ts-node-esm generate-add-doc.ts",

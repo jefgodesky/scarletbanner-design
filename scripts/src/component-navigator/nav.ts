@@ -1,6 +1,6 @@
 import { create } from 'unobtrusive-dom'
-import getGroups from './groups.js'
-import handleChange from './handle-change.js'
+import getGroups from './groups'
+import handleChange from './handle-change'
 
 const getComponentNavigator = (components: HTMLElement[]): HTMLSelectElement => {
   const groups = getGroups(components)
