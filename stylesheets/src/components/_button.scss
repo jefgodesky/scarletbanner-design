@@ -1,5 +1,6 @@
 @use "../modules/borders";
 @use "../modules/colors";
+@use "../modules/gradients";
 @use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/transitions";
@@ -9,62 +10,62 @@ button,
 input[type="button"],
 input[type="submit"] {
   appearance: none;
-  background: radial-gradient(colors.$scarlet 0%, darken(colors.$scarlet, 15%) 100%);
+  background: radial-gradient(gradients.$button-primary-default);
   border-radius: spacing.$rounding * 3;
   border-top: borders.$gold-ridge;
   border-right: borders.$gold-ridge;
   border-bottom: borders.$gold-groove;
   border-left: borders.$gold-groove;
   box-shadow: inset shadows.$block, shadows.$block;
-  color: colors.$hero-text;
+  color: colors.$white;
   cursor: pointer;
   display: inline;
   font-family: typography.$family-display;
   font-size: typography.$size-l;
   font-weight: normal;
   line-height: 1.2;
-  margin: 0.25em;
+  margin: spacing.$thick-border;
   padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 2);
-  text-shadow: 0 0 0.5rem colors.$shadow-light;
+  text-shadow: shadows.$pressed;
   transition: transitions.$quick;
   width: auto;
 
   &:hover:not([disabled]) {
-    background: radial-gradient(saturate(lighten(colors.$scarlet, 15%), 75%) 0%, darken(colors.$scarlet, 20%) 100%);
-    box-shadow: inset shadows.$block, 0 0 0.75rem 0 colors.$shadow-light;
+    background: radial-gradient(gradients.$button-primary-hover);
+    box-shadow: inset shadows.$block, shadows.$block;
   }
 
   &:active:not([disabled]) {
-    box-shadow: inset shadows.$block, 0 0 0.25rem 0 colors.$shadow-light;
-    text-shadow: 0 0 0.5rem colors.$shadow-deep;
+    box-shadow: inset shadows.$block, shadows.$pressed;
+    text-shadow: shadows.$block;
   }
 
   &.secondary {
-    background: radial-gradient(colors.$page-shade 0%, darken(colors.$page-shade, 15%) 100%);
+    background: radial-gradient(gradients.$button-secondary-default);
     border: 0.25rem transparent;
     color: colors.$page-text;
-    text-shadow: 0 0 0.25rem rgba(colors.$shadow-light, 0.25);
+    text-shadow: shadows.$pressed;
 
     &:hover:not([disabled]) {
-      background: radial-gradient(saturate(lighten(colors.$page-shade, 15%), 75%) 0%, darken(colors.$page-shade, 20%) 100%);
+      background: radial-gradient(gradients.$button-secondary-hover);
     }
 
     &:active:not([disabled]) {
-      text-shadow: 0 0 0.5rem colors.$hero-text;
+      text-shadow: shadows.$white-glow;
     }
   }
 
   &[disabled] {
-    background: radial-gradient(desaturate(colors.$page-shade, 100%) 0%, desaturate(darken(colors.$page-shade, 15%), 100%) 100%);
+    background: radial-gradient(gradients.$button-disabled);
     border-color: desaturate(colors.$gold, 100%);
-    box-shadow: inset 0 0 0.5rem 0 #00000044, 0 0 0.5rem 0 #00000044;
+    box-shadow: inset shadows.$pressed, shadows.$pressed;
     color: lighten(colors.$page-text, 15%);
     cursor: not-allowed;
     opacity: 0.75;
     text-shadow: none;
 
     &.secondary {
-      background: radial-gradient(desaturate(colors.$page-shade, 100%) 0%, desaturate(darken(colors.$page-shade, 15%), 100%) 100%);
+      background: radial-gradient(gradients.$button-disabled);
       color: lighten(colors.$page-text, 20%);
     }
   }

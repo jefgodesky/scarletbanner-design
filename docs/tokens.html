@@ -30,9 +30,12 @@
           <li><a href="#breakpoints">Breakpoints</a></li>
           <li><a href="#typography">Typography</a></li>
           <li><a href="#spacing">Spacing</a></li>
+          <li><a href="#duration">Duration</a></li>
+          <li><a href="#curves">Cubic B&eacute;zier Curves</a></li>
           <li><a href="#shadows">Shadows</a></li>
           <li><a href="#borders">Borders</a></li>
           <li><a href="#transitions">Transitions</a></li>
+          <li><a href="#gradients">Gradients</a></li>
         </ul>
       </nav>
       <h2 id="colors">Colors</h2>
@@ -65,7 +68,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{ breakpoints.full-page.scss }}</td>
+            <td>{{ breakpoint.full-page.scss }}</td>
             <td>{{ breakpoint.full-page }}</td>
           </tr>
         </tbody>
@@ -124,28 +127,28 @@
             <td>{{ typography.size.xxl }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.h1.scss }}</td>
-            <td>{{ typography.styles.h1.css }}</td>
+            <td>{{ typography.style.h1.scss }}</td>
+            <td>{{ typography.style.h1.css }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.h2.scss }}</td>
-            <td>{{ typography.styles.h2.css }}</td>
+            <td>{{ typography.style.h2.scss }}</td>
+            <td>{{ typography.style.h2.css }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.h3.scss }}</td>
-            <td>{{ typography.styles.h3.css }}</td>
+            <td>{{ typography.style.h3.scss }}</td>
+            <td>{{ typography.style.h3.css }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.h4.scss }}</td>
-            <td>{{ typography.styles.h4.css }}</td>
+            <td>{{ typography.style.h4.scss }}</td>
+            <td>{{ typography.style.h4.css }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.body.scss }}</td>
-            <td>{{ typography.styles.body.css }}</td>
+            <td>{{ typography.style.body.scss }}</td>
+            <td>{{ typography.style.body.css }}</td>
           </tr>
           <tr>
-            <td>{{ typography.styles.technical.scss }}</td>
-            <td>{{ typography.styles.technical.css }}</td>
+            <td>{{ typography.style.technical.scss }}</td>
+            <td>{{ typography.style.technical.css }}</td>
           </tr>
         </tbody>
       </table>
@@ -175,6 +178,68 @@
           <tr>
             <td>{{ spacing.rounding.scss }}</td>
             <td>{{ spacing.rounding }}</td>
+          </tr>
+          <tr>
+            <td>{{ spacing.thick border.scss }}</td>
+            <td>{{ spacing.thick border }}</td>
+          </tr>
+          <tr>
+            <td>{{ spacing.hairline.scss }}</td>
+            <td>{{ spacing.hairline }}</td>
+          </tr>
+          <tr>
+            <td>{{ spacing.none.scss }}</td>
+            <td>{{ spacing.none }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="duration">Duration</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_durations.scss</code>
+        module (found at <code>stylesheets/src/modules/_durations.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_durations.scss";</code>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ duration.instantaneous.scss }}</td>
+            <td>{{ duration.instantaneous }}</td>
+          </tr>
+          <tr>
+            <td>{{ duration.quick.scss }}</td>
+            <td>{{ duration.quick }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="curves">Cubic B&eacute;zier Curves</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_curves.scss</code>
+        module (found at <code>stylesheets/src/modules/_curves.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_curves.scss";</code>
+      <table>
+        <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ cubicBezier.ease in and out.scss }}</td>
+            <td>
+              <a href="{{ cubicBezier.ease in and out.url }}">
+                {{ cubicBezier.ease in and out }}
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -220,6 +285,40 @@
         <p>This shadow is used on most UI elements. It provides a subtle
           impression of depth suitable for widespread use.</p>
       </div>
+      <div class="shadow-pressed-example">
+        <h4>Pressed Shadow</h4>
+        <table class="varlist">
+          <tbody>
+          <tr>
+            <th>SCSS Variable</th>
+            <td>{{ shadow.pressed.scss }}</td>
+          </tr>
+          <tr>
+            <th>CSS</th>
+            <td>{{ shadow.pressed.css }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>This shadow is identical to the block shadow, but with a reduced
+          blur. Active buttons switch to this shadow to reinforce the physical
+          sense of a button being pressed.</p>
+      </div>
+      <div class="shadow-white-glow-example">
+        <h4>White Glow</h4>
+        <table class="varlist">
+          <tbody>
+          <tr>
+            <th>SCSS Variable</th>
+            <td>{{ shadow.white glow.scss }}</td>
+          </tr>
+          <tr>
+            <th>CSS</th>
+            <td>{{ shadow.white glow.css }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>This shadow creates a white glow.</p>
+      </div>
       <h2 id="borders">Borders</h2>
       <p>If you&rsquo;d like to use the SCSS variables provided for these
         tokens, you&rsquo;ll need to import the <code>_borders.scss</code>
@@ -233,15 +332,15 @@
           <tbody>
           <tr>
             <th>SCSS Variable</th>
-            <td>{{ borders.h1.scss }}</td>
+            <td>{{ border.h1.scss }}</td>
           </tr>
           <tr>
             <th>CSS</th>
-            <td>{{ borders.h1.css }}</td>
+            <td>{{ border.h1.css }}</td>
           </tr>
           </tbody>
         </table>
-        <p>This border is <strong>only</strong> used to underline primary headings.</p>
+        <p>This border is used to underline primary headings.</p>
       </div>
       <div class="border-block-example">
         <h4>Block Border</h4>
@@ -249,16 +348,48 @@
           <tbody>
           <tr>
             <th>SCSS Variable</th>
-            <td>{{ borders.block.scss }}</td>
+            <td>{{ border.block.scss }}</td>
           </tr>
           <tr>
             <th>CSS</th>
-            <td>{{ borders.block.css }}</td>
+            <td>{{ border.block.css }}</td>
           </tr>
           </tbody>
         </table>
         <p>This is the standard border that we use when a UI element needs
           a border.</p>
+      </div>
+      <div class="border-media-example">
+        <h4>Media Border</h4>
+        <table class="varlist">
+          <tbody>
+          <tr>
+            <th>SCSS Variable</th>
+            <td>{{ border.media.scss }}</td>
+          </tr>
+          <tr>
+            <th>CSS</th>
+            <td>{{ border.media.css }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>This is the border used for images, videos, and other media blocks.</p>
+      </div>
+      <div class="border-table-heading-example">
+        <h4>Table heading Border</h4>
+        <table class="varlist">
+          <tbody>
+          <tr>
+            <th>SCSS Variable</th>
+            <td>{{ border.table heading.scss }}</td>
+          </tr>
+          <tr>
+            <th>CSS</th>
+            <td>{{ border.table heading.css }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>This is the border used to underline table headings.</p>
       </div>
       <div class="border-gold-ridge-example">
         <h4>Gold Ridge Border</h4>
@@ -266,11 +397,11 @@
           <tbody>
           <tr>
             <th>SCSS Variable</th>
-            <td>{{ borders.gold.ridge.scss }}</td>
+            <td>{{ border.gold.ridge.scss }}</td>
           </tr>
           <tr>
             <th>CSS</th>
-            <td>{{ borders.gold.ridge.css }}</td>
+            <td>{{ border.gold.ridge.css }}</td>
           </tr>
           </tbody>
         </table>
@@ -283,11 +414,11 @@
           <tbody>
           <tr>
             <th>SCSS Variable</th>
-            <td>{{ borders.gold.groove.scss }}</td>
+            <td>{{ border.gold.groove.scss }}</td>
           </tr>
           <tr>
             <th>CSS</th>
-            <td>{{ borders.gold.groove.css }}</td>
+            <td>{{ border.gold.groove.css }}</td>
           </tr>
           </tbody>
         </table>
@@ -312,6 +443,119 @@
           <tr>
             <td>{{ transition.quick.scss }}</td>
             <td>{{ transition.quick.css }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="gradients">Gradients</h2>
+      <p>If you&rsquo;d like to use the SCSS variables provided for these
+        tokens, you&rsquo;ll need to import the <code>_gradients.scss</code>
+        module (found at <code>stylesheets/src/modules/_gradients.scss</code>
+        in our code repository after the tokens have been generated) with a
+        line like the following at the top of your SCSS stylesheet:</p>
+      <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_gradients.scss";</code>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Color</th>
+            <th class="num">Position</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">{{ gradient.button.primary.default.scss }}</td>
+            <td>{{ gradient.button.primary.default.0.color.hex }}</td>
+            <td class="num">{{ gradient.button.primary.default.0.position }}</td>
+            <td rowspan="2"><div class="gradient-example gradient-button-primary-default-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.button.primary.default.1.color.hex }}</td>
+            <td class="num">{{ gradient.button.primary.default.1.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="2">{{ gradient.button.primary.hover.scss }}</td>
+            <td>{{ gradient.button.primary.hover.0.color.hex }}</td>
+            <td class="num">{{ gradient.button.primary.hover.0.position }}</td>
+            <td rowspan="2"><div class="gradient-example gradient-button-primary-hover-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.button.primary.hover.1.color.hex }}</td>
+            <td class="num">{{ gradient.button.primary.hover.1.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="2">{{ gradient.button.secondary.default.scss }}</td>
+            <td>{{ gradient.button.secondary.default.0.color.hex }}</td>
+            <td class="num">{{ gradient.button.secondary.default.0.position }}</td>
+            <td rowspan="2"><div class="gradient-example gradient-button-secondary-default-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.button.secondary.default.1.color.hex }}</td>
+            <td class="num">{{ gradient.button.secondary.default.1.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="2">{{ gradient.button.secondary.hover.scss }}</td>
+            <td>{{ gradient.button.secondary.hover.0.color.hex }}</td>
+            <td class="num">{{ gradient.button.secondary.hover.0.position }}</td>
+            <td rowspan="2"><div class="gradient-example gradient-button-secondary-hover-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.button.secondary.hover.1.color.hex }}</td>
+            <td class="num">{{ gradient.button.secondary.hover.1.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="2">{{ gradient.button.disabled.scss }}</td>
+            <td>{{ gradient.button.disabled.0.color.hex }}</td>
+            <td class="num">{{ gradient.button.disabled.0.position }}</td>
+            <td rowspan="2"><div class="gradient-example gradient-button-disabled-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.button.disabled.1.color.hex }}</td>
+            <td class="num">{{ gradient.button.disabled.1.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="5">{{ gradient.line background.page shade.scss }}</td>
+            <td>{{ gradient.line background.page shade.0.color.hex }}</td>
+            <td class="num">{{ gradient.line background.page shade.0.position }}</td>
+            <td rowspan="5"><div class="gradient-example gradient-line-bg-page-shade-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.page shade.1.color.hex }}</td>
+            <td class="num">{{ gradient.line background.page shade.1.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.page shade.2.color.hex }}</td>
+            <td class="num">{{ gradient.line background.page shade.2.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.page shade.3.color.hex }}</td>
+            <td class="num">{{ gradient.line background.page shade.3.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.page shade.4.color.hex }}</td>
+            <td class="num">{{ gradient.line background.page shade.4.position }}</td>
+          </tr>
+          <tr>
+            <td rowspan="5">{{ gradient.line background.light scarlet.scss }}</td>
+            <td>{{ gradient.line background.light scarlet.0.color.hex }}</td>
+            <td class="num">{{ gradient.line background.light scarlet.0.position }}</td>
+            <td rowspan="5"><div class="gradient-example gradient-line-bg-light-scarlet-example"></div></td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.light scarlet.1.color.hex }}</td>
+            <td class="num">{{ gradient.line background.light scarlet.1.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.light scarlet.2.color.hex }}</td>
+            <td class="num">{{ gradient.line background.light scarlet.2.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.light scarlet.3.color.hex }}</td>
+            <td class="num">{{ gradient.line background.light scarlet.3.position }}</td>
+          </tr>
+          <tr>
+            <td>{{ gradient.line background.light scarlet.4.color.hex }}</td>
+            <td class="num">{{ gradient.line background.light scarlet.4.position }}</td>
           </tr>
         </tbody>
       </table>

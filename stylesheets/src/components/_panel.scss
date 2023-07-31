@@ -1,15 +1,16 @@
 @use "../modules/colors";
 @use "../modules/shadows";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 .panel {
-  border: 1px solid transparent;
+  border: spacing.$hairline solid transparent;
   border-radius: spacing.$rounding;
   color: colors.$page-text;
   display: block;
   font-weight: normal;
-  margin: 0 -1em;
-  padding: 0.333em 1em;
+  margin: spacing.$none typography.$size-m * -1;
+  padding: calc(#{typography.$size-m} / 3) typography.$size-m;
   text-decoration: none;
 
   &:hover {
@@ -25,6 +26,6 @@
   }
 
   h2, h3, h4 {
-    margin-top: 0.333em;
+    margin-top: typography.$size-m;
   }
 }

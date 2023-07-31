@@ -1,10 +1,11 @@
 @use "../modules/colors";
+@use "../modules/spacing";
 @use "../modules/typography";
 
 label.radio,
 label.checkbox {
-  margin: 1em 0;
-  padding: 0 0 0 calc(#{typography.$size-l} * 1.5);
+  margin: typography.$size-m spacing.$none;
+  padding: spacing.$none spacing.$none spacing.$none calc(#{typography.$size-l} * 1.5);
 
   &.extended {
     font-weight: normal;
@@ -18,14 +19,14 @@ input[type="checkbox"] {
   float: left;
   height: typography.$size-l;
   margin: calc(#{typography.$size-l} * -0.1) 0 0 calc(#{typography.$size-l} * -1.5);
-  padding: 0;
+  padding: spacing.$none;
   width: typography.$size-l;
 
   &:checked {
-    background: rgba(colors.$link, 0.25);
+    background: rgba(colors.$blue, 0.25);
 
     &:after {
-      background: colors.$link;
+      background: colors.$blue;
       border-radius: calc(#{typography.$size-l} * 0.3);
       content: '';
       display: block;

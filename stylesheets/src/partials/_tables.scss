@@ -1,5 +1,7 @@
+@use "../modules/borders";
 @use "../modules/colors";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 %varlist {
   th {
@@ -8,7 +10,7 @@
 
   th,
   td {
-    padding: 0 1em;
+    padding: spacing.$none typography.$size-m;
   }
 
   tr:nth-child(even) td {
@@ -23,8 +25,8 @@ body {
 table {
   border-collapse: collapse;
   font-family: 'Alegreya Sans', sans-serif;
-  margin: 1em -1em;
-  width: calc(100% + 2em);
+  margin: typography.$size-m typography.$size-m * -1;
+  width: calc(100% + (#{typography.$size-m} * 2));
 
   caption {
     counter-increment: scarletbanner-tables;
@@ -42,7 +44,7 @@ table {
   }
 
   th {
-    border-bottom: 0.1em solid colors.$scarlet;
+    border-bottom: borders.$table-heading;
   }
 
   tr:nth-child(even) td {

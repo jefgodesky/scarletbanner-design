@@ -3,6 +3,6 @@
 
 footer {
   @extend %layout-block;
-  margin: 0 auto;
-  padding: 0 spacing.$horizontal * 2 spacing.$vertical * 2 spacing.$horizontal * 2;
+  margin: spacing.$none auto;
+  padding: spacing.$none spacing.$horizontal * 2 spacing.$vertical * 2 spacing.$horizontal * 2;
 }

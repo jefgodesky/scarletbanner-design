@@ -7,8 +7,8 @@ input[type="checkbox"] {
   &:checked:after {
     background: transparent;
     border-top: 0 solid transparent;
-    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$link;
-    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$link;
+    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$blue;
+    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$blue;
     border-left: 0 solid transparent;
     border-radius: 0;
     height: typography.$size-l;

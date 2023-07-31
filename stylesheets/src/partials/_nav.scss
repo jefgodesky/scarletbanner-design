@@ -6,7 +6,7 @@
 
 body > nav {
   background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$shadow-deep;
+  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$black;
   box-shadow: shadows.$page;
   height: spacing.$vertical * 2;
   margin: 0;
@@ -19,19 +19,19 @@ body > nav {
     border-bottom: 0;
     font-size: 1em;
     height: spacing.$vertical * 7;
-    margin: 0 auto 0 auto;
-    padding: 0;
+    margin: spacing.$none auto spacing.$none auto;
+    padding: spacing.$none;
     position: relative;
 
     a {
-      bottom: 0;
+      bottom: spacing.$none;
       display: block;
-      font-size: 0;
-      left: 0;
+      font-size: spacing.$none;
+      left: spacing.$none;
       text-decoration: none;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: spacing.$none;
+      top: spacing.$none;
     }
   }
 }

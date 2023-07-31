@@ -1,6 +1,7 @@
 @use "../modules/cdn";
 @use "../modules/colors";
 @use "../modules/shadows";
+@use "../modules/spacing";
 @use "../modules/typography";
 
 .hero {
@@ -9,19 +10,19 @@
 
   img {
     height: 100%;
-    left: 0;
+    left: spacing.$none;
     object-fit: cover;
     object-position: center;
     position: absolute;
-    top: 0;
+    top: spacing.$none;
     width: 100%;
     z-index: -1;
   }
 
   &:after {
     background: url('#{cdn.$images}/wood.gif') repeat;
-    border-top: calc(#{typography.$size-xs} / 2) solid colors.$shadow-deep;
-    border-bottom: calc(#{typography.$size-xs} / 2) solid colors.$shadow-deep;
+    border-top: calc(#{typography.$size-xs} / 2) solid colors.$black;
+    border-bottom: calc(#{typography.$size-xs} / 2) solid colors.$black;
     bottom: typography.$size-xs * -4;
     box-shadow: shadows.$page;
     content: '';

@@ -1,11 +1,14 @@
 @use "../modules/breakpoints";
+@use "../modules/borders";
 @use "../modules/colors";
 @use "../modules/shadows";
+@use "../modules/spacing";
+@use "../modules/typography";
 
 img {
-  border: 0.25rem solid #000;
+  border: borders.$media;
   box-shadow: shadows.$block;
-  margin: 1rem 0;
+  margin: typography.$size-m spacing.$none;
   max-width: 100%;
 
   &.unboxed {
@@ -16,13 +19,13 @@ img {
   @media (min-width: breakpoints.$full-page) {
     &.right {
       float: right;
-      margin: 1rem -6rem 1rem 2rem;
+      margin: typography.$size-m typography.$size-m * -6 typography.$size-m typography.$size-xl;
       max-width: 60%;
     }
 
     &.left {
       float: left;
-      margin: 1rem 2rem 1rem -6rem;
+      margin: typography.$size-m typography.$size-xl typography.$size-m typography.$size-m * -6;
       max-width: 60%;
     }
   }

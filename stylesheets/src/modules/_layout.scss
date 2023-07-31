@@ -6,11 +6,11 @@
   padding: spacing.$vertical calc(#{spacing.$horizontal} / 2);
 
   @media (min-width: breakpoints.$full-page) {
-    margin: 0 spacing.$horizontal;
+    margin: spacing.$none spacing.$horizontal;
     padding: spacing.$vertical spacing.$horizontal;
   }
 
   @media (min-width: calc(#{breakpoints.$full-page} + (6 * #{spacing.$horizontal}))) {
-    margin: 0 auto;
+    margin: spacing.$none auto;
   }
 }

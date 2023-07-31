@@ -1,15 +1,16 @@
 @use "../partials/fonts" as f;
 @use "../modules/borders";
 @use "../modules/breakpoints";
-@use "../modules/typography";
 @use "../modules/colors";
+@use "../modules/spacing";
+@use "../modules/typography";
 
 body {
   font: typography.$body;
 }
 
 h1, h2, h3, h4 {
-  margin: 1em 0 0;
+  margin: typography.$size-m spacing.$none spacing.$none;
 }
 
 h1 {
@@ -28,12 +29,11 @@ h3 {
 
 h4 {
   font: typography.$h4;
-  margin: 1em 0 0 0;
 }
 
 ul, ol {
-  margin: 2em 0;
-  padding: 0;
+  margin: typography.$size-xl spacing.$none;
+  padding: spacing.$none;
 }
 
 ol ol {
@@ -49,21 +49,21 @@ ol ol ol ol {
 }
 
 p {
-  margin: 1em 0;
+  margin: typography.$size-m spacing.$none;
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin: spacing.$none spacing.$none typography.$size-xs spacing.$none;
 
   ul, ol {
-    margin: 0.5em 0 0.5em 1em;
+    margin: typography.$size-xs spacing.$none typography.$size-xs typography.$size-m;
   }
 
   p {
-    margin: 0;
+    margin: spacing.$none;
 
     & + p {
-      margin-top: 0.25em;
+      margin-top: calc(#{typography.$size-xs} / 2);
     }
   }
 }

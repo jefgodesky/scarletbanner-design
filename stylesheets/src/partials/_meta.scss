@@ -1,11 +1,17 @@
 @use "../modules/borders";
+@use "../modules/gradients";
 @use "../modules/shadows";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 .shadow-page-example,
 .shadow-block-example,
+.shadow-pressed-example,
+.shadow-white-glow-example,
 .border-h1-example,
 .border-block-example,
+.border-media-example,
+.border-table-heading-example,
 .border-gold-groove-example,
 .border-gold-ridge-example {
   border-radius: spacing.$rounding;
@@ -25,6 +31,14 @@
   box-shadow: shadows.$block;
 }
 
+.shadow-pressed-example {
+  box-shadow: shadows.$pressed;
+}
+
+.shadow-white-glow-example {
+  box-shadow: shadows.$white-glow;
+}
+
 .border-h1-example {
   border: borders.$h1;
 }
@@ -33,10 +47,53 @@
   border: borders.$block;
 }
 
+.border-media-example {
+  border: borders.$media;
+}
+
+.border-table-heading-example {
+  border: borders.$table-heading;
+}
+
 .border-gold-groove-example {
   border: borders.$gold-groove;
 }
 
 .border-gold-ridge-example {
   border: borders.$gold-ridge;
+}
+
+.gradient-example {
+  border: borders.$media;
+  border-radius: spacing.$rounding;
+  height: typography.$size-l;
+  width: 100%;
+}
+
+.gradient-button-primary-default-example {
+  background: linear-gradient(90deg, gradients.$button-primary-default);
+}
+
+.gradient-button-primary-hover-example {
+  background: linear-gradient(90deg, gradients.$button-primary-hover);
+}
+
+.gradient-button-secondary-default-example {
+  background: linear-gradient(90deg, gradients.$button-secondary-default);
+}
+
+.gradient-button-secondary-hover-example {
+  background: linear-gradient(90deg, gradients.$button-secondary-hover);
+}
+
+.gradient-button-disabled-example {
+  background: linear-gradient(90deg, gradients.$button-disabled);
+}
+
+.gradient-line-bg-page-shade-example {
+  background: linear-gradient(90deg, gradients.$line-bg-page-shade);
+}
+
+.gradient-line-bg-light-scarlet-example {
+  background: linear-gradient(90deg, gradients.$line-bg-light-scarlet);
 }

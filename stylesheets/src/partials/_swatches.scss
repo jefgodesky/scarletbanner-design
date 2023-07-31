@@ -2,41 +2,42 @@
 @use "../modules/breakpoints";
 @use "../modules/colors";
 @use "../modules/spacing";
+@use "../modules/typography";
 @use "../partials/tables";
 
 .swatch {
   border: borders.$block;
   border-radius: spacing.$rounding;
-  margin: 1em 0;
+  margin: typography.$size-m spacing.$none;
 
   h4 {
     font-style: normal;
-    padding: 2em 1em 1em 1em;
+    padding: typography.$size-xl typography.$size-m typography.$size-m typography.$size-m;
   }
 
   table {
     @extend %varlist;
     background: colors.$page-base;
-    border-radius: 0 0 spacing.$rounding spacing.$rounding;
+    border-radius: spacing.$none spacing.$none spacing.$rounding spacing.$rounding;
     color: colors.$page-text;
-    margin: 0;
-    padding: 0;
+    margin: spacing.$none;
+    padding: spacing.$none;
     width: 100%;
 
     &:before,
     &:after {
       content: '';
       display: block;
-      height: 0.5em;
+      height: typography.$size-xs;
     }
 
     &:after {
-      height: 1em;
+      height: typography.$size-m;
     }
   }
 
   th {
-    width: 3em;
+    width: typography.$size-xxl;
   }
 }
 
@@ -48,11 +49,11 @@
 
   h4 {
     font-style: normal;
-    padding: 1em;
+    padding: typography.$size-m;
   }
 
   .example {
-    padding: 1em;
+    padding: typography.$size-m;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -62,9 +63,9 @@
   @supports (display: grid) {
     .swatches {
       display: grid;
-      grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
-      grid-gap: 1em;
-      margin: 1em 0;
+      grid-template-columns: calc(50% - (#{typography.$size-m} / 2)) calc(50% - (#{typography.$size-m} / 2));
+      grid-gap: typography.$size-m;
+      margin: typography.$size-m spacing.$none;
 
       .swatch {
         margin: 0;

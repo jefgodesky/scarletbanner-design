@@ -3,28 +3,29 @@
 @use "../modules/colors";
 @use "../modules/shadows";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 nav.toc {
   background: rgba(colors.$page-shade, 0.5);
   border-top: borders.$block;
   border-bottom: borders.$block;
-  padding: 1em 2em;
+  padding: typography.$size-m typography.$size-xl;
 
   h4 {
     border-bottom: borders.$block;
-    border-bottom-width: 0.2em;
+    border-bottom-width: spacing.$thick-border;
     font-style: normal;
-    margin: 0 0 0.5em 0;
+    margin: spacing.$none spacing.$none typography.$size-xs spacing.$none;
     white-space: nowrap;
   }
 
   ul,
   li {
-    margin: 0;
-    padding: 0;
+    margin: spacing.$none;
+    padding: spacing.$none;
   }
 
   @media (min-width: breakpoints.$full-page) {
-    margin: 1em -2em;
+    margin: typography.$size-m typography.$size-xl * -1;
   }
 }

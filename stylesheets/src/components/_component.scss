@@ -1,14 +1,15 @@
 @use "../modules/borders";
 @use "../modules/colors";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 .component {
   border-top: borders.$h1;
-  margin: 0;
-  padding: 1em 0;
+  margin: spacing.$none;
+  padding: typography.$size-m spacing.$none;
 
   .example {
-    margin: 1em 0;
+    margin: typography.$size-m spacing.$none;
   }
 
   details > code[class*=language-].block {

@@ -1,12 +1,9 @@
 @use "../modules/colors";
+@use "../modules/gradients";
 @use "../modules/typography";
 
 a.prominent {
-  background: linear-gradient(180deg,
-    rgba(colors.$link, 0) 40%,
-    colors.$page-shade 40%,
-    colors.$page-shade 60%,
-    rgba(colors.$page-shade, 0) 60%);
+  background: linear-gradient(180deg, gradients.$line-bg-page-shade);
   color: colors.$page-text;
   display: block;
   font-family: typography.$family-display;
@@ -16,11 +13,7 @@ a.prominent {
   text-decoration: none;
 
   &:hover {
-    background: linear-gradient(180deg,
-      rgba(colors.$scarlet, 0) 40%,
-      rgba(colors.$scarlet, 0.2) 40%,
-      rgba(colors.$scarlet, 0.2) 60%,
-      rgba(colors.$page-shade, 0) 60%);
+    background: linear-gradient(180deg, gradients.$line-bg-light-scarlet);
     color: colors.$scarlet;
   }
 

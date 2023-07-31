@@ -2,12 +2,12 @@
 @use "../modules/transitions";
 
 a {
-  color: colors.$link;
+  color: colors.$blue;
   font-weight: bold;
   transition: transitions.$quick;
 
   &:visited {
-    color: colors.$visited;
+    color: colors.$purple;
   }
 
   &:active,

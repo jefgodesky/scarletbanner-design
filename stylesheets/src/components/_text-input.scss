@@ -8,7 +8,7 @@ input,
 textarea,
 select {
   appearance: none;
-  background: #00000010;
+  background: rgba(colors.$black, 0.1);
   border: borders.$block;
   box-shadow: inset shadows.$block;
   display: block;
@@ -17,8 +17,8 @@ select {
   width: 100%;
 
   &:focus {
-    background: rgba(colors.$link, 5%);
-    border-color: colors.$link;
+    background: rgba(colors.$blue, 5%);
+    border-color: colors.$blue;
   }
 
   &.error {

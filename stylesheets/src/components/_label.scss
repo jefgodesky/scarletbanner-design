@@ -1,16 +1,17 @@
 @use "../modules/colors";
+@use "../modules/spacing";
 @use "../modules/typography";
 
 label {
   font: typography.$technical;
   font-weight: bold;
   display: block;
-  margin: 1em 0 0;
+  margin: typography.$size-m spacing.$none spacing.$none;
 
   p {
     font-size: typography.$size-s;
     font-weight: normal;
-    margin: 0;
+    margin: spacing.$none;
   }
 
   &.error {
@@ -21,5 +22,5 @@ label {
 p.error.msg {
   color: colors.$scarlet;
   font: typography.$technical;
-  margin: typography.$size-xs 0 typography.$size-m 0;
+  margin: typography.$size-xs spacing.$none typography.$size-m spacing.$none;
 }
