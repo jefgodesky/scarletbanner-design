@@ -1,0 +1,9 @@
+@use "../modules/borders";
+@use "../modules/shadows";
+
+iframe.video {
+  aspect-ratio: 16 / 9;
+  border: borders.$media;
+  box-shadow: shadows.$block;
+  width: 100%;
+}

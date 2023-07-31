@@ -589,6 +589,21 @@
             will display its own content and nothing else.</li>
         </ul>
       </section>
+      <section id="component-video" class="component" data-component-category="Media">
+        <h2>Embedded Video</h2>
+        <div class="example">
+          <iframe class="video" src="https://www.youtube.com/embed/ZeWOdF3deZI" title="How Revolutions Really Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;iframe class="video" src="https://www.youtube.com/embed/ZeWOdF3deZI" title="How Revolutions Really Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The embed code that you copy from a service like YouTube will
+            often include <code>height</code> and <code>width</code>
+            attributes. Remove those, and add <code>class="video"</code>.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>
