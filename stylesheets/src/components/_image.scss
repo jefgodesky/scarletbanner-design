@@ -1,0 +1,29 @@
+@use "../modules/breakpoints";
+@use "../modules/colors";
+@use "../modules/shadows";
+
+img {
+  border: 0.25rem solid #000;
+  box-shadow: shadows.$block;
+  margin: 1rem 0;
+  max-width: 100%;
+
+  &.unboxed {
+    border: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: breakpoints.$full-page) {
+    &.right {
+      float: right;
+      margin: 1rem -6rem 1rem 2rem;
+      max-width: 60%;
+    }
+
+    &.left {
+      float: left;
+      margin: 1rem 2rem 1rem -6rem;
+      max-width: 60%;
+    }
+  }
+}
