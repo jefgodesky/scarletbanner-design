@@ -5,7 +5,6 @@
 @use "modules/spacing";
 
 @use "partials/typography";
-@use "partials/tables";
 @use "partials/nav";
 @use "partials/hero";
 @use "partials/main";
@@ -30,6 +29,7 @@
 @use "components/image";
 @use "components/figure";
 @use "components/video";
+@use "components/tables";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 

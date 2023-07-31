@@ -3,7 +3,6 @@
 @use "../modules/colors";
 @use "../modules/spacing";
 @use "../modules/typography";
-@use "../partials/tables";
 
 .swatch {
   border: borders.$block;
@@ -13,31 +12,6 @@
   h4 {
     font-style: normal;
     padding: typography.$size-xl typography.$size-m typography.$size-m typography.$size-m;
-  }
-
-  table {
-    @extend %varlist;
-    background: colors.$page-base;
-    border-radius: spacing.$none spacing.$none spacing.$rounding spacing.$rounding;
-    color: colors.$page-text;
-    margin: spacing.$none;
-    padding: spacing.$none;
-    width: 100%;
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      height: typography.$size-xs;
-    }
-
-    &:after {
-      height: typography.$size-m;
-    }
-  }
-
-  th {
-    width: typography.$size-xxl;
   }
 }
 

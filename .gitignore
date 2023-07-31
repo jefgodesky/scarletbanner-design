@@ -4,6 +4,7 @@ stylesheets/dist
 stylesheets/src/modules/*.scss
 !stylesheets/src/modules/_cdn.scss
 !stylesheets/src/modules/_layout.scss
+!stylesheets/src/modules/_tables.scss
 scripts/dist
 *.html
 !docs/*.html

@@ -3,21 +3,6 @@
 @use "../modules/spacing";
 @use "../modules/typography";
 
-%varlist {
-  th {
-    border: 0;
-  }
-
-  th,
-  td {
-    padding: spacing.$none typography.$size-m;
-  }
-
-  tr:nth-child(even) td {
-    background: none;
-  }
-}
-
 body {
   counter-reset: scarletbanner-tables;
 }
@@ -29,12 +14,16 @@ table {
   width: calc(100% + (#{typography.$size-m} * 2));
 
   caption {
-    counter-increment: scarletbanner-tables;
     font-weight: bold;
+    padding: spacing.$none typography.$size-m;
     text-align: left;
 
-    &:before {
-      content: "Table " counter(scarletbanner-tables) ". ";
+    &:not(.uncounted) {
+      counter-increment: scarletbanner-tables;
+
+      &:before {
+        content: "Table " counter(scarletbanner-tables) ". ";
+      }
     }
   }
 
@@ -48,7 +37,7 @@ table {
   }
 
   tr:nth-child(even) td {
-    background: adjust-color(colors.$page-shade, $alpha: -0.66);
+    background: rgba(colors.$page-shade, 0.3);
   }
 
   .num {
@@ -56,10 +45,6 @@ table {
   }
 
   tfoot {
-    border-top: 1px solid adjust-color(colors.$page-text, $alpha: -0.66);
-  }
-
-  &.varlist {
-    @extend %varlist;
+    border-top: borders.$block;
   }
 }
