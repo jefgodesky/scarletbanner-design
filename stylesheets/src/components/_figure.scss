@@ -1,0 +1,22 @@
+@use "../modules/borders";
+@use "../modules/typography";
+@use "../modules/spacing";
+
+body {
+  counter-reset: scarletbanner-figures;
+}
+
+figcaption {
+  border-top: borders.$block;
+  font: typography.$technical;
+  padding: spacing.$thick-border spacing.$none typography.$size-m;
+
+  &:not(.uncounted) {
+    counter-increment: scarletbanner-figures;
+
+    &:before {
+      content: "Figure " counter(scarletbanner-figures) ". ";
+      font-weight: bold;
+    }
+  }
+}
