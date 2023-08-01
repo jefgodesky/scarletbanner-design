@@ -19,7 +19,7 @@ main {
   color: colors.$page-text;
   font-size: 1.25em;
   line-height: 1.5;
-  margin-top: spacing.$vertical * 3;
+  margin-top: spacing.$vertical * 4;
   
   @media (min-width: breakpoints.$full-page) {
     background-image: url('#{cdn.$images}/page-top.svg'),
