@@ -1,0 +1,76 @@
+@use "../modules/breakpoints";
+@use "../components/dataset";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+aside.side-panel {
+  header {
+    font: typography.$body;
+    line-height: 1;
+    text-align: center;
+
+    h2,
+    p {
+      margin: spacing.$thick-border spacing.$none;
+    }
+  }
+
+  h2 {
+    font: typography.$h2;
+  }
+
+  img {
+    margin: typography.$size-m calc((#{spacing.$horizontal} * -1) - #{spacing.$thick-border});
+    max-width: 100vw;
+    width: calc(100% + (#{spacing.$horizontal} * 2) + #{spacing.$thick-border * 2});
+  }
+
+  dl {
+    font: typography.$technical;
+  }
+
+  dt {
+    font-style: normal;
+  }
+
+  dd {
+    margin: spacing.$none spacing.$none typography.$size-s spacing.$none;
+  }
+
+  @media (min-width: breakpoints.$full-page) {
+    img {
+      margin: typography.$size-m calc((#{spacing.$horizontal} * -0.5) - #{spacing.$thick-border});
+      width: calc(100% + #{spacing.$horizontal} + (#{spacing.$thick-border} * 2));
+    }
+
+    dl {
+      @include dataset.dataset;
+    }
+  }
+
+  @media (min-width: breakpoints.$side-panel-b) {
+    float: right;
+    width: 50%;
+
+    dl {
+      display: block;
+
+      dd {
+        margin: spacing.$none spacing.$none typography.$size-s spacing.$none;
+      }
+    }
+
+    img {
+      margin: typography.$size-m calc((#{spacing.$horizontal} * -0.5) - #{spacing.$thick-border});
+      width: calc(100% + #{spacing.$horizontal} + (#{spacing.$thick-border} * 2));
+    }
+
+    @media (min-width: breakpoints.$side-panel-c) {
+      margin-right: spacing.$horizontal * -2;
+
+      dl {
+        @include dataset.dataset;
+      }
+    }
+  }
+}

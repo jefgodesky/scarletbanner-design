@@ -966,6 +966,63 @@
             rendered not in bold, but in scarlet.</li>
         </ul>
       </section>
+      <section id="component-sidepanel" class="component" data-component-category="Content">
+        <h2>Side Panel</h2>
+        <div class="example">
+          <aside class="side-panel">
+            <header>
+              <p class="subtitle">Hobbits of the Shire</p>
+              <h2>Frodo Baggins</h2>
+              <p class="subtitle">Ringbearer</p>
+            </header>
+            <img src="https://scarletbanner.s3.us-east-2.stackpathstorage.com/design/v1/0/0/images/frodo.jpg" alt="Frodo Baggins" />
+            <dl>
+              <dt>Westron Name</dt>
+              <dd>Maura Labingi</dd>
+              <dt>Born</dt>
+              <dd>22 September, T.A. 2968</dd>
+              <dt>Languages</dt>
+              <dd>Westron, Sindarin</dd>
+              <dt>Best Friend</dt>
+              <dd>Samwise Gamgee</dd>
+            </dl>
+          </aside>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;aside class="side-panel"&gt;
+  &lt;header&gt;
+    &lt;p class="subtitle"&gt;Hobbits of the Shire&lt;/p&gt;
+    &lt;h2&gt;Frodo Baggins&lt;/h2&gt;
+    &lt;p class="subtitle"&gt;Ringbearer&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;img src="https://scarletbanner.s3.us-east-2.stackpathstorage.com/design/v1/0/0/images/frodo.jpg" alt="Frodo Baggins" /&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;Westron Name&lt;/dt&gt;
+    &lt;dd&gt;Maura Labingi&lt;/dd&gt;
+    &lt;dt&gt;Born&lt;/dt&gt;
+    &lt;dd&gt;22 September, T.A. 2968&lt;/dd&gt;
+    &lt;dt&gt;Languages&lt;/dt&gt;
+    &lt;dd&gt;Westron, Sindarin&lt;/dd&gt;
+    &lt;dt&gt;Best Friend&lt;/dt&gt;
+    &lt;dd&gt;Samwise Gamgee&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/aside&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The side panel component is designed to provide quick, comparable
+            data for pages on a similar set of topics. For examples, pages
+            that concern characters may have a standard set of information,
+            such as gender, species, date of birth, etc., so that each page
+            about a character might have its own side panel, featuring that
+            character&rsquo;s information.</li>
+          <li>A side panel may feature a subtitle above or below the main
+            title (or, as in the example above, both). Subtitles can also be
+            links where appropriate (e.g., linking to a page that lists all of
+            the pages that belong to this category).</li>
+          <li>A side panel can feature an optional image.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>

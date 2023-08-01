@@ -12,9 +12,13 @@
     margin: typography.$size-m spacing.$none;
   }
 
-  details > code[class*=language-].block {
-    border-top: 0;
-    width: calc(100% - (#{spacing.$horizontal} / 2));
+  details {
+    clear: both;
+
+    & > code[class*=language-].block {
+      border-top: 0;
+      width: calc(100% - (#{spacing.$horizontal} / 2));
+    }
   }
 
   summary {
