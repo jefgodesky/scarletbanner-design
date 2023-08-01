@@ -1,0 +1,43 @@
+@use "../modules/typography";
+@use "../modules/spacing";
+
+%dataset {
+  font: typography.$technical;
+  overflow: auto;
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  dt {
+    float: left;
+    font-style: normal;
+    margin-right: typography.$size-m;
+  }
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: fit-content(spacing.$horizontal) 1fr;
+    grid-gap: spacing.$thick-border;
+
+    dt {
+      float: none;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+dl.dataset {
+  @extend %dataset;
+}

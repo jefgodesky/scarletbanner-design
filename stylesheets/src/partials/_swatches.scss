@@ -1,6 +1,7 @@
 @use "../modules/borders";
 @use "../modules/breakpoints";
 @use "../modules/colors";
+@use "../components/dataset";
 @use "../modules/spacing";
 @use "../modules/typography";
 
@@ -12,6 +13,15 @@
   h4 {
     font-style: normal;
     padding: typography.$size-xl typography.$size-m typography.$size-m typography.$size-m;
+  }
+
+  dl {
+    @extend %dataset;
+    background: colors.$page-base;
+    border-radius: spacing.$none spacing.$none spacing.$rounding spacing.$rounding;
+    color: colors.$page-text;
+    padding: typography.$size-m;
+    margin: 0;
   }
 }
 
