@@ -21,14 +21,17 @@ h1 {
 
 h2 {
   font: typography.$h2;
+  margin: typography.$size-xxl spacing.$none typography.$size-m;
 }
 
 h3 {
   font: typography.$h3;
+  margin: typography.$size-xl spacing.$none typography.$size-m;
 }
 
 h4 {
   font: typography.$h4;
+  margin: typography.$size-l spacing.$none typography.$size-m;
 }
 
 ul, ol {
