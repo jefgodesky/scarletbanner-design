@@ -51,7 +51,7 @@
         for making text readable and accessible. As a result, not every
         possible combination of our colors is appropriate. Below are the
         combinations which meet the WCAG AAA criteria for body text.</p>
-      {{ color-contrast.normal.aaa }}
+      {{ color-contrast.normal.aaa.skip-table }}
       <h2 id="breakpoints">Breakpoints</h2>
       <p>If you&rsquo;d like to use the SCSS variables provided for these
         tokens, you&rsquo;ll need to import the <code>_breakpoints.scss</code>
@@ -252,71 +252,47 @@
       <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_shadows.scss";</code>
       <div class="shadow-page-example">
         <h4>Page Shadow</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ shadow.page.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ shadow.page.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ shadow.page.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ shadow.page.css }}</dd>
+        </dl>
         <p>This shadow is used on the main element and a few other key components
           tied to layout. It is deep, dark, and generally too much for standard
           UI components. Use sparingly and with caution.</p>
       </div>
       <div class="shadow-block-example">
         <h4>Block Shadow</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ shadow.block.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ shadow.block.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ shadow.block.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ shadow.block.css }}</dd>
+        </dl>
         <p>This shadow is used on most UI elements. It provides a subtle
           impression of depth suitable for widespread use.</p>
       </div>
       <div class="shadow-pressed-example">
         <h4>Pressed Shadow</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ shadow.pressed.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ shadow.pressed.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ shadow.pressed.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ shadow.pressed.css }}</dd>
+        </dl>
         <p>This shadow is identical to the block shadow, but with a reduced
           blur. Active buttons switch to this shadow to reinforce the physical
           sense of a button being pressed.</p>
       </div>
       <div class="shadow-white-glow-example">
         <h4>White Glow</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ shadow.white glow.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ shadow.white glow.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ shadow.white glow.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ shadow.white glow.css }}</dd>
+        </dl>
         <p>This shadow creates a white glow.</p>
       </div>
       <h2 id="borders">Borders</h2>
@@ -328,100 +304,64 @@
       <code class="language-css block">@use "/path/to/repo/stylesheets/src/modules/_borders.scss";</code>
       <div class="border-h1-example">
         <h4>Primary Heading Bottom Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.h1.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.h1.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.h1.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.h1.css }}</dd>
+        </dl>
         <p>This border is used to underline primary headings.</p>
       </div>
       <div class="border-block-example">
         <h4>Block Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.block.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.block.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.block.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.block.css }}</dd>
+        </dl>
         <p>This is the standard border that we use when a UI element needs
           a border.</p>
       </div>
       <div class="border-media-example">
         <h4>Media Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.media.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.media.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.media.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.media.css }}</dd>
+        </dl>
         <p>This is the border used for images, videos, and other media blocks.</p>
       </div>
       <div class="border-table-heading-example">
         <h4>Table heading Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.table heading.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.table heading.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.table heading.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.table heading.css }}</dd>
+        </dl>
         <p>This is the border used to underline table headings.</p>
       </div>
       <div class="border-gold-ridge-example">
         <h4>Gold Ridge Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.gold.ridge.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.gold.ridge.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.gold.ridge.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.gold.ridge.css }}</dd>
+        </dl>
         <p>This border is used in conjunction with the gold groove border
           (below) to create a gilded border.</p>
       </div>
       <div class="border-gold-groove-example">
         <h4>Gold Groove Border</h4>
-        <table class="varlist">
-          <tbody>
-          <tr>
-            <th>SCSS Variable</th>
-            <td>{{ border.gold.groove.scss }}</td>
-          </tr>
-          <tr>
-            <th>CSS</th>
-            <td>{{ border.gold.groove.css }}</td>
-          </tr>
-          </tbody>
-        </table>
+        <dl class="dataset">
+          <dt>SCSS Variable</dt>
+          <dd>{{ border.gold.groove.scss }}</dd>
+          <dt>CSS</dt>
+          <dd>{{ border.gold.groove.css }}</dd>
+        </dl>
         <p>This border is used in conjunction with the gold ridge border
           (above) to create a gilded border.</p>
       </div>
