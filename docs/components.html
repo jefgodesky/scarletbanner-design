@@ -939,6 +939,33 @@
             considered separately.</li>
         </ul>
       </section>
+      <section id="component-pullquote" class="component" data-component-category="Content">
+        <h2>Pull Quote</h2>
+        <div class="example">
+          <aside class="pull">
+            <p>Do not meddle in the affairs of wizards, for they are subtle and quick to <strong>anger</strong>.</p>
+          </aside>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;aside class="pull"&gt;
+  &lt;p&gt;Do not meddle in the affairs of wizards, for they are subtle and quick to &lt;strong&gt;anger&lt;/strong&gt;.&lt;/p&gt;
+&lt;/aside&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>Pull quotes are key passages pulled from the text and duplicated
+            in an attention-grabbing way, to entice someone who is skimming the
+            content to read more closely. As such, these are semantically
+            <code>&lt;aside&gt;</code> elements, since they exist outside of
+            the primary flow of the main content.</li>
+          <li>If you are looking for a way to present a paragraph-sized block
+            of text in a way that is meant to be read in the main flow of the
+            page&rsquo;s content, use the <a href="#component-blockquote">block quote</a>
+            component.</li>
+          <li>Within a pull quote, a <code>&lt;strong&gt;</code> tag is
+            rendered not in bold, but in scarlet.</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>

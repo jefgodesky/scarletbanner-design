@@ -1,0 +1,18 @@
+@use "../modules/colors";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+aside.pull {
+  background: transparent;
+  box-shadow: none;
+  font: typography.$h2;
+  font-weight: normal;
+  margin: spacing.$none;
+  padding: typography.$size-xl spacing.$none;
+  text-align: center;
+
+  strong {
+    color: colors.$scarlet;
+    font-weight: normal;
+  }
+}
