@@ -861,6 +861,42 @@
             CMYKA, HSLA, and HSVA values for each color.</li>
         </ul>
       </section>
+      <section id="component-blockquote" class="component" data-component-category="Content">
+        <h2>Block Quote</h2>
+        <div class="example">
+          <blockquote>
+            <p>Anarchism is not a romantic fable but the hardheaded
+              realization, based on five thousand years of experience, that we
+              cannot entrust the management of our lives to kings, priests,
+              politicians, generals, and county commissioners.</p>
+            <footer>Edward Abbey</footer>
+          </blockquote>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;blockquote&gt;
+  &lt;p&gt;Quote&lt;/p&gt;
+  &lt;footer&gt;Source&lt;/footer&gt;
+&lt;/blockquote&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The block quote component allows you to present a quote in a way
+            that visually distinguishes it from other content on the page. This
+            should still follow in the flow of the main content, though; for a
+            decorative pull quote that is not part of the main flow of the
+            content, use the <a href="#component-pullquote">pull quote</a>
+            component. For shorter, inline quotations that shouldn&rsquo;t be
+            visually distinguished, use the <code>&lt;q&gt;</code> tag. This
+            can be supplemented with a <code>cite</code> attribute with a URL
+            that points to the quote&rsquo;s source.</li>
+          <li>You can present a block quote without a source (especially when
+            the source has already been mentioned in the text), but you can
+            also provide a source in a footer (the <code>&lt;cite&gt;</code>
+            element is only for printed sources; if your source is a printed
+            source, then you can use a <code>&lt;cite&gt;</code> tag inside
+            your footer, but the footer will work in all cases).</li>
+        </ul>
+      </section>
     </main>
     <script src="/scripts/dist/bundle.js"></script>
   </body>

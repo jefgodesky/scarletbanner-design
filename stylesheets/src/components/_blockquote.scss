@@ -1,0 +1,45 @@
+@use "../modules/colors";
+@use "../modules/shadows";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+blockquote {
+  background: colors.$page-base;
+  box-shadow: shadows.$block;
+  margin: spacing.$none;
+  padding: spacing.$vertical spacing.$horizontal;
+  position: relative;
+
+  &:before,
+  &:after {
+    color: rgba(colors.$black, 0.05);
+    font-size: typography.$size-xxl * 4;
+    line-height: 1;
+    position: absolute;
+  }
+
+  &:before {
+    content: open-quote;
+    left: spacing.$none;
+    top: spacing.$none;
+  }
+
+  &:after {
+    bottom: spacing.$none;
+    content: close-quote;
+    right: spacing.$none;
+  }
+
+  footer {
+    font-style: italic;
+    margin: spacing.$none;
+    max-width: 65%;
+    padding: spacing.$none;
+    text-align: right;
+
+    &:before {
+      content: '\2014';
+      margin-right: spacing.$thick-border;
+    }
+  }
+}
