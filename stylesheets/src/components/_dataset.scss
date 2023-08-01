@@ -1,7 +1,7 @@
 @use "../modules/typography";
 @use "../modules/spacing";
 
-%dataset {
+@mixin dataset {
   font: typography.$technical;
   overflow: auto;
 
@@ -30,6 +30,7 @@
 
     dt {
       float: none;
+      white-space: nowrap;
     }
 
     &:after {
@@ -39,5 +40,5 @@
 }
 
 dl.dataset {
-  @extend %dataset;
+  @include dataset;
 }

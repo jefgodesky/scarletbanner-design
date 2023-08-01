@@ -16,24 +16,23 @@
   }
 
   dl {
-    @extend %dataset;
+    @include dataset.dataset;
     background: colors.$page-base;
     border-radius: spacing.$none spacing.$none spacing.$rounding spacing.$rounding;
     color: colors.$page-text;
     padding: typography.$size-m;
     margin: 0;
   }
+
+  dt,
+  dd {
+    white-space: nowrap;
+  }
 }
 
 .contrast-report {
-  table {
-    display: none;
-    visibility: hidden;
-  }
-
   h4 {
     font-style: normal;
-    padding: typography.$size-m;
   }
 
   .example {
