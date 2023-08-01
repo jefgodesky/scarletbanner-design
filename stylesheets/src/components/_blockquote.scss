@@ -6,7 +6,7 @@
 blockquote {
   background: colors.$page-base;
   box-shadow: shadows.$block;
-  margin: spacing.$none;
+  margin: typography.$size-m spacing.$none;
   padding: spacing.$vertical spacing.$horizontal;
   position: relative;
 
@@ -32,7 +32,7 @@ blockquote {
 
   footer {
     font-style: italic;
-    margin: spacing.$none;
+    margin: spacing.$none spacing.$none spacing.$none 35%;
     max-width: 65%;
     padding: spacing.$none;
     text-align: right;
