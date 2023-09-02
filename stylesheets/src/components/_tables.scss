@@ -9,7 +9,7 @@ body {
 
 table {
   border-collapse: collapse;
-  font-family: 'Alegreya Sans', sans-serif;
+  font: typography.$technical;
   margin: typography.$size-m typography.$size-m * -1;
   width: calc(100% + (#{typography.$size-m} * 2));
 
