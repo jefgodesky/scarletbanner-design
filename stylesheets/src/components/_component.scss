@@ -25,6 +25,7 @@
     border: borders.$day-block;
     cursor: pointer;
     font: typography.$technical;
+    font-weight: bold;
     padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
     width: calc(100% - (#{spacing.$horizontal} / 2));
   }
