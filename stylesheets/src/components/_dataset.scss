@@ -3,7 +3,7 @@
 
 @mixin dataset {
   font: typography.$technical;
-  overflow: auto;
+  overflow: hidden;
 
   dt,
   dd {
@@ -13,7 +13,8 @@
 
   dt {
     float: left;
-    font-style: normal;
+    font: typography.$technical;
+    font-weight: bold;
     margin-right: typography.$size-m;
   }
 
@@ -26,7 +27,7 @@
   @supports (display: grid) {
     display: grid;
     grid-template-columns: fit-content(spacing.$horizontal) 1fr;
-    grid-gap: spacing.$thick-border;
+    grid-gap: calc(#{spacing.$thick-border} * 2);
 
     dt {
       float: none;

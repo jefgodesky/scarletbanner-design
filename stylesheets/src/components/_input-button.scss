@@ -1,0 +1,33 @@
+@use "../modules/spacing";
+
+.input-button {
+  background: transparent;
+  border: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  input,
+  button {
+    margin: 0;
+  }
+
+  input {
+    margin: calc(#{spacing.$hairline} * 2) spacing.$none;
+    padding-right: calc(#{spacing.$horizontal} / 2);
+  }
+
+  button {
+    margin-left: calc((#{spacing.$horizontal} / 2) * -1);
+
+    p {
+      aspect-ratio: 3 / 1;
+      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+      width: spacing.$vertical * 4;
+    }
+
+    span {
+      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+    }
+  }
+}

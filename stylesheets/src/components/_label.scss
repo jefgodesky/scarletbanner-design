@@ -4,7 +4,7 @@
 
 label {
   font: typography.$technical;
-  font-weight: bold;
+  font-weight: 600;
   display: block;
   margin: typography.$size-m spacing.$none spacing.$none;
 
@@ -15,12 +15,21 @@ label {
   }
 
   &.error {
-    color: colors.$scarlet;
+    color: colors.$day-accent;
+  }
+
+  & + input,
+  & + textarea,
+  & + select {
+    margin-top: calc(#{spacing.$vertical} / 8)
   }
 }
 
+.night label.error {
+  color: colors.$night-accent;
+}
+
 p.error.msg {
-  color: colors.$scarlet;
   font: typography.$technical;
   margin: typography.$size-xs spacing.$none typography.$size-m spacing.$none;
 }

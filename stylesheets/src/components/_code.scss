@@ -7,12 +7,16 @@
 }
 
 :not(pre) > code[class*=language-].block {
-  background: colors.$page-base;
-  border: borders.$block;
+  background: colors.$day-bg;
+  border: borders.$day-block;
   display: block;
   max-height: spacing.$vertical * 10;
-  overflow: scroll;
-  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
-  white-space: pre;
+  overflow: auto;
+  padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4) !important;
   width: 100%;
+}
+
+.night :not(pre) > code[class*=language-].block {
+  background: colors.$night-bg;
+  border: borders.$night-block;
 }

@@ -7,8 +7,8 @@ input[type="checkbox"] {
   &:checked:after {
     background: transparent;
     border-top: 0 solid transparent;
-    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$blue;
-    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$blue;
+    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$day-link;
+    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$day-link;
     border-left: 0 solid transparent;
     border-radius: 0;
     height: typography.$size-l;
@@ -16,4 +16,10 @@ input[type="checkbox"] {
     transform: rotate(45deg);
     width: calc(#{typography.$size-l} / 2);
   }
+}
+
+.night input[type="checkbox"]:checked:after {
+  background: transparent;
+  border-right-color: colors.$night-link;
+  border-bottom-color: colors.$night-link;
 }

@@ -12,7 +12,11 @@ aside.pull {
   text-align: center;
 
   strong {
-    color: colors.$scarlet;
+    color: colors.$day-accent;
     font-weight: normal;
   }
+}
+
+.night aside.pull strong {
+  color: colors.$night-accent;
 }

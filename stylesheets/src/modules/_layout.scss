@@ -2,15 +2,7 @@
 @use "../modules/spacing";
 
 %layout-block {
-  max-width: breakpoints.$full-page;
-  padding: spacing.$vertical calc(#{spacing.$horizontal} / 2);
-
-  @media (min-width: breakpoints.$full-page) {
-    margin: spacing.$none spacing.$horizontal;
-    padding: spacing.$vertical spacing.$horizontal;
-  }
-
-  @media (min-width: calc(#{breakpoints.$full-page} + (6 * #{spacing.$horizontal}))) {
-    margin: spacing.$none auto;
-  }
+  margin: 0 auto;
+  max-width: calc(#{breakpoints.$full-page} - (#{spacing.$horizontal} * 2));
+  padding: spacing.$vertical spacing.$horizontal;
 }

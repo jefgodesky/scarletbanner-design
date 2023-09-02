@@ -3,7 +3,11 @@
 
 iframe.video {
   aspect-ratio: 16 / 9;
-  border: borders.$media;
+  border: borders.$day-block;
   box-shadow: shadows.$block;
   width: 100%;
+}
+
+.night iframe.video {
+  border: borders.$night-block;
 }

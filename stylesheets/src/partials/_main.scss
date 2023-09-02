@@ -1,34 +1,7 @@
 @use "../modules/breakpoints";
-@use "../modules/cdn";
-@use "../modules/colors";
-@use "../modules/shadows";
-@use "../modules/spacing";
 @use "../modules/layout";
+@use "../modules/spacing";
 
 main {
   @extend %layout-block;
-  background-color: colors.$page-base;
-  background-image: url('#{cdn.$images}/page-top.svg'),
-    url('#{cdn.$images}/page-bottom.svg'),
-    linear-gradient(colors.$page-shade 0, transparent 10em, transparent calc(100% - 10em), colors.$page-shade 100%),
-    linear-gradient(90deg, colors.$page-shade 0, transparent 10em, transparent calc(100% - 10em), colors.$page-shade 100%);
-  background-repeat: no-repeat;
-  background-position: top center, bottom center, center;
-  background-size: 102%, 102%, cover;
-  box-shadow: shadows.$page;
-  color: colors.$page-text;
-  font-size: 1.25em;
-  line-height: 1.5;
-  margin-top: spacing.$vertical * 4;
-  
-  @media (min-width: breakpoints.$full-page) {
-    background-image: url('#{cdn.$images}/page-top.svg'),
-      url('#{cdn.$images}/page-bottom.svg'),
-      url('#{cdn.$images}/page-body.svg'),
-      linear-gradient(colors.$page-shade 0, transparent 10em, transparent calc(100% - 10em), colors.$page-shade 100%),
-      linear-gradient(90deg, colors.$page-shade 0, transparent 10em, transparent calc(100% - 10em), colors.$page-shade 100%);
-    background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
-    background-position: top center, bottom center, center, center;
-    background-size: 100%, 100%, 100%, cover;
-  }
 }

@@ -1,37 +1,28 @@
-@use "../modules/cdn";
-@use "../modules/colors";
-@use "../modules/spacing";
-@use "../modules/shadows";
 @use "../modules/layout";
 
-body > nav {
-  background: url('#{cdn.$images}/wood.gif') repeat;
-  border-bottom: calc(#{spacing.$vertical} / 8) solid colors.$black;
-  box-shadow: shadows.$page;
-  height: spacing.$vertical * 2;
-  margin: 0;
-  position: relative;
+.scarletbanner > nav {
+  @extend %layout-block;
 
   h1 {
-    @extend %layout-block;
-    background: url('#{cdn.$logos}/full-color-trimmed.png') no-repeat top center;
+    aspect-ratio: 3.3 / 1;
+    background: url("/images/day/logo.svg") no-repeat top left;
     background-size: contain;
-    border-bottom: 0;
-    font-size: 1em;
-    height: spacing.$vertical * 7;
-    margin: spacing.$none auto spacing.$none auto;
-    padding: spacing.$none;
+    font-size: 0;
+    margin: 0;
     position: relative;
+    width: 50%;
 
     a {
-      bottom: spacing.$none;
+      bottom: 0;
       display: block;
-      font-size: spacing.$none;
-      left: spacing.$none;
-      text-decoration: none;
+      left: 0;
       position: absolute;
-      right: spacing.$none;
-      top: spacing.$none;
+      right: 0;
+      top: 0;
     }
   }
+}
+
+.scarletbanner.night > nav h1 {
+  background-image: url("/images/night/logo.svg");
 }

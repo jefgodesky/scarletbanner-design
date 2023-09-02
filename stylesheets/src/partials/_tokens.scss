@@ -1,0 +1,61 @@
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/gradients";
+@use "../modules/shadows";
+@use "../modules/spacing";
+
+.border-example,
+.shadow-example,
+.gradient-example {
+  width: spacing.$horizontal;
+}
+
+.border-example {
+  height: 0;
+
+  &.day-block { border-top: borders.$day-block; }
+  &.day-table-heading { border-top: borders.$day-table-heading; }
+  &.day-cta { border-top: borders.$day-cta; }
+  &.day-cta-active { border-top: borders.$day-cta-active; }
+  &.night-block { border-top: borders.$night-block; }
+  &.night-table-heading { border-top: borders.$night-table-heading; }
+  &.night-cta { border-top: borders.$night-cta; }
+  &.night-cta-active { border-top: borders.$night-cta-active; }
+}
+
+.shadow-example {
+  background: colors.$day-bg;
+  height: 0.5rem;
+
+  &.block { box-shadow: shadows.$block; }
+  &.focus-day-input { box-shadow: shadows.$focus-day-input; }
+  &.day-error-input { box-shadow: shadows.$day-error-input; }
+  &.focus-night-input { box-shadow: shadows.$focus-night-input; }
+  &.night { box-shadow: shadows.$night-error-input; }
+  &.button { box-shadow: shadows.$button; }
+  &.pressed-button { box-shadow: shadows.$pressed-button; }
+}
+
+.gradient-example {
+  border: borders.$day-block;
+  box-shadow: shadows.$block;
+  height: 1rem;
+
+  &.steel { background: linear-gradient(90deg, gradients.$steel); }
+  &.blue-steel { background: linear-gradient(90deg, gradients.$blue-steel); }
+  &.primary-button { background: linear-gradient(90deg, gradients.$primary-button); }
+  &.primary-button-active { background: linear-gradient(90deg, gradients.$primary-button-active); }
+  &.secondary-button { background: linear-gradient(90deg, gradients.$secondary-button); }
+  &.secondary-button-active { background: linear-gradient(90deg, gradients.$secondary-button-active); }
+  &.disabled-button { background: linear-gradient(90deg, gradients.$disabled-button); }
+}
+
+.night {
+  .shadow-example {
+    background: colors.$night-bg;
+  }
+
+  .gradient-example {
+    border: borders.$night-block;
+  }
+}

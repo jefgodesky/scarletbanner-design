@@ -1,8 +1,13 @@
 @use "../modules/colors";
-@use "../modules/shadows";
 
 select,
 select:active {
-  background: colors.$page-base;
-  box-shadow: shadows.$block;
+  background: colors.$day-shade;
+}
+
+.night {
+  select,
+  select:active {
+    background: colors.$night-shade;
+  }
 }

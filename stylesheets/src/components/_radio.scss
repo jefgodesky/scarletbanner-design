@@ -1,4 +1,5 @@
 @use "../modules/colors";
+@use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/typography";
 
@@ -14,6 +15,7 @@ label.checkbox {
 
 input[type="radio"],
 input[type="checkbox"] {
+  background: colors.$day-shade;
   border-radius: calc(#{typography.$size-l} / 2);
   display: inline-block;
   float: left;
@@ -23,16 +25,31 @@ input[type="checkbox"] {
   width: typography.$size-l;
 
   &:checked {
-    background: rgba(colors.$blue, 0.25);
+    box-shadow: inset shadows.$focus-day-input;
 
     &:after {
-      background: colors.$blue;
+      background: colors.$day-link;
       border-radius: calc(#{typography.$size-l} * 0.3);
       content: '';
       display: block;
       height: calc(#{typography.$size-l} * 0.6);
       margin: calc((#{typography.$size-l} * 0.2) - 1px) 0 0 calc((#{typography.$size-l} * 0.2) - 1px);
       width: calc(#{typography.$size-l} * 0.6);
+    }
+  }
+}
+
+.night {
+  input[type="radio"],
+  input[type="checkbox"] {
+    background: colors.$night-shade;
+
+    &:checked {
+      box-shadow: inset shadows.$focus-night-input;
+
+      &:after {
+        background: colors.$night-link;
+      }
     }
   }
 }

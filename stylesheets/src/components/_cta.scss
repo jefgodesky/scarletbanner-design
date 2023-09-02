@@ -1,0 +1,39 @@
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/typography";
+
+.cta {
+  border-bottom: borders.$day-cta;
+  font: typography.$h3;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:visited {
+    color: colors.$day-link;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: borders.$day-cta-active;
+    color: colors.$day-accent;
+  }
+
+  &:after {
+    content: '\00BB';
+    padding-left: typography.$size-xs;
+  }
+}
+
+.night .cta {
+  border-bottom: borders.$night-cta;
+
+  &:visited {
+    color: colors.$night-link;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: borders.$night-cta-active;
+    color: colors.$night-accent;
+  }
+}

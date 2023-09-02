@@ -2,16 +2,29 @@
 @use "../modules/transitions";
 
 a {
-  color: colors.$blue;
+  color: colors.$day-link;
   font-weight: bold;
   transition: transitions.$quick;
 
   &:visited {
-    color: colors.$purple;
+    color: colors.$day-link-visited;
   }
 
   &:active,
   &:hover {
-    color: colors.$scarlet;
+    color: colors.$day-accent;
+  }
+}
+
+.night a {
+  color: colors.$night-link;
+
+  &:visited {
+    color: colors.$night-link-visited;
+  }
+
+  &:active,
+  &:hover {
+    color: colors.$night-accent;
   }
 }

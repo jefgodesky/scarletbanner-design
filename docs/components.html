@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" media="all" href="/stylesheets/dist/index.css" />
   </head>
-  <body>
+  <body class="scarletbanner">
     <nav>
       <h1>
         <a href="https://scarletbanner.com">The Scarlet Banner</a>
@@ -48,18 +48,14 @@
             <a href="#component-panel">panel link</a> component.</li>
         </ul>
       </section>
-      <section id="component-prominent-link" class="component" data-component-category="Navigation">
-        <h2>Prominent Link</h2>
-        <div class="example">
-          <a href="#component-prominent-link" class="prominent">Left-Aligned Link</a>
-          <a href="#component-prominent-link" class="prominent center">Center-Aligned Link</a>
-          <a href="#component-prominent-link" class="prominent right">Right-Aligned Link</a>
+      <section id="component-cta" class="component" data-component-category="Navigation">
+        <h2>Call to Action</h2>
+        <div class="example" style="padding: 1em; text-align: center;">
+          <a href="#component-prominent-link" class="cta">Call to Action</a>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="language-html block">&lt;a href="#" class="prominent"&gt;Left-Aligned Link&lt;/a&gt;
-&lt;a href="#" class="prominent center"&gt;Center-Aligned Link&lt;/a&gt;
-&lt;a href="#" class="prominent right"&gt;Right-Aligned Link&lt;/a&gt;</code>
+          <code class="language-html block">&lt;a href="#" class="cta"&gt;Call to Action&lt;/a&gt;</code>
         </details>
         <ul class="notes">
           <li>Use this component when you want to give users the opportunity to
@@ -117,36 +113,15 @@
       <section id="component-button" class="component" data-component-category="Navigation">
         <h2>Button</h2>
         <div class="example">
-          <div>
-            <button>Primary Button</button>
-            <input type="button" value="Primary Button" />
-          </div>
-          <div>
-            <button class="secondary">Secondary Button</button>
-            <input type="button" value="Secondary Button" class="secondary" />
-          </div>
-          <div>
-            <button disabled>Disabled Button</button>
-            <input type="button" value="Disabled Button" disabled />
-          </div>
-          <div>
-            <button disabled class="secondary">Disabled Secondary Button</button>
-            <input type="button" value="Disabled Secondary Button" disabled class="secondary" />
-          </div>
+          <button><p><span>Primary Button</span></p></button>
+          <button class="secondary"><p><span>Secondary Button</span></p></button>
+          <button disabled><p><span>Disabled Button</span></p></button>
         </div>
         <details>
           <summary>Markup</summary>
-          <code class="language-html block">&lt;button&gt;Primary Button&lt;/button&gt;
-&lt;input type="button" value="Primary Button" /&gt;
-
-&lt;button class="secondary"&gt;Secondary Button&lt;/button&gt;
-&lt;input type="button" value="Secondary Button" class="secondary" /&gt;
-
-&lt;button disabled&gt;Disabled Button&lt;/button&gt;
-&lt;input type="button" value="Disabled Button" disabled /&gt;
-
-&lt;button disabled class="secondary"&gt;Disabled Secondary Button&lt;/button&gt;
-&lt;input type="button" value="Disabled Secondary Button" disabled class="secondary" /&gt;</code>
+          <code class="language-html block">&lt;button&gt;&lt;p&gt;&lt;span&gt;Primary Button&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button class="secondary"&gt;&lt;p&gt;&lt;span&gt;Secondary Button&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button disabled&gt;&lt;p&gt;&lt;span&gt;Disabled Button&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;</code>
         </details>
         <ul class="notes">
           <li>Buttons <em>do things</em>, while <a href="#component-link">links</a>
@@ -342,6 +317,28 @@
             <a href="#component-input">text input</a> field.</li>
           <li>Just like other form elements, text areas should appear with a
             concise and informative <a href="#component-label">label</a>.</li>
+        </ul>
+      </section>
+      <section id="component-input-button" class="component" data-component-category="Forms">
+        <h2>Input &amp; Button</h2>
+        <div class="example">
+          <fieldset class="input-button">
+            <input type="search" placeholder="Search" />
+            <button><p><span>Search</span></p></button>
+          </fieldset>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;fieldset class="input-button"&gt;
+  &lt;input type="search" placeholder="Search" /&gt;
+  &lt;button&gt;&lt;p&gt;&lt;span&gt;Search&lt;/span&gt;&lt;/p&gt;&lt;/button&gt;
+&lt;/fieldset&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>This component allows you to create a form that combines a single
+            text input field with a button. This is useful for simple,
+            single-input forms like search query forms and email list signup
+            forms.</li>
         </ul>
       </section>
       <section id="component-dropdown" class="component" data-component-category="Forms">
@@ -916,7 +913,7 @@
         <h2>Sidebar</h2>
         <div class="example">
           <aside>
-            <h2>Son of a Biscuit Eater</h2>
+            <h3>Son of a Biscuit Eater</h3>
             <p>Knave spyglass booty list quarter Nelsons folly cackle fruit bilge sutler salmagundi. Spirits swab Shiver me timbers lugsail cackle fruit barkadeer to go on account hardtack Yellow Jack doubloon. Gangway fore Arr Privateer clipper skysail killick Cat o'nine tails maroon scuttle.</p>
             <p>Nipperkin overhaul black spot bring a spring upon her cable topmast parrel cog ballast provost Davy Jones' Locker. Pinnace hardtack scuppers tackle handsomely gangplank grapple Jack Tar yardarm piracy. Sail ho grog blossom bilge rat topsail Jolly Roger sutler run a rig mizzen Sink me Pieces of Eight.</p>
           </aside>
@@ -924,7 +921,7 @@
         <details>
           <summary>Markup</summary>
           <code class="language-html block">&lt;aside&gt;
-  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;h3&gt;Title&lt;/h3&gt;
   &lt;p&gt;Content&lt;/p&gt;
 &lt;/aside&gt;</code>
         </details>

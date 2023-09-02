@@ -1,19 +1,16 @@
 @use "../modules/breakpoints";
 @use "../modules/borders";
 @use "../modules/colors";
-@use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 nav.toc {
-  background: rgba(colors.$page-shade, 0.5);
-  border-top: borders.$block;
-  border-bottom: borders.$block;
-  padding: typography.$size-m typography.$size-xl;
+  background: colors.$day-shade;
+  padding: typography.$size-l typography.$size-xxl;
 
   h4 {
-    border-bottom: borders.$block;
-    border-bottom-width: spacing.$thick-border;
+    border-bottom: borders.$day-block;
+    border-bottom-width: spacing.$hairline;
     font-style: normal;
     margin: spacing.$none spacing.$none typography.$size-xs spacing.$none;
     white-space: nowrap;
@@ -25,7 +22,19 @@ nav.toc {
     padding: spacing.$none;
   }
 
+  li {
+    padding: calc(#{spacing.$vertical} / 16) 0;
+  }
+
   @media (min-width: breakpoints.$full-page) {
-    margin: typography.$size-m typography.$size-xl * -1;
+    margin: typography.$size-l typography.$size-xxl * -1;
+  }
+}
+
+.night nav.toc {
+  background: colors.$night-shade;
+
+  h4 {
+    border-bottom: borders.$night-block;
   }
 }

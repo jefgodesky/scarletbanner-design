@@ -6,7 +6,7 @@
 @use "../modules/typography";
 
 img {
-  border: borders.$media;
+  border: borders.$day-block;
   box-shadow: shadows.$block;
   margin: typography.$size-m spacing.$none;
   max-width: 100%;
@@ -29,4 +29,8 @@ img {
       max-width: 60%;
     }
   }
+}
+
+.night img {
+  border: borders.$night-block;
 }

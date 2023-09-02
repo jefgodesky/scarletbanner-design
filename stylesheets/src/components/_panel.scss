@@ -1,12 +1,9 @@
 @use "../modules/colors";
-@use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 .panel {
-  border: spacing.$hairline solid transparent;
-  border-radius: spacing.$rounding;
-  color: colors.$page-text;
+  color: colors.$day-fg;
   display: block;
   font-weight: normal;
   margin: spacing.$none typography.$size-m * -1;
@@ -14,18 +11,32 @@
   text-decoration: none;
 
   &:hover {
-    background: colors.$page-base;
-    border-color: colors.$page-shade;
-    box-shadow: shadows.$block;
+    background: colors.$day-bg;
+    border-color: colors.$day-shade;
   }
 
   &:active,
   &:hover,
   &:visited {
-    color: colors.$page-text;
+    color: colors.$day-fg;
   }
 
   h2, h3, h4 {
     margin-top: typography.$size-m;
+  }
+}
+
+.scarletbanner.night .panel {
+  color: colors.$night-fg;
+
+  &:hover {
+    background: colors.$night-shade;
+    border-color: colors.$night-shade;
+  }
+
+  &:active,
+  &:hover,
+  &:visited {
+    color: colors.$night-fg;
   }
 }

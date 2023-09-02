@@ -15,8 +15,11 @@ h1, h2, h3, h4 {
 
 h1 {
   font: typography.$h1;
-  border-bottom: borders.$h1;
-  color: colors.$scarlet;
+  color: colors.$day-accent;
+}
+
+.night h1 {
+  color: colors.$night-accent;
 }
 
 h2 {

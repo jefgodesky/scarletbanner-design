@@ -1,4 +1,10 @@
+@use "../modules/spacing";
+@use "../modules/typography";
+
 dt {
-  font-style: italic;
-  font-weight: bold;
+  font: typography.$h4;
+}
+
+dd {
+  margin: spacing.$none spacing.$none calc(#{spacing.$vertical} / 2) spacing.$none;
 }

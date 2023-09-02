@@ -1,6 +1,5 @@
-@use "../../node_modules/prismjs/themes/prism.css";
+@use "vendor/prism";
 
-@use "modules/cdn";
 @use "modules/colors";
 @use "modules/spacing";
 
@@ -9,20 +8,21 @@
 @use "partials/hero";
 @use "partials/main";
 @use "partials/footer";
-@use "partials/meta";
 
 @use "partials/swatches";
+@use "partials/tokens";
 
 @use "components/code";
 @use "components/component";
 @use "components/link";
-@use "components/prominent-link";
+@use "components/cta";
 @use "components/panel";
 @use "components/button";
 @use "components/toc";
 @use "components/text-input";
 @use "components/label";
 @use "components/textarea";
+@use "components/input-button";
 @use "components/dropdown";
 @use "components/radio";
 @use "components/checkbox";
@@ -38,8 +38,6 @@
 @use "components/pullquote";
 @use "components/side-panel";
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&family=Alegreya+Sans:ital,wght@0,300;0,700;1,300;1,700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 html {
   box-sizing: border-box;
 }
@@ -49,11 +47,30 @@ html {
 }
 
 body {
-  background-attachment: fixed, local;
-  background-color: colors.$black;
-  background-image: linear-gradient(transparent 0%, colors.$black 100%), url('#{cdn.$images}/wall.gif');
-  background-repeat: no-repeat, repeat;
-  background-position: bottom center, top center;
+  background: colors.$day-bg url("/images/day/bg.jpg") no-repeat bottom center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: colors.$day-fg;
   margin: 0;
   padding: 0;
+
+  &:not(.night) {
+    @extend %prism-default;
+
+    :not(pre) > code[class*=language-].block {
+      white-space: pre;
+    }
+  }
+
+  &.night {
+    @extend %prism-dark;
+    background: colors.$night-bg url("/images/night/bg.jpg") no-repeat bottom center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: colors.$night-fg;
+
+    :not(pre) > code[class*=language-].block {
+      white-space: pre;
+    }
+  }
 }

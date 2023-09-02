@@ -6,8 +6,6 @@
 @use "../modules/typography";
 
 .swatch {
-  border: borders.$block;
-  border-radius: spacing.$rounding;
   margin: typography.$size-m spacing.$none;
 
   h4 {
@@ -17,9 +15,9 @@
 
   dl {
     @include dataset.dataset;
-    background: colors.$page-base;
-    border-radius: spacing.$none spacing.$none spacing.$rounding spacing.$rounding;
-    color: colors.$page-text;
+    background: colors.$day-bg;
+    color: colors.$day-fg;
+    overflow: hidden;
     padding: typography.$size-m;
     margin: 0;
   }
@@ -28,6 +26,11 @@
   dd {
     white-space: nowrap;
   }
+}
+
+.night .swatch dl {
+  background: colors.$night-bg;
+  color: colors.$night-fg;
 }
 
 .contrast-report {

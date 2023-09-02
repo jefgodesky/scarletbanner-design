@@ -33,11 +33,11 @@ table {
   }
 
   th {
-    border-bottom: borders.$table-heading;
+    border-bottom: borders.$day-table-heading;
   }
 
   tr:nth-child(even) td {
-    background: rgba(colors.$page-shade, 0.3);
+    background: colors.$day-shade-lighter;
   }
 
   .num {
@@ -45,6 +45,20 @@ table {
   }
 
   tfoot {
-    border-top: borders.$block;
+    border-top: borders.$day-block;
+  }
+}
+
+.night table {
+  th {
+    border-bottom: borders.$night-table-heading;
+  }
+
+  tr:nth-child(even) td {
+    background: colors.$night-shade-lighter;
+  }
+
+  tfoot {
+    border-top: borders.$night-block;
   }
 }

@@ -1,24 +1,23 @@
 @use "../modules/breakpoints";
 @use "../modules/colors";
-@use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 aside {
-  background: colors.$page-base;
-  box-shadow: shadows.$block;
-  font: typography.$technical;
+  background: colors.$day-shade;
   margin: typography.$size-m spacing.$none;
-  padding: spacing.$vertical spacing.$horizontal;
+  padding: spacing.$vertical spacing.$horizontal * 0.5;
 
-  h2 {
-    font: typography.$technical;
-    font-size: typography.$size-l;
-    font-weight: bold;
+  *:first-child {
+    margin-top: typography.$size-xs;
   }
 
   @media (min-width: breakpoints.$full-page) {
     margin: typography.$size-m spacing.$horizontal * -0.5;
     padding: spacing.$vertical spacing.$horizontal * 0.5;
   }
+}
+
+.night aside {
+  background: colors.$night-shade;
 }

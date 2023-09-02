@@ -1,13 +1,16 @@
-@use "../modules/cdn";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 hr {
   appearance: none;
-  background: transparent url('#{cdn.$images}/hr.svg') no-repeat center;
+  background: transparent url('/images/day/divider.svg') no-repeat center;
   background-size: contain;
   border: 0;
   height: typography.$size-xxl;
   margin: typography.$size-m spacing.$none;
   width: 100%;
+}
+
+.night hr {
+  background-image: url('/images/night/divider.svg');
 }

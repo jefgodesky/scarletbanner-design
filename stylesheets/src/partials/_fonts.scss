@@ -1,9 +1,12 @@
-@use "../modules/cdn";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Vollkorn+SC&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
-  font-family: 'Black Castle';
-  src: url('#{cdn.$fonts}/blackcastlemf-webfont.woff2') format('woff2'),
-  url('#{cdn.$fonts}/blackcastlemf-webfont.woff') format('woff');
+  font-family: "Ravenscroft";
+  src: url("/fonts/ravenscroft.woff2"),
+    url("/fonts/ravenscroft.woff"),
+    url("/fonts/ravenscroft.ttf"),
+    url("/fonts/ravenscroft.eot"),
+    url("/fonts/ravenscroft.svg");
   font-weight: normal;
   font-style: normal;
 }

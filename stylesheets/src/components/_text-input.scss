@@ -8,22 +8,46 @@ input,
 textarea,
 select {
   appearance: none;
-  background: rgba(colors.$black, 0.1);
-  border: borders.$block;
+  background: transparent;
+  background: colors.$day-shade;
+  border: borders.$day-block;
   box-shadow: inset shadows.$block;
+  color: colors.$day-fg;
   display: block;
   font: typography.$technical;
+  margin: calc(#{spacing.$vertical} / 4) 0;
+  outline: none;
   padding: calc(#{spacing.$vertical} / 4) calc(#{spacing.$horizontal} / 4);
   width: 100%;
 
   &:focus {
-    background: rgba(colors.$blue, 5%);
-    border-color: colors.$blue;
+    border-color: colors.$day-link;
+    box-shadow: inset shadows.$focus-day-input;
   }
 
   &.error {
-    background: rgba(colors.$scarlet, 0.1);
-    border-color: colors.$scarlet;
-    color: colors.$scarlet;
+    border-color: colors.$day-accent;
+    box-shadow: inset shadows.$day-error-input;
+    color: colors.$day-accent;
+  }
+}
+
+.night {
+  input,
+  textarea,
+  select {
+    border: borders.$night-block;
+    color: colors.$night-fg;
+
+    &:focus {
+      border-color: colors.$night-link;
+      box-shadow: inset shadows.$focus-night-input;
+    }
+
+    &.error {
+      border-color: colors.$night-accent;
+      box-shadow: inset shadows.$night-error-input;
+      color: colors.$night-accent;
+    }
   }
 }
