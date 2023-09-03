@@ -18,7 +18,6 @@ describe('initComponentNavigator', () => {
     const components = [...document.body.querySelectorAll('section[data-component-category]')]
     initComponentNavigator(components as HTMLElement[])
     const check = document.body.querySelector('#component-navigator select')
-    console.log(check)
     expect(check).not.to.equal(undefined)
   })
 })
