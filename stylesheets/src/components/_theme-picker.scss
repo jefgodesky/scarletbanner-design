@@ -1,0 +1,39 @@
+#theme-picker {
+  bottom: 0;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+
+  img {
+    margin: 0;
+    position: fixed;
+  }
+
+  select {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    bottom: 0;
+    font-size: 0;
+    height: 10vw;
+    position: fixed;
+    right: 0;
+    width: 10vw;
+    z-index: 99;
+  }
+}
+
+#theme-picker-frame {
+  bottom: 0;
+  right: 0;
+  width: 10vw;
+  z-index: 98;
+}
+
+#theme-picker-wheel {
+  bottom: -7vw;
+  right: -7vw;
+  width: 16vw;
+  z-index: 97;
+}

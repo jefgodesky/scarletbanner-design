@@ -6,6 +6,7 @@ interface ModuleConfig {
 }
 
 const modules: ModuleConfig[] = [
+  { elems: selector('body'), name: 'theme-picker' },
   { elems: selector('code.block'), name: 'code' },
   { elems: selector('section.component[data-component-category]'), name: 'component-navigator' }
 ]
