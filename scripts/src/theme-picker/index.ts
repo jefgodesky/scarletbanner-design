@@ -3,8 +3,8 @@ import getPreference from './get-preference'
 import update from './update'
 
 const initThemePicker = async (): Promise<void> => {
-  createThemePickerWidget()
   const pref = getPreference()
+  createThemePickerWidget(pref)
   await update(pref)
 }
 

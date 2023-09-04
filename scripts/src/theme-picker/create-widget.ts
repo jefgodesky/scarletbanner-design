@@ -1,12 +1,14 @@
 import { create } from 'unobtrusive-dom'
 import handleChange from './handle-change'
+import { ThemePreference } from './get-preference'
 
-const createThemePickerWidget = (): void => {
+const createThemePickerWidget = (pref: ThemePreference = 'natural'): void => {
   const select = create({ tag: 'select' }) as HTMLSelectElement
-  select.appendChild(create({ tag: 'option', attrs: { value: 'day' }, text: 'Day' }))
-  select.appendChild(create({ tag: 'option', attrs: { value: 'night' }, text: 'Night' }))
-  select.appendChild(create({ tag: 'option', attrs: { value: 'natural' }, text: 'Natural' }))
-  select.addEventListener('change', handleChange)
+  const selected = 'selected'
+  select.appendChild(create({ tag: 'option', attrs: pref === 'day' ? { value: 'day', selected } : { value: 'day' }, text: 'Day' }))
+  select.appendChild(create({ tag: 'option', attrs: pref === 'night' ? { value: 'night', selected } : { value: 'night' }, text: 'Night' }))
+  select.appendChild(create({ tag: 'option', attrs: pref === 'natural' ? { value: 'natural', selected } : { value: 'natural' }, text: 'Natural' }))
+  select.addEventListener('change', (event) => { void handleChange(event) })
 
   const wrapper = create({ tag: 'div', attrs: { id: 'theme-picker' } })
   wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-frame', src: '/images/wheel-frame.svg', alt: 'Theme Picker Frame' }, classes: ['unboxed'] }))
