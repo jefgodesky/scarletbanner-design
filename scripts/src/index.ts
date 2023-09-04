@@ -15,7 +15,7 @@ const loadModules = async (configs: ModuleConfig[]): Promise<void> => {
   for (const { elems, name } of configs) {
     if (elems === null) continue
     const module = await import(`./${name}/index`)
-    module.default(elems)
+    await module.default(elems)
   }
 }
 
