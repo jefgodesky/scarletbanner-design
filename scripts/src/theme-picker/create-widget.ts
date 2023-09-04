@@ -2,9 +2,9 @@ import { create } from 'unobtrusive-dom'
 
 const createThemePickerWidget = (): void => {
   const select = create({ tag: 'select' })
-  select.appendChild(create({ tag: 'option', text: 'Day' }))
-  select.appendChild(create({ tag: 'option', text: 'Night' }))
-  select.appendChild(create({ tag: 'option', text: 'Natural' }))
+  select.appendChild(create({ tag: 'option', attrs: { value: 'day' }, text: 'Day' }))
+  select.appendChild(create({ tag: 'option', attrs: { value: 'night' }, text: 'Night' }))
+  select.appendChild(create({ tag: 'option', attrs: { value: 'natural' }, text: 'Natural' }))
 
   const wrapper = create({ tag: 'div', attrs: { id: 'theme-picker' } })
   wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-frame', src: '/images/wheel-frame.svg', alt: 'Theme Picker Frame' }, classes: ['unboxed'] }))
