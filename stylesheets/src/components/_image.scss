@@ -33,4 +33,9 @@ img {
 
 .night img {
   border: borders.$night-block;
+
+  &.unboxed {
+    border: none;
+    box-shadow: none;
+  }
 }
