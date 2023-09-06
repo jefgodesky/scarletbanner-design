@@ -16,10 +16,10 @@
     box-shadow: none;
     bottom: 0;
     font-size: 0;
-    height: 10vw;
+    height: 10vmax;
     position: fixed;
     right: 0;
-    width: 10vw;
+    width: 10vmax;
     z-index: 99;
   }
 }
@@ -27,13 +27,13 @@
 #theme-picker-frame {
   bottom: 0;
   right: 0;
-  width: 10vw;
+  width: 10vmax;
   z-index: 98;
 }
 
 #theme-picker-wheel {
-  bottom: -6vw;
-  right: -5.25vw;
-  width: 14vw;
+  bottom: -6vmax;
+  right: -5.25vmax;
+  width: 14vmax;
   z-index: 97;
 }
