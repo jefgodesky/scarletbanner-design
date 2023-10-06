@@ -14,10 +14,10 @@ describe('Theme picker: handleChange', () => {
     jsdomCleanUp()
   })
 
-  it('changes theme in local storage', () => {
+  it('changes theme in local storage', async () => {
     const value = 'day'
     const target = create({ tag: 'option', attrs: { value }, text: 'Day' })
-    handleChange({ target })
+    await handleChange({ target })
     expect(window.localStorage.getItem('theme')).to.equal(value)
   })
 })
