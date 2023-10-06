@@ -9,6 +9,9 @@ scripts/dist
 !docs/*.html
 add-doc.json
 
+# Ignore release files
+v1
+
 # Ignore local files
 .DS_Store
 .idea

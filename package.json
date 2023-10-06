@@ -21,7 +21,7 @@
   "scripts": {
     "test": "npm-run-all lint unit-test",
     "dev": "npm-run-all tokens watch:dev",
-    "prod": "npm-run-all tokens sass:prod js:prod",
+    "prod": "npm-run-all tokens sass:prod js:prod release",
     "lint": "ts-standard",
     "unit-test": "mocha --experimental-specifier-resolution=node",
     "tokens": "npm-run-all tokens:adddoc tokens:compile",
@@ -34,7 +34,8 @@
     "sass:dev": "sass --watch --update --style=expanded stylesheets/src:stylesheets/dist",
     "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist",
     "js:dev": "webpack --watch --mode development",
-    "js:prod": "webpack --stats-error-details --mode production"
+    "js:prod": "webpack --stats-error-details --mode production",
+    "release": "node release.js"
   },
   "pre-commit": [
     "test",
