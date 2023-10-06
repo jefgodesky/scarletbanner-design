@@ -1,4 +1,5 @@
-![The Scarlet Banner](https://github.com/jefgodesky/scarletbanner/blob/main/static/logo/full-color.png?raw=true)
+![The Scarlet Banner](https://raw.githubusercontent.com/jefgodesky/scarletbanner-design/main/images/night/logo.svg#gh-dark-mode-only)
+![The Scarlet Banner](https://raw.githubusercontent.com/jefgodesky/scarletbanner-design/main/images/day/logo.svg#gh-light-mode-only)
 
 # The Scarlet Banner Design System
 This repository houses the source code for [_The Scarlet Banner_ Design System](https://design.scarletbanner.com),
