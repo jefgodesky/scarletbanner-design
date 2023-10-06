@@ -5,10 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-env:
-  REPO: scarletbanner-design
-  GH_USERNAME: jefgodesky
-
 jobs:
   deploy:
     name: Deploy to design.scarletbanner.com
@@ -22,7 +18,7 @@ jobs:
           PORT: 22
           KEY: ${{ secrets.DEPLOYER_KEY }}
           script: |
-            cd /var/www/html/${{ env.REPO }}
+            cd ${{ secrets.DEPLOYER_REMOTE_DIR }}
             git pull
             npm install
             npm run prod
