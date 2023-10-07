@@ -1,12 +1,14 @@
+@use "../modules/paths";
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Vollkorn+SC&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
   font-family: "Ravenscroft";
-  src: url("/fonts/ravenscroft.woff2"),
-    url("/fonts/ravenscroft.woff"),
-    url("/fonts/ravenscroft.ttf"),
-    url("/fonts/ravenscroft.eot"),
-    url("/fonts/ravenscroft.svg");
+  src: url("#{paths.$fonts}/ravenscroft.woff2"),
+    url("#{paths.$fonts}/ravenscroft.woff"),
+    url("#{paths.$fonts}/ravenscroft.ttf"),
+    url("#{paths.$fonts}/ravenscroft.eot"),
+    url("#{paths.$fonts}/ravenscroft.svg");
   font-weight: normal;
   font-style: normal;
 }

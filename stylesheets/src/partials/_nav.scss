@@ -1,11 +1,12 @@
 @use "../modules/layout";
+@use "../modules/paths";
 
 .scarletbanner > nav {
   @extend %layout-block;
 
   h1 {
     aspect-ratio: 3.3 / 1;
-    background: url("/images/day/logo.svg") no-repeat top left;
+    background: url("#{paths.$images}/day/logo.svg") no-repeat top left;
     background-size: contain;
     font-size: 0;
     margin: 0;
@@ -24,5 +25,5 @@
 }
 
 .scarletbanner.night > nav h1 {
-  background-image: url("/images/night/logo.svg");
+  background-image: url("#{paths.$images}/night/logo.svg");
 }

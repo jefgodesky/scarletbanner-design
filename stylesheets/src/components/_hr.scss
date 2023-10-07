@@ -1,9 +1,10 @@
+@use "../modules/paths";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 hr {
   appearance: none;
-  background: transparent url('/images/day/divider.svg') no-repeat center;
+  background: transparent url('#{paths.$images}/day/divider.svg') no-repeat center;
   background-size: contain;
   border: 0;
   height: typography.$size-xxl;
@@ -12,5 +13,5 @@ hr {
 }
 
 .night hr {
-  background-image: url('/images/night/divider.svg');
+  background-image: url('#{paths.$images}/night/divider.svg');
 }
