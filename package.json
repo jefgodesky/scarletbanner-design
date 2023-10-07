@@ -35,7 +35,8 @@
     "sass:prod": "sass --no-source-map --style=compressed stylesheets/src:stylesheets/dist",
     "js:dev": "webpack --watch --mode development",
     "js:prod": "webpack --stats-error-details --mode production",
-    "release": "node release.js"
+    "release": "NODE_OPTIONS=\"--loader ts-node/esm\" ts-node release/copy.ts"
+
   },
   "pre-commit": [
     "test",
