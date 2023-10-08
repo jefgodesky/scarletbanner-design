@@ -1,30 +1,43 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
+import webpack from 'webpack'
+import getVersionPath from './release/get-version-path.js'
 
-const FILENAME = fileURLToPath(import.meta.url)
-const DIR = path.dirname(FILENAME)
+export default (env: any, argv: any): webpack.Configuration => {
+  const FILENAME = fileURLToPath(import.meta.url)
+  const DIR = path.dirname(FILENAME)
+  const [version] = getVersionPath()
+  const base = argv.mode === 'production'
+    ? `https://design.scarletbanner.com${version}`
+    : ''
 
-export default {
-  entry: './scripts/src/index.ts',
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+  return {
+    entry: './scripts/src/index.ts',
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/
+        }
+      ]
+    },
+    resolve: {
+      extensions: ['.ts', '.js']
+    },
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(DIR, 'scripts/dist')
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
       }
+    },
+    plugins: [
+      new webpack.DefinePlugin({
+        BASE_PATH: JSON.stringify(base)
+      })
     ]
-  },
-  resolve: {
-    extensions: ['.ts', '.js']
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(DIR, 'scripts/dist')
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
   }
 }
