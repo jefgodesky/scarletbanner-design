@@ -38,7 +38,6 @@
     "js:dev": "webpack --watch --mode development",
     "js:prod": "webpack --stats-error-details --mode production",
     "release": "NODE_OPTIONS=\"--loader ts-node/esm\" ts-node release/copy.ts"
-
   },
   "pre-commit": [
     "test",
@@ -58,6 +57,7 @@
     "@types/prismjs": "^1.26.0",
     "@types/sinon": "^10.0.15",
     "@types/suncalc": "^1.9.0",
+    "@types/webpack": "^5.28.3",
     "browser-sync": "^2.29.3",
     "chai": "^4.3.7",
     "chokidar-cli": "^3.0.0",
