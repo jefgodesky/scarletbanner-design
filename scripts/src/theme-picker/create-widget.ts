@@ -11,8 +11,9 @@ const createThemePickerWidget = (pref: ThemePreference = 'natural'): void => {
   select.addEventListener('change', (event) => { void handleChange(event) })
 
   const wrapper = create({ tag: 'div', attrs: { id: 'theme-picker' } })
-  wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-frame', src: '/images/wheel-frame.svg', alt: 'Theme Picker Frame' }, classes: ['unboxed'] }))
-  wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-wheel', src: '/images/wheel.png', alt: 'Theme Picker: Day or Night?' }, classes: ['unboxed'] }))
+  const base = (globalThis as any).BASE_PATH as string ?? ''
+  wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-frame', src: `${base}/images/wheel-frame.svg`, alt: 'Theme Picker Frame' }, classes: ['unboxed'] }))
+  wrapper.appendChild(create({ tag: 'img', attrs: { id: 'theme-picker-wheel', src: `${base}/images/wheel.png`, alt: 'Theme Picker: Day or Night?' }, classes: ['unboxed'] }))
   wrapper.appendChild(select)
 
   document.body.appendChild(wrapper)
