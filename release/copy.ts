@@ -5,18 +5,28 @@ import getVersionPath from './get-version-path.js'
 const [release, version] = getVersionPath()
 const releaseDir = `.${release}`
 
-if (!fs.existsSync(releaseDir)) {
-  fs.mkdirSync(releaseDir, { recursive: true })
+const copy = (src: string, dest: string): void => {
+  const srcExists = fs.existsSync(src)
+  const destExists = fs.existsSync(dest)
+  const srcIsDir = srcExists && fs.statSync(src).isDirectory()
+
+  if (srcIsDir) {
+    if (!destExists) fs.mkdirSync(dest, { recursive: true })
+
+    fs.readdirSync(src).forEach(filename => {
+      copy(path.join(src, filename), path.join(dest, filename))
+    })
+  } else if (srcExists) {
+    fs.copyFileSync(src, dest)
+  }
 }
 
-const types = ['scripts', 'stylesheets']
-const sourceDirs = types.map(type => `./${type}/dist`)
-sourceDirs.forEach(dir => {
-  fs.readdirSync(dir).forEach(file => {
-    const src = path.join(process.cwd(), dir, file)
-    const dest = path.join(process.cwd(), release, file)
-    fs.copyFileSync(src, dest)
-  })
-})
+const map: { [key: string]: string } = {
+  './scripts/dist': `.${release}`,
+  './stylesheets/dist': `.${release}`,
+  './images': `.${release}/images`,
+  './fonts': `.${release}/fonts`
+}
 
+for (const src in map) copy(src, map[src])
 console.log(`Release ${version} ready in ${releaseDir}`)
