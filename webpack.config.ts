@@ -36,7 +36,7 @@ export default (env: any, argv: any): webpack.Configuration => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        BASE_PATH: JSON.stringify(base)
+        'process.env.BASE_PATH': JSON.stringify(base)
       })
     ]
   }
