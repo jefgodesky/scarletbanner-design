@@ -1,0 +1,66 @@
+@use "../modules/borders";
+@use "../modules/colors";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+nav.auth {
+  background: colors.$day-shade;
+  margin: 0 0 typography.$size-l 0;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-left: borders.$day-block;
+      border-left-color: colors.$day-shade;
+      margin: spacing.$none;
+      padding: typography.$size-s typography.$size-m;
+      position: relative;
+      width: 20%;
+
+      & > a {
+        align-items: center;
+        bottom: 0;
+        color: colors.$day-fg;
+        display: flex;
+        font-family: typography.$family-subheading;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+
+        &:hover {
+          color: colors.$day-accent;
+        }
+      }
+    }
+
+    .pov {
+      border-left: 0;
+      width: 60%;
+
+      label {
+        margin: 0 0 typography.$size-xs;
+      }
+
+      select {
+        margin: spacing.$none;
+      }
+
+      .input-button button {
+        clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+        width: calc(#{spacing.$button-width} / 4);
+      }
+    }
+  }
+}
+
+.night nav.auth {
+  background: colors.$night-shade;
+}

@@ -189,6 +189,95 @@
             scrolling.</li>
         </ul>
       </section>
+      <section id="component-auth-nav" class="component" data-component-category="Navigation">
+        <h2>Authentication Navigator</h2>
+        <div class="example">
+          <nav class="auth">
+            <ul>
+              <li class="pov">
+                <label for="component-auth-nav-pov-logged-out">Perspective</label>
+                <fieldset class="input-button">
+                  <select id="component-auth-nav-pov-logged-out">
+                    <option>Common Knowledge</option>
+                  </select>
+                  <button>Set</button>
+                </fieldset>
+              </li>
+              <li><a href="#component-auth-nav">Register</a></li>
+              <li><a href="#component-auth-nav">Log in</a></li>
+            </ul>
+          </nav>
+          <nav class="auth">
+            <ul>
+              <li class="pov">
+                <label for="component-auth-nav-pov-logged-in">Perspective</label>
+                <fieldset class="input-button">
+                  <select id="component-auth-nav-pov-logged-in">
+                    <option>Character A</option>
+                    <option>Character B</option>
+                    <option>Common Knowledge</option>
+                  </select>
+                  <button>Set</button>
+                </fieldset>
+              </li>
+              <li><a href="#component-auth-nav">Profile</a></li>
+              <li><a href="#component-auth-nav">Log out</a></li>
+            </ul>
+          </nav>
+        </div>
+        <details>
+          <summary>Markup</summary>
+          <code class="language-html block">&lt;!-- Unauthenticated state --&gt;
+&lt;nav class="auth"&gt;
+  &lt;ul&gt;
+    &lt;li class="pov"&gt;
+      &lt;label for="auth-nav-pov"&gt;Perspective&lt;/label&gt;
+      &lt;fieldset class="input-button"&gt;
+        &lt;select id="auth-nav-pov"&gt;
+          &lt;option&gt;Common Knowledge&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button&gt;Set&lt;/button&gt;
+      &lt;/fieldset&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="/register"&gt;Register&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/login"&gt;Log in&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Authenticated state --&gt;
+&lt;nav class="auth"&gt;
+  &lt;ul&gt;
+    &lt;li class="pov"&gt;
+      &lt;label for="auth-nav-pov"&gt;Perspective&lt;/label&gt;
+      &lt;fieldset class="input-button"&gt;
+        &lt;select id="auth-nav-pov"&gt;
+          &lt;option&gt;Character A&lt;/option&gt;
+          &lt;option&gt;Character B&lt;/option&gt;
+          &lt;option&gt;Common Knowledge&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button&gt;Set&lt;/button&gt;
+      &lt;/fieldset&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="/profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/logout"&gt;Log out&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code>
+        </details>
+        <ul class="notes">
+          <li>The Scarlet Banner website is primarily a wiki, where most
+            information is locked behind <em>secrets</em>, which some
+            characters know and others don&rsquo;t. You can read the wiki from
+            the perspective of any of your characters, which will reveal the
+            secrets that character knows in context. As such, the navigation at
+            the top of the page gives users access to the typical log in, log
+            out, registration, and profile options, but it also gives them the
+            option to change their perspective character.</li>
+          <li>In actual use, the perspective dropdown should be tied to a form
+            which will update which perspective the user sees the page from.</li>
+          <li>The authentication navigator is typically the first thing on the
+            page, even above the logo and main page navigation.</li>
+        </ul>
+      </section>
       <section id="component-input" class="component" data-component-category="Forms">
         <h2>Text Input</h2>
         <div class="example">
