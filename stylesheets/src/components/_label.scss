@@ -8,7 +8,8 @@ label {
   display: block;
   margin: typography.$size-m spacing.$none spacing.$none;
 
-  p {
+  .note {
+    display: block;
     font-size: typography.$size-s;
     font-weight: normal;
     margin: spacing.$none;
@@ -29,7 +30,8 @@ label {
   color: colors.$night-accent;
 }
 
-p.error.msg {
+.error.msg {
+  color: colors.$day-accent;
   font: typography.$technical;
   margin: typography.$size-xs spacing.$none typography.$size-m spacing.$none;
 }

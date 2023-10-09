@@ -256,7 +256,7 @@
           <input type="text" id="component-label-x1" />
           <label for="component-label-x2">
             Label
-            <p>This label has a note.</p>
+            <span class="note">This label has a note.</span>
           </label>
           <input type="text" id="component-label-x2" />
           <label for="component-label-x3" class="error">Label in Error State</label>
@@ -271,12 +271,13 @@
 
 &lt;label for="component-label-x2"&gt;
   Label
-  &lt;p&gt;This label has a note.&lt;/p&gt;
+  &lt;span class="note"&gt;This label has a note.&lt;/span&gt;
 &lt;/label&gt;
 &lt;input type="text" id="component-label-x2" /&gt;
 
 &lt;label for="component-label-x3" class="error"&gt;Label in Error State&lt;/label&gt;
-&lt;input type="text" class="error" id="component-label-x3" /&gt;</code>
+&lt;input type="text" class="error" id="component-label-x3" /&gt;
+&lt;p class="error msg"&gt;This is an example of a text input in an error state, with a label and an error message.&lt;/p&gt;</code>
         </details>
         <ul class="notes">
           <li>Though rare exceptions might exist, it&rsquo;s a good starting
@@ -411,7 +412,7 @@
           <label class="radio">
             <input type="radio" name="radio-example" value="note" id="radio-example-note" />
             Well&hellip;
-            <p>This radio button&rsquo;s label has a note.</p>
+            <span class="note">This radio button&rsquo;s label has a note.</span>
           </label>
           <label class="radio extended">
             <input type="radio" name="radio-example" value="ext" id="radio-example-ext" />
@@ -437,7 +438,7 @@
 &lt;label class="radio"&gt;
   &lt;input type="radio" name="radio-example" value="note" id="radio-example-note" /&gt;
   Well&hellip;
-  &lt;p&gt;This radio button&rsquo;s label has a note.&lt;/p&gt;
+  &lt;span class="note"&gt;This radio button&rsquo;s label has a note.&lt;/span&gt;
 &lt;/label&gt;
 
 &lt;label class="radio extended"&gt;
