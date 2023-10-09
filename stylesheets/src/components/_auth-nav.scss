@@ -1,11 +1,14 @@
 @use "../modules/borders";
 @use "../modules/colors";
+@use "../modules/layout";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 nav.auth {
+  @extend %layout-block;
   background: colors.$day-shade;
-  margin: 0 0 typography.$size-l 0;
+  margin: spacing.$none spacing.$none typography.$size-l spacing.$none;
+  padding: spacing.$none;
 
   ul {
     display: flex;
@@ -63,4 +66,17 @@ nav.auth {
 
 .night nav.auth {
   background: colors.$night-shade;
+
+  ul li {
+    border-left: borders.$night-block;
+    border-left-color: colors.$night-shade;
+
+    & > a {
+      color: colors.$night-fg;
+
+      &:hover {
+        color: colors.$night-accent;
+      }
+    }
+  }
 }
