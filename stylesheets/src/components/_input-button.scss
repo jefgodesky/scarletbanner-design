@@ -20,7 +20,7 @@
   button {
     clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
     margin-left: calc((#{spacing.$horizontal} / 2) * -1);
-    width: spacing.$button-width / 2;
+    width: calc(#{spacing.$button-width} / 2);
 
     p {
       aspect-ratio: 3 / 1;
