@@ -7,7 +7,7 @@
 nav.auth {
   @extend %layout-block;
   background: colors.$day-shade;
-  margin: spacing.$none spacing.$none typography.$size-l spacing.$none;
+  margin-bottom: typography.$size-l;
   padding: spacing.$none;
 
   ul {
