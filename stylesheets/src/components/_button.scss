@@ -10,77 +10,42 @@ button,
 input[type="button"],
 input[type="submit"] {
   appearance: none;
-  background: transparent;
+  aspect-ratio: 8 / 1;
+  background: radial-gradient(circle, gradients.$primary-button);
   border: 0;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  color: colors.$day-bg;
   cursor: pointer;
   display: block;
-  filter: drop-shadow(0 0 0.25rem #00000080);
-  margin: calc(#{spacing.$vertical} / 4) auto;
-  outline: none;
-  transition: all 0.2s ease-in-out;
+  font-family: typography.$family-subheading;
+  font-size: typography.$size-m * 1.05;
+  margin: typography.$size-m auto;
+  padding: typography.$size-xs typography.$size-l;
+  text-shadow: shadows.$button;
+  width: spacing.$button-width;
 
-  p {
-    aspect-ratio: 8 / 1;
-    background: linear-gradient(22deg, gradients.$steel);
-    border: 0;
-    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
-    display: block;
-    margin: 0;
-    position: relative;
-    width: spacing.$button-width;
-  }
-
-  span {
-    align-items: center;
-    background: radial-gradient(circle, gradients.$primary-button);
-    bottom: spacing.$button-border;
-    box-shadow: inset shadows.$button;
-    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
-    color: colors.$day-bg;
-    display: flex;
-    font-family: 'Vollkorn SC', 'serif';
-    font-size: typography.$size-m;
-    justify-content: center;
-    left: spacing.$button-border;
-    line-height: 1;
-    margin: 0;
-    position: absolute;
-    right: spacing.$button-border;
-    text-shadow: 0 0 0.5rem #000;
-    top: spacing.$button-border;
-    transition: all durations.$quick curves.$ease-in-out;
-  }
-
-  &:focus p {
-    background: linear-gradient(22deg, gradients.$blue-steel);
-  }
-
-  &:hover span {
+  &:hover {
     background: radial-gradient(circle, gradients.$primary-button-active);
   }
 
-  &:active span {
+  &:active {
     box-shadow: inset shadows.$pressed-button;
-    text-shadow: 0 0 0.25rem #000;
   }
 
-  &.secondary,
-  &[disabled] {
-    span {
-      background: radial-gradient(circle, gradients.$secondary-button);
-    }
+  &.secondary {
+    background: radial-gradient(circle, gradients.$secondary-button);
 
-    &:hover span {
+    &:hover {
       background: radial-gradient(circle, gradients.$secondary-button-active);
     }
   }
 
-  &[disabled] {
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    background: radial-gradient(circle, gradients.$disabled-button);
+    box-shadow: none;
     cursor: not-allowed;
-    opacity: 0.33;
-
-    &:hover span {
-      background: radial-gradient(circle, gradients.$secondary-button);
-    }
+    opacity: 0.5;
   }
 }
