@@ -147,6 +147,10 @@ nav.auth {
 .night nav.auth {
   background: colors.$night-shade;
 
+  &.header {
+    background: colors.$night-bg url("#{paths.$images}/night/bg.jpg") no-repeat bottom center;
+  }
+
   li {
     border-bottom: 1px solid colors.$night-shade;
 
