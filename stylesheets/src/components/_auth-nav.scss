@@ -91,7 +91,6 @@ nav.auth {
     background: colors.$day-bg url("#{paths.$images}/day/bg.jpg") no-repeat bottom center;
     box-shadow: shadows.$block;
     left: 0;
-    position: absolute;
     right: 0;
     transition: transitions.$quick;
     top: 0;
@@ -105,7 +104,6 @@ nav.auth {
       cursor: pointer;
       display: block;
       height: spacing.$horizontal;
-      position: absolute;
       right: spacing.$horizontal;
       transition: transitions.$quick;
       width: spacing.$horizontal;
@@ -121,6 +119,10 @@ nav.auth {
         top: 0;
         transition: transitions.$quick;
       }
+    }
+
+    &.initialized {
+      position: absolute;
     }
 
     &.closed {
