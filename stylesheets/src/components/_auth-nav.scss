@@ -1,55 +1,34 @@
 @use "../modules/borders";
+@use "../modules/breakpoints";
 @use "../modules/colors";
-@use "../modules/layout";
+@use "../modules/mixins";
+@use "../modules/paths";
+@use "../modules/shadows";
 @use "../modules/spacing";
+@use "../modules/transitions";
 @use "../modules/typography";
 
 nav.auth {
-  @extend %layout-block;
   background: colors.$day-shade;
-  margin-bottom: typography.$size-l;
   padding: spacing.$none;
 
   ul {
-    display: flex;
-    list-style-type: none;
+    @include mixins.unformatted-list;
+  }
+
+  li {
+    border-bottom: 1px solid colors.$day-shade;
+    display: block;
+    height: typography.$size-xxl;
     margin: 0;
-    padding: 0;
+    padding: typography.$size-m spacing.$horizontal;
+    position: relative;
 
-    li {
-      border-left: borders.$day-block;
-      border-left-color: colors.$day-shade;
-      margin: spacing.$none;
-      padding: typography.$size-s typography.$size-m;
-      position: relative;
-      width: 20%;
-
-      & > a {
-        align-items: center;
-        bottom: 0;
-        color: colors.$day-fg;
-        display: flex;
-        font-family: typography.$family-subheading;
-        justify-content: center;
-        left: 0;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        text-decoration: none;
-        top: 0;
-
-        &:hover {
-          color: colors.$day-accent;
-        }
-      }
-    }
-
-    .pov {
-      border-left: 0;
-      width: 60%;
+    &.pov {
+      height: auto;
 
       label {
-        margin: 0 0 typography.$size-xs;
+        margin-bottom: typography.$size-xs;
       }
 
       select {
@@ -61,22 +40,114 @@ nav.auth {
         width: calc(#{spacing.$button-width} / 4);
       }
     }
+
+    a {
+      align-items: center;
+      bottom: 0;
+      color: colors.$day-fg;
+      display: flex;
+      font-family: typography.$family-subheading;
+      left: 0;
+      padding: typography.$size-m spacing.$horizontal;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      top: 0;
+
+      &:hover {
+        color: colors.$day-accent;
+      }
+    }
+  }
+
+  @media (min-width: breakpoints.$full-page) {
+    padding: spacing.$none spacing.$horizontal;
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      align-items: center;
+      border-bottom: 0;
+      border-right: 1px solid colors.$day-shade;
+      height: auto;
+      padding: spacing.$vertical spacing.$none;
+      width: 20%;
+
+      &.pov {
+        padding-right: typography.$size-m;
+        width: 60%;
+      }
+
+      a {
+        justify-content: center;
+        padding: spacing.$none;
+      }
+    }
+  }
+
+  &.header {
+    background: colors.$day-bg url("#{paths.$images}/day/bg.jpg") no-repeat bottom center;
+    box-shadow: shadows.$block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition: transitions.$quick;
+    top: 0;
+    z-index: 90;
+
+    &:before,
+    &:after {
+      bottom: calc(#{spacing.$horizontal} * -1);
+      content: '';
+      display: block;
+      height: spacing.$horizontal;
+      position: absolute;
+      right: spacing.$horizontal;
+      width: spacing.$horizontal;
+    }
+
+    &:before {
+      background: linear-gradient(180deg, colors.$day-fg 0%, colors.$day-accent 10%, colors.$day-accent 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);;
+    }
+
+    &:after {
+      background: url("#{paths.$images}/arrow.png") no-repeat center;
+      background-size: 50%;
+      cursor: pointer;
+      transition: transitions.$quick;
+    }
+  }
+
+  &.closed {
+    transform: translateY(-100%);
+
+    &:after {
+      transform: rotate(180deg);
+    }
   }
 }
 
 .night nav.auth {
   background: colors.$night-shade;
 
-  ul li {
-    border-left: borders.$night-block;
-    border-left-color: colors.$night-shade;
+  li {
+    border-bottom: 1px solid colors.$night-shade;
 
-    & > a {
+    a {
       color: colors.$night-fg;
 
       &:hover {
         color: colors.$night-accent;
       }
+    }
+  }
+
+  @media (min-width: breakpoints.$full-page) {
+    li {
+      border-right: 1px solid colors.$night-shade;
     }
   }
 }

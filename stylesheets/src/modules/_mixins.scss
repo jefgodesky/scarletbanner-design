@@ -1,0 +1,7 @@
+@use "./spacing";
+
+@mixin unformatted-list {
+  list-style-type: none;
+  margin: spacing.$none;
+  padding: spacing.$none;
+}
