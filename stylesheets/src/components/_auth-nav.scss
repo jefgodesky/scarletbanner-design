@@ -104,6 +104,7 @@ nav.auth {
       cursor: pointer;
       display: block;
       height: spacing.$horizontal;
+      position: absolute;
       right: spacing.$horizontal;
       transition: transitions.$quick;
       width: spacing.$horizontal;
