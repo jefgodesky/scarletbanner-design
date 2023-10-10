@@ -97,27 +97,38 @@ nav.auth {
     top: 0;
     z-index: 90;
 
-    &:before,
-    &:after {
+    .toggle {
+      background: linear-gradient(180deg, colors.$day-fg 0%, colors.$day-accent 10%, colors.$day-accent 100%);
       bottom: calc(#{spacing.$horizontal} * -1);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);
       content: '';
+      cursor: pointer;
       display: block;
       height: spacing.$horizontal;
       position: absolute;
       right: spacing.$horizontal;
-      width: spacing.$horizontal;
-    }
-
-    &:before {
-      background: linear-gradient(180deg, colors.$day-fg 0%, colors.$day-accent 10%, colors.$day-accent 100%);
-      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);;
-    }
-
-    &:after {
-      background: url("#{paths.$images}/arrow.png") no-repeat center;
-      background-size: 50%;
-      cursor: pointer;
       transition: transitions.$quick;
+      width: spacing.$horizontal;
+
+      &:before {
+        background: url("#{paths.$images}/arrow.png") no-repeat center;
+        background-size: 50%;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: transitions.$quick;
+      }
+    }
+
+    &.closed {
+      transform: translateY(-100%);
+
+      .toggle:before {
+        transform: rotate(180deg);
+      }
     }
   }
 
