@@ -1,39 +1,77 @@
 @use "../modules/borders";
+@use "../modules/breakpoints";
 @use "../modules/colors";
+@use "../modules/paths";
+@use "../modules/spacing";
+@use "../modules/transitions";
 @use "../modules/typography";
 
 .cta {
-  border-bottom: borders.$day-cta;
+  align-items: center;
+  color: colors.$day-fg;
+  display: flex;
   font: typography.$h3;
-  font-weight: bold;
+  text-align: left;
   text-decoration: none;
 
   &:visited {
-    color: colors.$day-link;
+    color: colors.$day-fg;
   }
 
-  &:hover,
-  &:active {
-    border-bottom: borders.$day-cta-active;
+  &:hover {
     color: colors.$day-accent;
+
+    &:after {
+      width: 62%;
+    }
   }
 
   &:after {
-    content: '\00BB';
-    padding-left: typography.$size-xs;
+    background: transparent url('#{paths.$images}/day/divider.svg') no-repeat left center;
+    background-size: cover;
+    border-right: spacing.$thick-border solid colors.$day-fg;
+    content: '';
+    display: block;
+    height: typography.$size-xxl;
+    margin-left: typography.$size-s;
+    transform: scaleX(-1);
+    width: 60%;
+  }
+
+  @media (min-width: 20rem) {
+    &:after { width: 52%; }
+    &:hover:after { width: 54%; }
+  }
+
+  @media (min-width: 30rem) {
+    &:after { width: 44%; }
+    &:hover:after { width: 46%; }
+  }
+
+  @media (min-width: 40rem) {
+    &:after { width: 36%; }
+    &:hover:after { width: 38%; }
+  }
+
+  @media (min-width: 50rem) {
+    &:after { width: 25%; }
+    &:hover:after { width: 27%; }
   }
 }
 
 .night .cta {
-  border-bottom: borders.$night-cta;
+  color: colors.$night-fg;
 
   &:visited {
-    color: colors.$night-link;
+    color: colors.$night-fg;
   }
 
-  &:hover,
-  &:active {
-    border-bottom: borders.$night-cta-active;
+  &:hover {
     color: colors.$night-accent;
+  }
+
+  &:after {
+    background-image: url('#{paths.$images}/night/divider.svg');
+    border-right-color: colors.$night-fg;
   }
 }
