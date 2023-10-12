@@ -1,7 +1,54 @@
+@use "sass:math";
 @use "./spacing";
 
 @mixin unformatted-list {
   list-style-type: none;
   margin: spacing.$none;
   padding: spacing.$none;
+}
+
+@mixin diamondsides($size, $color) {
+  $scale: 1 / math.sqrt(2);
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 0;
+    margin-top: calc(#{$size} * -0.5);
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg) scale($scale);
+    width: 0;
+  }
+
+  &:before {
+    border-top: calc(#{$size} / 2) solid transparent;
+    border-right: calc(#{$size} / 2) solid transparent;
+    border-bottom: calc(#{$size} / 2) solid $color;
+    border-left: calc(#{$size} / 2) solid $color;
+    left: 0;
+    margin-left: calc(#{$size} * -0.5);
+  }
+
+  &:after {
+    border-top: calc(#{$size} / 2) solid $color;
+    border-right: calc(#{$size} / 2) solid $color;
+    border-bottom: calc(#{$size} / 2) solid transparent;
+    border-left: calc(#{$size} / 2) solid transparent;
+    right: 0;
+    margin-right: calc(#{$size} * -0.5);
+  }
+}
+
+@mixin diamondside-recolor($color) {
+  &:before {
+    border-bottom-color: $color;
+    border-left-color: $color;
+  }
+
+  &:after {
+    border-top-color: $color;
+    border-right-color: $color;
+  }
 }

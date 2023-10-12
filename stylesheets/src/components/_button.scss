@@ -1,7 +1,5 @@
 @use "../modules/colors";
-@use "../modules/_curves.scss";
-@use "../modules/durations";
-@use "../modules/gradients";
+@use "../modules/mixins";
 @use "../modules/shadows";
 @use "../modules/spacing";
 @use "../modules/typography";
@@ -9,43 +7,57 @@
 button,
 input[type="button"],
 input[type="submit"] {
+  @include mixins.diamondsides(calc(#{typography.$size-m} + (#{typography.$size-xs} * 2)), colors.$day-accent);
   appearance: none;
-  aspect-ratio: 8 / 1;
-  background: radial-gradient(circle, gradients.$primary-button);
+  background: colors.$day-accent;
   border: 0;
-  clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  box-shadow: none;
   color: colors.$day-bg;
   cursor: pointer;
   display: block;
+  filter: drop-shadow(spacing.$none spacing.$none 0.2rem #00000099);
   font-family: typography.$family-subheading;
-  font-size: typography.$size-m * 1.05;
-  margin: typography.$size-m auto;
-  padding: typography.$size-xs typography.$size-l;
-  text-shadow: shadows.$button;
-  width: spacing.$button-width;
+  font-size: typography.$size-m;
+  line-height: typography.$size-m;
+  margin: typography.$size-xs auto;
+  padding: typography.$size-xs typography.$size-m;
+  text-shadow: spacing.$none spacing.$none 0.2rem #00000080;
+  white-space: nowrap;
+  width: calc(100% - 2em);
 
   &:hover {
-    background: radial-gradient(circle, gradients.$primary-button-active);
+    text-shadow: spacing.$none spacing.$none 0.2rem #ffffff80;
   }
 
   &:active {
-    box-shadow: inset shadows.$pressed-button;
+    filter: drop-shadow(spacing.$none spacing.$none 0.1rem #000000cc);
   }
 
   &.secondary {
-    background: radial-gradient(circle, gradients.$secondary-button);
-
-    &:hover {
-      background: radial-gradient(circle, gradients.$secondary-button-active);
-    }
+    @include mixins.diamondside-recolor(colors.$day-fg);
+    background: colors.$day-fg;
   }
 
-  &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active {
-    background: radial-gradient(circle, gradients.$disabled-button);
-    box-shadow: none;
+  &[disabled] {
     cursor: not-allowed;
-    opacity: 0.5;
+    filter: none;
+    opacity: 0.3333;
+
+    &:hover {
+      text-shadow: spacing.$none spacing.$none 0.2rem #00000080;
+    }
+  }
+}
+
+.night button,
+.night input[type="button"],
+.night input[type="submit"] {
+  @include mixins.diamondside-recolor(colors.$night-accent);
+  background: colors.$night-accent;
+  border: 0;
+
+  &.secondary {
+    @include mixins.diamondside-recolor(colors.$night-bg);
+    background: colors.$night-bg;
   }
 }

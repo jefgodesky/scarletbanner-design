@@ -34,6 +34,8 @@
   &.night { box-shadow: shadows.$night-error-input; }
   &.button { box-shadow: shadows.$button; }
   &.pressed-button { box-shadow: shadows.$pressed-button; }
+  &.button-text { box-shadow: shadows.$button-text; }
+  &.button-text-hover { box-shadow: shadows.$button-text-hover; }
 }
 
 .gradient-example {
