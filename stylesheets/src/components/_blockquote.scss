@@ -7,26 +7,6 @@ blockquote {
   padding: spacing.$vertical spacing.$horizontal;
   position: relative;
 
-  &:before,
-  &:after {
-    font-size: typography.$size-xxl * 4;
-    line-height: 1;
-    opacity: 0.2;
-    position: absolute;
-  }
-
-  &:before {
-    content: open-quote;
-    left: spacing.$none;
-    top: spacing.$none;
-  }
-
-  &:after {
-    bottom: spacing.$none;
-    content: close-quote;
-    right: spacing.$none;
-  }
-
   footer {
     font-style: italic;
     margin: spacing.$none spacing.$none spacing.$none 35%;
