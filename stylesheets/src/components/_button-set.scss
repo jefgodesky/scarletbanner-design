@@ -1,0 +1,47 @@
+@use "../modules/breakpoints";
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+.button-set {
+  @include mixins.unformatted-list;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) calc(50% - 1px), rgba(0, 0, 0, 0.5) calc(50%), rgba(0, 0, 0, 0) calc(50% + 2px));
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: spacing.$thick-border spacing.$none;
+
+  button {
+    max-width: none;
+  }
+}
+
+.night .button-set {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) calc(50% - 1px), rgba(255, 255, 255, 0.5) calc(50%), rgba(255, 255, 255, 0) calc(50% + 2px));
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: breakpoints.$full-page) {
+  .button-set {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) calc(50% - 1px), rgba(0, 0, 0, 0.5) calc(50%), rgba(0, 0, 0, 0) calc(50% + 2px));
+    border-top: 0;
+    border-bottom: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 typography.$size-m;
+    }
+
+    button {
+      width: auto;
+    }
+  }
+
+  .night .button-set {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) calc(50% - 1px), rgba(255, 255, 255, 0.5) calc(50%), rgba(255, 255, 255, 0) calc(50% + 2px));
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
