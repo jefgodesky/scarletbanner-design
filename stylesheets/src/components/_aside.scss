@@ -1,10 +1,11 @@
 @use "../modules/breakpoints";
 @use "../modules/colors";
+@use "../modules/mixins";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 aside {
-  background: colors.$day-shade;
+  @include mixins.fancy-border("day", colors.$day-shade);
   margin: typography.$size-m spacing.$none;
   padding: spacing.$vertical spacing.$horizontal * 0.5;
 
@@ -19,5 +20,5 @@ aside {
 }
 
 .night aside {
-  background: colors.$night-shade;
+  @include mixins.fancy-border("night", colors.$night-shade);
 }
