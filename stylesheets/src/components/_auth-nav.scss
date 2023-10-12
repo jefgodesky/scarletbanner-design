@@ -92,16 +92,16 @@ nav.auth {
 
     .toggle {
       background: linear-gradient(180deg, colors.$day-fg 0%, colors.$day-accent 10%, colors.$day-accent 100%);
-      bottom: calc(#{spacing.$horizontal} * -1);
+      bottom: calc((#{spacing.$horizontal} * (2/3)) * -1);
       clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);
       content: '';
       cursor: pointer;
       display: block;
-      height: spacing.$horizontal;
+      height: calc(#{spacing.$horizontal} * (2/3));
       position: absolute;
       right: spacing.$horizontal;
       transition: transitions.$quick;
-      width: spacing.$horizontal;
+      width: calc(#{spacing.$horizontal} * (2/3));
 
       &:before {
         background: url("#{paths.$images}/arrow.png") no-repeat center;
