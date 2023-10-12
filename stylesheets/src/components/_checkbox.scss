@@ -1,4 +1,5 @@
 @use "../modules/colors";
+@use "../modules/spacing";
 @use "../modules/typography";
 
 input[type="checkbox"] {
@@ -6,20 +7,15 @@ input[type="checkbox"] {
 
   &:checked:after {
     background: transparent;
-    border-top: 0 solid transparent;
-    border-right: calc(#{typography.$size-xs} * 0.8) solid colors.$day-link;
-    border-bottom: calc(#{typography.$size-xs} * 0.8) solid colors.$day-link;
-    border-left: 0 solid transparent;
-    border-radius: 0;
-    height: typography.$size-l;
-    margin: -0.25rem 0 0 0.5rem;
-    transform: rotate(45deg);
-    width: calc(#{typography.$size-l} / 2);
+    color: colors.$day-link;
+    content: '\2713';
+    font-size: typography.$size-l;
+    font-weight: bold;
+    margin: spacing.$hairline;
   }
 }
 
 .night input[type="checkbox"]:checked:after {
   background: transparent;
-  border-right-color: colors.$night-link;
-  border-bottom-color: colors.$night-link;
+  color: colors.$night-link;
 }
