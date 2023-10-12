@@ -1,11 +1,12 @@
 @use "../modules/breakpoints";
 @use "../modules/borders";
 @use "../modules/colors";
+@use "../modules/mixins";
 @use "../modules/spacing";
 @use "../modules/typography";
 
 nav.toc {
-  background: colors.$day-shade;
+  @include mixins.fancy-border("day", colors.$day-shade);
   padding: typography.$size-l typography.$size-xxl;
 
   h4 {
@@ -32,7 +33,7 @@ nav.toc {
 }
 
 .night nav.toc {
-  background: colors.$night-shade;
+  @include mixins.fancy-border("night", colors.$night-shade);
 
   h4 {
     border-bottom: borders.$night-block;
