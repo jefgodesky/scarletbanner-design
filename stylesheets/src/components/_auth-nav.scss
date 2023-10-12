@@ -9,7 +9,7 @@
 @use "../modules/typography";
 
 nav.auth {
-  background: colors.$day-shade;
+  @include mixins.fancy-border("day", colors.$day-shade);
   padding: spacing.$none;
 
   ul {
@@ -17,28 +17,15 @@ nav.auth {
   }
 
   li {
-    border-bottom: 1px solid colors.$day-shade;
+    border-bottom: 1px solid colors.$day-fg;
     display: block;
     height: typography.$size-xxl;
     margin: 0;
-    padding: typography.$size-m spacing.$horizontal;
+    padding: typography.$size-m;
     position: relative;
 
-    &.pov {
+    &.pov{
       height: auto;
-
-      label {
-        margin-bottom: typography.$size-xs;
-      }
-
-      select {
-        margin: spacing.$none;
-      }
-
-      .input-button button {
-        clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
-        width: calc(#{spacing.$button-width} / 4);
-      }
     }
 
     a {
@@ -47,6 +34,7 @@ nav.auth {
       color: colors.$day-fg;
       display: flex;
       font-family: typography.$family-subheading;
+      justify-content: center;
       left: 0;
       padding: typography.$size-m spacing.$horizontal;
       position: absolute;
@@ -55,14 +43,14 @@ nav.auth {
       top: 0;
 
       &:hover {
+        background: colors.$night-shade;
         color: colors.$day-accent;
       }
     }
   }
 
   @media (min-width: breakpoints.$full-page) {
-    padding: spacing.$none spacing.$horizontal;
-
+    padding: spacing.$none typography.$size-l;
     ul {
       display: flex;
     }
@@ -70,13 +58,13 @@ nav.auth {
     li {
       align-items: center;
       border-bottom: 0;
-      border-right: 1px solid colors.$day-shade;
+      border-right: 1px solid colors.$day-fg;
       height: auto;
       padding: spacing.$vertical spacing.$none;
       width: 20%;
 
       &.pov {
-        padding-right: typography.$size-m;
+        padding-right: typography.$size-xl;
         width: 60%;
       }
 
@@ -88,7 +76,13 @@ nav.auth {
   }
 
   &.header {
-    background: colors.$day-bg url("#{paths.$images}/day/bg.jpg") no-repeat bottom center;
+    background-color: colors.$day-bg;
+    background-image: url('#{paths.$images}/day/corner-bottomleft.gif'),
+      url('#{paths.$images}/day/corner-bottomright.gif'),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%),
+      url("#{paths.$images}/day/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom right, bottom center, bottom center;
     box-shadow: shadows.$block;
     left: 0;
     right: 0;
@@ -133,6 +127,10 @@ nav.auth {
         transform: rotate(180deg);
       }
     }
+
+    @media (min-width: breakpoints.$full-page) {
+      padding: spacing.$none spacing.$horizontal;
+    }
   }
 
   &.closed {
@@ -145,10 +143,15 @@ nav.auth {
 }
 
 .night nav.auth {
-  background: colors.$night-shade;
+  @include mixins.fancy-border("day", colors.$night-shade);
 
   &.header {
-    background: colors.$night-bg url("#{paths.$images}/night/bg.jpg") no-repeat bottom center;
+    background-color: colors.$night-bg;
+    background-image: url("#{paths.$images}/night/bg.jpg"),
+    url('#{paths.$images}/night/corner-bottomleft.gif'),
+    url('#{paths.$images}/night/corner-bottomright.gif');
+    background-repeat: no-repeat;
+    background-position: bottom center, bottom left, bottom right;
   }
 
   li {

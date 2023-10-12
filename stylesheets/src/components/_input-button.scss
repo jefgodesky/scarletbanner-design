@@ -10,11 +10,13 @@
   padding: 0;
 
   input,
+  select,
   button {
     margin: 0;
   }
 
-  input {
+  input,
+  select {
     margin: calc(#{spacing.$hairline} * 2) spacing.$none;
     padding-right: calc(#{spacing.$horizontal} / 2);
   }
