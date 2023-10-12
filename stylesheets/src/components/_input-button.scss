@@ -1,4 +1,6 @@
+@use "../modules/mixins";
 @use "../modules/spacing";
+@use "../modules/typography";
 
 .input-button {
   background: transparent;
@@ -18,18 +20,7 @@
   }
 
   button {
-    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-    margin-left: calc((#{spacing.$horizontal} / 2) * -1);
-    width: calc(#{spacing.$button-width} / 2);
-
-    p {
-      aspect-ratio: 3 / 1;
-      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-      width: spacing.$vertical * 4;
-    }
-
-    span {
-      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-    }
+    @include mixins.diamondside-resize(calc((#{typography.$size-m} * 1.2) + (#{spacing.$hairline} * 4) + (#{spacing.$vertical} / 2)));
+    width: auto;
   }
 }

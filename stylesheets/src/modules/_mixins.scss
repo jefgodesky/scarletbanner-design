@@ -52,3 +52,22 @@
     border-right-color: $color;
   }
 }
+
+@mixin diamondside-resize($size) {
+  $scale: 1 / math.sqrt(2);
+
+  &:before,
+  &:after {
+    border-width: calc(#{$size} / 2);
+    margin-top: calc(#{$size} * -0.5);
+    transform: rotate(45deg) scale($scale);
+  }
+
+  &:before {
+    margin-left: calc(#{$size} * -0.5);
+  }
+
+  &:after {
+    margin-right: calc(#{$size} * -0.5);
+  }
+}
