@@ -83,7 +83,8 @@ nav.auth {
       url("#{paths.$images}/day/bg.jpg");
     background-repeat: no-repeat;
     background-position: bottom left, bottom right, bottom center, bottom center;
-    border: spacing.$none borders.$day-block borders.$day-block borders.$day-block;
+    border: borders.$day-block;
+    border-top: spacing.$none;
     box-shadow: shadows.$block;
     left: 0;
     right: 0;
@@ -144,7 +145,7 @@ nav.auth {
 }
 
 .night nav.auth {
-  @include mixins.fancy-border("day", colors.$night-shade);
+  @include mixins.fancy-border("night", colors.$night-shade);
 
   &.header {
     background-color: colors.$night-bg;
@@ -153,8 +154,9 @@ nav.auth {
       linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%),
       url("#{paths.$images}/night/bg.jpg");
     background-repeat: no-repeat;
-    background-position: bottom center, bottom left, bottom right;
-    border: spacing.$none borders.$night-block borders.$night-block borders.$night-block;
+    background-position: bottom left, bottom right, top center, bottom center;
+    border: borders.$night-block;
+    border-top: spacing.$none;
   }
 
   li {
