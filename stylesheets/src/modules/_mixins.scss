@@ -80,7 +80,7 @@
     $border: borders.$night-block;
   }
 
-  background: $bgcolor;
+  background-color: $bgcolor;
   background-image: url('#{paths.$images}/#{$theme}/corner-topleft.gif'),
     url('#{paths.$images}/#{$theme}/corner-topright.gif'),
     url('#{paths.$images}/#{$theme}/corner-bottomleft.gif'),

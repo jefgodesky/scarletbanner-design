@@ -83,6 +83,7 @@ nav.auth {
       url("#{paths.$images}/day/bg.jpg");
     background-repeat: no-repeat;
     background-position: bottom left, bottom right, bottom center, bottom center;
+    border: spacing.$none borders.$day-block borders.$day-block borders.$day-block;
     box-shadow: shadows.$block;
     left: 0;
     right: 0;
@@ -147,11 +148,13 @@ nav.auth {
 
   &.header {
     background-color: colors.$night-bg;
-    background-image: url("#{paths.$images}/night/bg.jpg"),
-    url('#{paths.$images}/night/corner-bottomleft.gif'),
-    url('#{paths.$images}/night/corner-bottomright.gif');
+    background-image: url('#{paths.$images}/night/corner-bottomleft.gif'),
+      url('#{paths.$images}/night/corner-bottomright.gif'),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%),
+      url("#{paths.$images}/night/bg.jpg");
     background-repeat: no-repeat;
     background-position: bottom center, bottom left, bottom right;
+    border: spacing.$none borders.$night-block borders.$night-block borders.$night-block;
   }
 
   li {
