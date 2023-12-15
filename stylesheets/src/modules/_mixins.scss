@@ -10,7 +10,7 @@
 }
 
 @mixin diamondsides($size, $color) {
-  $scale: 1 / math.sqrt(2);
+  $scale: math.div(1, math.sqrt(2));
   position: relative;
 
   &:before,
@@ -56,7 +56,7 @@
 }
 
 @mixin diamondside-resize($size) {
-  $scale: 1 / math.sqrt(2);
+  $scale: math.div(1, math.sqrt(2));
 
   &:before,
   &:after {
