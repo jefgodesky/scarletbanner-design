@@ -59,7 +59,7 @@
     "@types/sinon": "^10.0.15",
     "@types/suncalc": "^1.9.0",
     "@types/webpack": "^5.28.3",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^2.23.7",
     "chai": "^4.3.7",
     "chokidar-cli": "^3.0.0",
     "jsdom-global": "^3.0.2",
