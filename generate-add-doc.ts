@@ -1,7 +1,7 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
+import pkg from './package.json' assert { type: 'json' }
 
-const generateAddDoc = () => {
-  const pkg = JSON.parse(readFileSync('./package.json', { encoding: 'utf8' }))
+const generateAddDoc = (): void => {
   const add = {
     version: pkg.version,
     'version path': `v${pkg.version.split('.').join('/')}`
