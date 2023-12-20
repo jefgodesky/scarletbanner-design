@@ -26,7 +26,7 @@
     "unit-test": "mocha --experimental-specifier-resolution=node",
     "tokens": "npm-run-all tokens:adddoc tokens:compile",
     "tokens:compile": "design-tokenizer --file tokens.json --scss --add-dictionary add-doc.json --html-src docs --html-dist .",
-    "tokens:adddoc": "node --loader ts-node/esm generate-add-doc.ts",
+    "tokens:adddoc": "NODE_OPTIONS=\"--loader ts-node/esm\" node generate-add-doc.ts",
     "watch:dev": "npm-run-all -p sass:dev server:dev html:dev token:dev js:dev",
     "token:dev": "chokidar \"./tokens.json\" -c \"npm run tokens\"",
     "html:dev": "chokidar \"./docs/*.html\" -c \"npm run tokens\"",
