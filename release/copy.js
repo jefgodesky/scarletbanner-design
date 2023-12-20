@@ -1,11 +1,8 @@
 import fs from 'fs'
 import path from 'path'
-import getVersionPath from './get-version-path.js'
+import { version, versionPath } from './version.js'
 
-const [release, version] = getVersionPath()
-const releaseDir = `.${release}`
-
-const copy = (src: string, dest: string): void => {
+const copy = (src, dest) => {
   const srcExists = fs.existsSync(src)
   const destExists = fs.existsSync(dest)
   const srcIsDir = srcExists && fs.statSync(src).isDirectory()
@@ -21,12 +18,12 @@ const copy = (src: string, dest: string): void => {
   }
 }
 
-const map: { [key: string]: string } = {
-  './scripts/dist': `.${release}`,
-  './stylesheets/dist': `.${release}`,
-  './images': `.${release}/images`,
-  './fonts': `.${release}/fonts`
+const map = {
+  './scripts/dist': `.${versionPath}`,
+  './stylesheets/dist': `.${versionPath}`,
+  './images': `.${versionPath}/images`,
+  './fonts': `.${versionPath}/fonts`
 }
 
 for (const src in map) copy(src, map[src])
-console.log(`Release ${version} ready in ${releaseDir}`)
+console.log(`Release ${version} ready in ${versionPath}`)

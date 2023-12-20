@@ -7,6 +7,7 @@ stylesheets/src/modules/*.scss
 !stylesheets/src/modules/_paths.scss
 !stylesheets/src/modules/_tables.scss
 scripts/dist
+release/src/version.js
 *.html
 !docs/*.html
 add-doc.json

@@ -1,14 +1,13 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import webpack from 'webpack'
-import getVersionPath from './release/get-version-path.js'
+import { versionPath } from './release/version.js'
 
-export default (env: any, argv: any): webpack.Configuration => {
+export default (env, argv) => {
   const FILENAME = fileURLToPath(import.meta.url)
   const DIR = path.dirname(FILENAME)
-  const [version] = getVersionPath()
   const base = argv.mode === 'production'
-    ? `https://design.scarletbanner.com${version}`
+    ? `https://design.scarletbanner.com${versionPath}`
     : ''
 
   return {

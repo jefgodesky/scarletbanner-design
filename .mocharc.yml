@@ -7,4 +7,3 @@ require:
 spec:
   - './scripts/src/*.spec.ts'
   - './scripts/src/**/*.spec.ts'
-  - './release/*.spec.ts'
