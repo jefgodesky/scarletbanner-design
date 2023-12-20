@@ -17,11 +17,13 @@ export default (env, argv) => {
         {
           test: /\.tsx?$/,
           use: 'ts-loader',
+          include: path.resolve(DIR, 'scripts/src'),
           exclude: /node_modules/
         }
       ]
     },
     resolve: {
+      cacheWithContext: false,
       extensions: ['.ts', '.js']
     },
     output: {
