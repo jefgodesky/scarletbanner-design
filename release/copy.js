@@ -19,11 +19,13 @@ const copy = (src, dest) => {
 }
 
 const map = {
-  './scripts/dist': `.${versionPath}`,
-  './stylesheets/dist': `.${versionPath}`,
-  './images': `.${versionPath}/images`,
-  './fonts': `.${versionPath}/fonts`
+  './images': './dist/images',
+  './fonts': './dist/fonts',
+  './dist/scripts': `./dist${versionPath}/scripts`,
+  './dist/stylesheets': `./dist${versionPath}/stylesheets`,
+  './dist/images': `./dist${versionPath}/images`,
+  './dist/fonts': `./dist${versionPath}/fonts`
 }
 
 for (const src in map) copy(src, map[src])
-console.log(`Release ${version} ready in ${versionPath}`)
+console.log(`Release ${version} ready in dist${versionPath}`)

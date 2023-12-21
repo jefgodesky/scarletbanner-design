@@ -11,13 +11,13 @@ export default (env, argv) => {
     : ''
 
   return {
-    entry: './scripts/src/index.ts',
+    entry: './scripts/index.ts',
     module: {
       rules: [
         {
           test: /\.tsx?$/,
           use: 'ts-loader',
-          include: path.resolve(DIR, 'scripts/src'),
+          include: path.resolve(DIR, 'scripts'),
           exclude: /node_modules/
         }
       ]
@@ -28,7 +28,7 @@ export default (env, argv) => {
     },
     output: {
       filename: 'bundle.js',
-      path: path.resolve(DIR, 'scripts/dist')
+      path: path.resolve(DIR, 'dist/scripts')
     },
     optimization: {
       splitChunks: {
