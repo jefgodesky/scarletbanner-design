@@ -21,9 +21,9 @@ jobs:
 
       - name: Build project
         run: |
+          mkdir -p dist
           npm install
           npm run prod
-          ls -l dist
           cd dist
           tar -czvf ../design.tar.gz .
 
