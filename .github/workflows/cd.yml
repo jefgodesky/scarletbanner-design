@@ -23,10 +23,8 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run prod
-
-      - name: Archive production build
         run: |
+          npm run prod
           cd dist
           tar -czvf ../design.tar.gz .
 
