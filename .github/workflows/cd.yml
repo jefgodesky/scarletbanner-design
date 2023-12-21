@@ -26,7 +26,9 @@ jobs:
         run: npm run prod
 
       - name: Archive production build
-        run: tar -czvf design.tar.gz ./dist
+        run: |
+          cd dist
+          tar -czvf ../design.tar.gz .
 
       - name: Upload production build
         uses: actions/upload-artifact@v4
@@ -67,6 +69,5 @@ jobs:
           key: ${{ secrets.DEPLOYER_KEY }}
           script: |
             cd ${{ secrets.DEPLOYER_DIR }}
-            tar -xzvf design.tar.gz --strip-components=2
-            tar -xzvf design.tar.gz --wildcards '*.html'
+            tar -xzvf design.tar.gz
             rm design.tar.gz
