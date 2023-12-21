@@ -68,4 +68,5 @@ jobs:
           script: |
             cd ${{ secrets.DEPLOYER_DIR }}
             tar -xzvf design.tar.gz --strip-components=2
+            tar -xzvf design.tar.gz --wildcards '*.html'
             rm design.tar.gz
