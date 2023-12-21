@@ -67,4 +67,5 @@ jobs:
           key: ${{ secrets.DEPLOYER_KEY }}
           script: |
             cd ${{ secrets.DEPLOYER_DIR }}
-            tar -xzvf design.tar.gz
+            tar -xzvf design.tar.gz --strip-components=1
+            rm design.tar.gz
