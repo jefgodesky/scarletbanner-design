@@ -19,12 +19,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Build project
         run: |
+          npm install
           npm run prod
+          ls -l dist
           cd dist
           tar -czvf ../design.tar.gz .
 
