@@ -21,8 +21,8 @@ const copy = (src, dest) => {
 const map = {
   './images': './dist/images',
   './fonts': './dist/fonts',
-  './dist/scripts': `./dist${versionPath}/scripts`,
-  './dist/stylesheets': `./dist${versionPath}/stylesheets`,
+  './dist/scripts': `./dist${versionPath}`,
+  './dist/stylesheets': `./dist${versionPath}`,
   './dist/images': `./dist${versionPath}/images`,
   './dist/fonts': `./dist${versionPath}/fonts`
 }
