@@ -11,6 +11,14 @@
 nav.auth {
   @include mixins.fancy-border("day", colors.$day-shade);
   padding: spacing.$none;
+  transform: translateY(-100%);
+  animation: no-js-reveal 0s 1.5s forwards;
+  
+  @keyframes no-js-reveal {
+    to {
+      transform: none;
+    }
+  }
 
   ul {
     @include mixins.unformatted-list;
@@ -119,11 +127,12 @@ nav.auth {
     }
 
     &.initialized {
+      animation: none;
       position: absolute;
     }
 
-    &.closed {
-      transform: translateY(-100%);
+    &.open {
+      transform: none;
 
       .toggle:before {
         transform: rotate(180deg);
