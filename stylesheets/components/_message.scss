@@ -1,0 +1,78 @@
+@use "../modules/colors";
+@use "../modules/mixins";
+@use "../modules/spacing";
+@use "../modules/typography";
+
+.alert {
+  @include mixins.fancy-border("day", colors.$day-shade);
+  margin: typography.$size-m spacing.$none;
+  padding: spacing.$vertical spacing.$horizontal * 0.5;
+  position: relative;
+
+  &.alert-info {
+    background-color: rgba(colors.$day-link, 0.25);
+  }
+
+  &.alert-success {
+    background-color: rgba(#5aca75, 0.25);
+  }
+
+  &.alert-warning {
+    background-color: rgba(#ff8f39, 0.25);
+  }
+
+  &.alert-error {
+    background-color: rgba(colors.$day-accent, 0.25);
+  }
+
+  .btn-close {
+    background: transparent;
+    color: colors.$day-fg;
+    filter: none;
+    height: 1.5em;
+    margin: 0;
+    right: 0;
+    position: absolute;
+    top: 0.5em;
+    width: 0;
+
+    &:before {
+      border: 0;
+      content: '\00D7';
+      height: 100%;
+      margin: 0;
+      line-height: 1.5;
+      top: 0;
+      transform: none;
+      width: 100%;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.night .alert {
+  @include mixins.fancy-border("night", colors.$night-shade);
+
+  &.alert-info {
+    background-color: rgba(colors.$night-link, 0.25);
+  }
+
+  &.alert-error {
+    background-color: rgba(colors.$night-accent, 0.25);
+  }
+
+  &.alert-success {
+    background-color: rgba(#287d3c, 0.25);
+  }
+
+  &.alert-warning {
+    background-color: rgba(#b95000, 0.25);
+  }
+
+  .btn-close {
+    color: colors.$night-fg;
+  }
+}
